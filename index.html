@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bottle Technology — Roadmap 2026</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --lw:236px;
+  --col:48px;
+  --bg:#fff;--bg2:#f7f6f3;--bg3:#eceae6;
+  --text:#111;--text2:#555;--text3:#999;
+  --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.15);
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+body{font-family:var(--font);background:#f0eff0;color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden;color-scheme:light}
+
+.topnav{flex:0 0 52px;height:52px;background:#fff;border-bottom:1px solid var(--border2);display:flex;align-items:center;justify-content:space-between;padding:0 20px;gap:12px;z-index:50}
+.nav-left{display:flex;align-items:center;gap:10px}
+.nav-logo{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700}
+.nav-dot{width:9px;height:9px;border-radius:50%;background:#185FA5}
+.nav-divider{width:1px;height:18px;background:var(--border2)}
+.nav-title{font-size:13px;font-weight:500;color:#333}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-meta{font-size:11px;color:var(--text3)}
+.nav-btn{font-size:11px;padding:5px 12px;border-radius:6px;border:0.5px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;font-family:var(--font);display:flex;align-items:center;gap:5px;transition:background .15s}
+.nav-btn:hover{background:var(--bg3)}
+
+.filterbar{flex:0 0 auto;background:#fff;border-bottom:1px solid var(--border2);padding:0 20px}
+.filter-row{display:flex;align-items:center;gap:6px;padding:7px 0;border-bottom:0.5px solid var(--border);flex-wrap:wrap}
+.filter-row:last-child{border-bottom:none}
+.filter-label{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;width:52px;flex-shrink:0}
+.chip{font-size:11px;padding:3px 11px;border-radius:20px;border:0.5px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .12s;font-family:var(--font);white-space:nowrap;display:flex;align-items:center;gap:5px}
+.chip:hover{background:var(--bg3);color:var(--text)}
+.chip.active{background:var(--text);color:#fff;border-color:var(--text)}
+.pchip{font-size:11px;padding:3px 10px 3px 4px;border-radius:20px;border:0.5px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .12s;font-family:var(--font);display:flex;align-items:center;gap:5px}
+.pchip:hover{background:var(--bg3);color:var(--text)}
+.pchip.active{border-color:#111;color:#111;box-shadow:0 0 0 1.5px #111}
+.avatar{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0}
+
+.legendbar{flex:0 0 auto;background:#fff;border-bottom:1px solid var(--border2);padding:6px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text2)}
+.leg-sw{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+.leg-dia{width:9px;height:9px;transform:rotate(45deg);border-radius:2px;background:#C89000;flex-shrink:0}
+
+.scroll-area{flex:1 1 0;overflow:auto;position:relative;background:#f0eff0}
+.gantt{display:table;border-collapse:collapse;min-width:max-content;width:100%}
+
+.gantt-hrow{display:table-row}
+.hcorner{display:table-cell;width:var(--lw);min-width:var(--lw);position:sticky;left:0;top:0;z-index:40;background:#fff;border-right:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:0 10px 0 16px;vertical-align:middle;font-size:10px;font-weight:600;color:var(--text3);letter-spacing:0.04em;text-transform:uppercase}
+.htimeline{display:table-cell;position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--border2);padding:0;vertical-align:middle;position:sticky}
+.hcols{display:flex}
+.hcol{flex:0 0 var(--col);width:var(--col);font-size:10px;color:var(--text3);text-align:center;padding:0 2px;border-left:0.5px solid var(--border);height:36px;display:flex;align-items:center;justify-content:center;white-space:nowrap;font-weight:400}
+.hcol.major{color:#111;font-weight:700}
+.hcol.month-line{border-left:1px solid var(--border2)}
+.today-header-marker{position:absolute;top:0;z-index:5;display:flex;flex-direction:column;align-items:center;pointer-events:none;transform:translateX(-50%)}
+.today-badge{background:#E24B4A;color:#fff;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;white-space:nowrap;margin-top:4px}
+.today-tick{width:2px;height:10px;background:#E24B4A;margin-top:1px}
+
+.grow{display:table-row;cursor:pointer}
+.grow .lc{background:var(--bg2);border-top:1px solid var(--border2);border-bottom:0.5px solid var(--border2)}
+.grow .tc{background:var(--bg2);border-top:1px solid var(--border2);border-bottom:0.5px solid var(--border2)}
+.glabel{font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;gap:5px;user-select:none}
+.garr{font-size:9px;transition:transform .2s}
+
+.drow{display:table-row}
+.drow.hidden{display:none}
+.lc{display:table-cell;width:var(--lw);min-width:var(--lw);max-width:var(--lw);position:sticky;left:0;z-index:10;background:#fff;border-right:1px solid var(--border2);border-bottom:0.5px solid var(--border);padding:9px 10px 9px 16px;vertical-align:top}
+.row-title{font-size:12px;font-weight:700;line-height:1.3}
+.row-sub{font-size:10px;color:var(--text3);margin-top:2px;line-height:1.4}
+.owner-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
+.opill{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:2px 7px 2px 3px;font-size:10px;font-weight:500;white-space:nowrap}
+.opill .oa{width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;flex-shrink:0}
+
+.tc{display:table-cell;position:relative;border-bottom:0.5px solid var(--border);vertical-align:top;background-image:repeating-linear-gradient(to right,transparent,transparent calc(var(--col) - 0.5px),rgba(0,0,0,0.055) calc(var(--col) - 0.5px),rgba(0,0,0,0.055) var(--col))}
+.mline{position:absolute;top:0;bottom:0;width:1px;background:rgba(0,0,0,0.1);z-index:1;pointer-events:none}
+
+.bar{position:absolute;height:22px;display:flex;align-items:center;padding:0 8px;font-size:9px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff;border-radius:5px;cursor:default;z-index:3;transition:filter .12s,box-shadow .12s,opacity .2s}
+.bar.planned{opacity:.45;background-image:repeating-linear-gradient(45deg,transparent,transparent 3px,rgba(255,255,255,.28) 3px,rgba(255,255,255,.28) 5px);border:1px dashed rgba(255,255,255,.6);height:18px;font-size:8px;font-weight:600}
+.bar.planned::before{content:'PLANNED · ';opacity:.85;font-weight:700;font-size:7.5px;letter-spacing:.05em;margin-right:2px}
+.bar.planned:hover{opacity:.75}
+.planned-row-hidden .bar.planned,.planned-row-hidden .planned-ms{display:none!important}
+.planned-ms{position:absolute;width:9px;height:9px;transform:translateY(-50%) rotate(45deg);border-radius:1px;z-index:4;border:1.5px dashed rgba(0,0,0,.4);cursor:default;background:transparent!important;transition:transform .15s,opacity .2s}
+.planned-ms:hover{transform:translateY(-50%) rotate(45deg) scale(1.4)}
+.bar:hover{filter:brightness(1.09);box-shadow:0 2px 10px rgba(0,0,0,0.18);z-index:9}
+.bar.dashed{background:transparent!important;border:1.5px dashed;opacity:.6}
+.bar.dimmed{opacity:.1!important;pointer-events:none}
+.bar.highlighted{box-shadow:0 0 0 2px rgba(0,0,0,0.35);z-index:6}
+
+.ms{position:absolute;width:12px;height:12px;transform:translateY(-50%) rotate(45deg);border-radius:2px;z-index:5;border:2px solid #fff;cursor:default;transition:transform .15s,opacity .2s;background:#C89000}
+.ms:hover{transform:translateY(-50%) rotate(45deg) scale(1.4);z-index:9}
+.ms.dimmed{opacity:.1;pointer-events:none}
+.today-line{position:absolute;top:0;bottom:0;width:2px;background:#E24B4A;z-index:7;pointer-events:none}
+
+#tt{display:none;position:fixed;background:#fff;border:0.5px solid rgba(0,0,0,0.18);border-radius:10px;padding:11px 14px;font-size:12px;max-width:280px;z-index:999;box-shadow:0 6px 24px rgba(0,0,0,0.12);pointer-events:none;font-family:var(--font);color:#111}
+#tt.show{display:block}
+#tt .ttt{font-weight:700;font-size:12px;margin-bottom:4px}
+#tt .ttb{font-size:11px;color:#555;line-height:1.6}
+#tt .ttbadge{display:inline-block;font-size:9px;padding:2px 8px;border-radius:10px;font-weight:600;margin-bottom:4px}
+#tt .ttown{display:inline-flex;align-items:center;gap:4px;background:#f0efeb;border-radius:10px;padding:2px 8px;font-size:10px;color:#555;margin-top:5px}
+
+@media print{
+  body{overflow:visible;height:auto}
+  .topnav,.filterbar,.legendbar{position:static}
+  .scroll-area{overflow:visible;height:auto}
+  .nav-btn,.chip,.pchip{display:none}
+  .bar,.ms{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .bar.dimmed{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="nav-left">
+    <div class="nav-logo"><div class="nav-dot"></div>Bottle Technology</div>
+    <div class="nav-divider"></div>
+    <div class="nav-title">Roadmap 2026</div>
+  </div>
+  <div class="nav-right">
+    <span class="nav-meta">Jun 19, 2026 – Jul 31, 2027 · FY 83/84</span>
+    <button class="nav-btn" id="plannedToggle" onclick="togglePlanned(this)" style="background:#FFF9E6;border-color:#E6C300;color:#7A5200">👁 Hide planned</button>
+    <button class="nav-btn" onclick="expandAll()">⊞ Expand all</button>
+    <button class="nav-btn" onclick="window.print()">🖨 Print / PDF</button>
+  </div>
+</div>
+
+<div class="filterbar">
+  <div class="filter-row">
+    <div class="filter-label">Track</div>
+    <button class="chip active" onclick="trackFilter('all',this)">All</button>
+    <button class="chip" onclick="trackFilter('product',this)">Own products</button>
+    <button class="chip" onclick="trackFilter('client',this)">Client work</button>
+    <button class="chip" onclick="trackFilter('977',this)">+977 Project</button>
+    <button class="chip" onclick="trackFilter('ops',this)">Ops</button>
+  </div>
+  <div class="filter-row" id="statusRow"><div class="filter-label">Status</div></div>
+  <div class="filter-row" id="peopleRow"><div class="filter-label">People</div></div>
+</div>
+
+<div class="legendbar">
+  <div class="leg"><div class="leg-sw" style="background:#639922"></div>Live / feature dev</div>
+  <div class="leg"><div class="leg-sw" style="background:#185FA5"></div>Development</div>
+  <div class="leg"><div class="leg-sw" style="background:#BA7517"></div>Deployment / trial</div>
+  <div class="leg"><div class="leg-sw" style="background:#1D9E75"></div>Testing</div>
+  <div class="leg"><div class="leg-sw" style="background:#534AB7"></div>Consulting / design</div>
+  <div class="leg"><div class="leg-sw" style="background:#888780"></div>Support</div>
+  <div class="leg"><div class="leg-sw" style="background:#993556"></div>Procurement</div>
+  <div class="leg"><div class="leg-sw" style="background:#7B3F00"></div>+977 sprints</div>
+  <div class="leg"><div class="leg-dia"></div>Milestone</div>
+  <div class="leg" style="border-left:1px dashed rgba(0,0,0,.25);padding-left:14px;margin-left:6px"><div style="width:22px;height:10px;border-radius:2px;background:repeating-linear-gradient(45deg,#9a9890,#9a9890 3px,#c7c5be 3px,#c7c5be 5px);border:1px dashed #666;opacity:.6"></div>Original planned (dashed)</div>
+</div>
+
+<div class="scroll-area" id="scrollArea">
+  <div class="gantt" id="gantt"></div>
+</div>
+<div id="tt"></div>
+
+<script>
+const TS=new Date(2026,5,19),TE=new Date(2027,6,31);
+const TDAYS=(TE-TS)/864e5,COL_DAYS=7,NCOLS=Math.ceil(TDAYS/COL_DAYS),CW=48;
+function dOff(s){const[y,m,d]=s.split('-').map(Number);return(new Date(y,m-1,d)-TS)/864e5}
+function px(s){return(dOff(s)/TDAYS*NCOLS*CW).toFixed(1)+'px'}
+function pw(s,e){return((dOff(e)-dOff(s))/TDAYS*NCOLS*CW).toFixed(1)+'px'}
+function TW(){return NCOLS*CW}
+function colDate(i){const dt=new Date(TS.getTime()+i*COL_DAYS*864e5);return{mo:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][dt.getMonth()],d:dt.getDate(),month:dt.getMonth()}}
+function isMajor(i){if(i===0)return true;return colDate(i).month!==colDate(i-1).month}
+
+const C={green:'#639922',blue:'#185FA5',amber:'#BA7517',purple:'#534AB7',pink:'#993556',gray:'#888780',teal:'#0F6E56',teallt:'#1D9E75',red:'#E24B4A',orange:'#C47B0A',p2:'#7F77DD',br:'#7B3F00',br2:'#9C5A2D',ind:'#3949AB',indlt:'#5C6BC0'};
+const BADGE={
+  live:['#EAF3DE','#3B6D11','Live'],dev:['#E6F1FB','#185FA5','Development'],
+  trial:['#FFF3CD','#7A5200','Trial / deployment'],blocked:['#FCEBEB','#A32D2D','Blocked'],
+  consulting:['#EEEDFE','#3E3596','Consulting'],procurement:['#FBEAF0','#7A2445','Procurement'],
+  testing:['#E1F5EE','#0C5E45','Testing'],support:['#F1EFE8','#4A4945','Support'],
+  planning:['#FFF8E1','#6B4C00','Planning'],sprint:['#FFF3E0','#7B3F00','Sprint'],
+  design:['#F3E5F5','#6A1B9A','Design'],milestone:['#F1EFE8','#4A4945','Milestone'],
+};
+
+const TEAM=[
+  {id:'ajay',   name:'Ajay',         initials:'A',  color:'#185FA5'},
+  {id:'suman',  name:'Suman',        initials:'S',  color:'#639922'},
+  {id:'rahul',  name:'Rahul',        initials:'R',  color:'#534AB7'},
+  {id:'pranuz', name:'Pranuz',       initials:'P',  color:'#BA7517'},
+  {id:'umang',  name:'Umang',        initials:'U',  color:'#993556'},
+  {id:'suraj',  name:'Suraj R.',     initials:'SR', color:'#0F6E56'},
+  {id:'dhakal', name:'Suraj Dhakal', initials:'SD', color:'#C47B0A'},
+  {id:'amit',   name:'Amit',         initials:'Am', color:'#3949AB'},
+  {id:'shreya', name:'Shreya Awasti',initials:'Sh', color:'#B03E6E'},
+  {id:'puran',  name:'Puran Ji',     initials:'PJ', color:'#7B3F00'},
+  {id:'abishek',name:'Abishek',      initials:'Ab', color:'#555'},
+  {id:'kris',   name:'Kris (freelance)',initials:'K', color:'#8E24AA'},
+];
+const TMEM={};TEAM.forEach(m=>TMEM[m.id]=m);
+
+const TH=22,TG=5,VP=10;
+function rh(row){
+  const cur=row.tracks.length;
+  const plan=(row.planned&&row.planned.length)?row.planned.length:0;
+  const total=cur+plan;
+  const PH=18, PG=3; // planned bar height and gap (shorter/tighter)
+  const planHeight = plan>0 ? (plan*PH + (plan-1)*PG + 6) : 0; // 6px gap between planned and current stacks
+  return Math.max(54, VP*2 + cur*TH + (cur-1)*TG + planHeight);
+}
+
+const ALL_STATUSES=['support','trial','procurement','dev','planning','testing','consulting','blocked','sprint','design'];
+
+const GROUPS=[
+  {id:'signage',label:'Formula Signage',tag:'product',rows:[{
+    title:'Formula Signage',
+    sub:'Marriott monitoring till Aug 1 → Solti expansion · Monitoring, support & QA: Amit',
+    pivotReason:'Monitoring window extended to Aug 1 (was Jun 30) after positive Marriott trial. Amit added for on-site support & QA — Pranuz was overloaded.',
+    planned:[[
+      {s:'2026-06-19',e:'2026-06-30',label:'Monitoring + support + contract (Marriott)',color:'#888780',st:'support',owners:['ajay','suraj'],pivot:'Monitoring window extended to Aug 1 after positive trial result. QA reassigned from Pranuz to Amit to balance workload.'},
+      {s:'2026-07-15',e:'2026-09-15',label:'Deploy to Solti Hotel + other prospects',color:'#BA7517',st:'trial',owners:['ajay','puran'],pivot:'Solti deployment extended through Dec (client pipeline larger than planned). Amit added for deployment support.'},
+    ],[
+      {s:'2026-07-10',e:'2026-07-15',label:'50 devices — planned receipt window',color:'#993556',st:'procurement',owners:['umang','abishek'],pivot:'AHEAD OF SCHEDULE — devices arrived Jul 6, earlier than the planned Jul 10–15 receipt window. Timeline was not replanned; the earlier arrival is a positive schedule variance.'},
+    ]],
+    tracks:[
+      [
+        {s:'2026-06-19',e:'2026-08-01',label:'Monitoring + support + contract (Marriott)',color:C.gray,st:'support',owners:['ajay','suraj','amit'],tip:'Monitoring, support, and contract finalisation with Marriott extended till Aug 1. Monitoring, support & QA: Amit.'},
+        {s:'2026-07-15',e:'2026-12-17',label:'Deploy to Solti Hotel + other prospects (Puran Ji)',color:C.amber,st:'trial',owners:['ajay','puran','amit'],tip:'Deployment to Solti Hotel and other prospects from Jul 15 with Puran Ji. Deployment support: Amit.'},
+      ],
+      [
+        {s:'2026-06-19',e:'2026-07-06',label:'50 devices — order to receipt (received Jul 6, ahead of plan)',color:C.pink,st:'procurement',owners:['umang','abishek'],tip:'50 devices ordered. Received Jul 6 — 4 days ahead of the planned Jul 10–15 window.'},
+      ],
+    ],
+    ms:[
+      {d:'2026-06-25',label:'Trial result',color:C.red,tip:'🔴 Marriott trial ended. Go/No-go on full contract.'},
+      {d:'2026-07-06',label:'Devices received',color:C.pink,tip:'50 Formula Signage devices received Jul 6.'},
+      {d:'2026-07-15',label:'Solti deploy',color:C.amber,tip:'Deployment to Solti Hotel begins.'},
+      {d:'2026-08-01',label:'Marriott monitoring ends',color:C.gray,tip:'Marriott monitoring & support phase concludes Aug 1.'},
+    ]
+  }]},
+
+  {id:'rms',label:'Formula RMS',tag:'product',rows:[{
+    title:'Formula RMS',
+    sub:'Phase 1 → cooling → Phase 2 Aug 1 · QA & support Pranuz (all phases)',
+    pivotReason:'Phase 1 delivery pushed from Jun 30 to Jul 17 due to IRD integration complexity. Cooling compressed to 2 weeks (was 4). Phase 2 timeline held.',
+    planned:[[
+      {s:'2026-06-20',e:'2026-06-30',label:'Phase 1: QR ordering + IRD + inventory',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'Delivery slipped by 17 days to Jul 17 due to IRD verification integration taking longer than estimated. Sip & Skip aligned with new date.'},
+      {s:'2026-07-01',e:'2026-07-31',label:'Cooling period + support',color:'#888780',st:'support',owners:['suman'],pivot:'Cooling window compressed to Jul 17–Aug 1 (2 weeks instead of 4) to protect Phase 2 start date.'},
+      {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + Formula app',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'No change — Phase 2 dates held despite Phase 1 slip. Pranuz added for QA across all phases.'},
+    ]],
+    tracks:[[
+      {s:'2026-06-20',e:'2026-07-17',label:'Phase 1: QR ordering + IRD + inventory',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 1: QR-based ordering, inventory, IRD verification. Delivered to Sip & Skip Jul 17. QA: Pranuz.'},
+      {s:'2026-07-17',e:'2026-08-01',label:'Cooling period + support (Suman, Pranuz)',color:C.gray,st:'support',owners:['suman','pranuz'],tip:'Cooling period Jul 17–Aug 1. Bug fixes and post-launch support by Suman. Support & QA: Pranuz.'},
+      {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + app',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 2: improvements, tablet app, Formula app. Full August sprint. QA: Pranuz.'},
+    ]],
+    ms:[
+      {d:'2026-07-17',label:'Phase 1 live',color:C.blue,tip:'Phase 1 delivered to Sip & Skip.'},
+      {d:'2026-08-01',label:'Phase 2 start',color:C.blue,tip:'Phase 2 begins.'},
+      {d:'2026-08-31',label:'Phase 2 target',color:C.teal,tip:'Phase 2 feature-complete target.'},
+    ]
+  }]},
+
+  {id:'abhyas',label:'Abhyas — Learning Platform',tag:'product',rows:[
+    {
+      title:'Abhyas — Native Smartboard App',
+      sub:'PRIORITY 1: Flutter native app fixing AI pen + WebView issues · Ajay leads',
+      pivotReason:'MAJOR PIVOT: original plan was a straight revamp + feature sprint (Classroom, Homework, Live Tuition). Blocked by 7+ WebView-level issues affecting live classes on smartboards — screen share failure, fullscreen crash, camera/mic permission failures, whiteboard sizing, backgrounding disconnects. Root cause: Abhyas app WebView does not fully implement Android WebChromeClient callbacks. Decision: build native Flutter app to solve these at once, then bug-fix MVP1, then resume revamp, then features.',
+      planned:[[
+        {s:'2026-06-22',e:'2026-07-15',label:'Planning + revamp Phase 1',color:'#C47B0A',st:'planning',owners:['suraj','ajay'],pivot:'MAJOR PIVOT — original planning phase never became a revamp. 7+ WebView-level issues (AI pen, screen share, fullscreen crash, camera/mic on OEM boards) surfaced as critical class-blocking bugs. Native Flutter app work replaced this window.'},
+        {s:'2026-07-15',e:'2026-08-15',label:'Classroom + Homework + Live Tuition (planned features)',color:'#639922',st:'dev',owners:['ajay','suman'],pivot:'PIVOTED OUT — feature sprint pushed by ~8 weeks. Sequence is now: native app → MVP1 bug fixes → revamp → features.'},
+      ]],
+      tracks:[[
+        {s:'2026-07-15',e:'2026-07-18',label:'Prototype (3 days): pen + whiteboard + BBB sync + mic + camera',color:C.red,st:'dev',owners:['ajay'],tip:'3-day validation spike Jul 15–17: AI pen on native Flutter canvas, whiteboard-BBB sync, mic/echo cancellation, camera on smartboard hardware (Android/Windows/Linux). Go/No-go on Jul 17.'},
+        {s:'2026-07-18',e:'2026-08-01',label:'Native app build — minimal classroom functionality (2 weeks)',color:C.blue,st:'dev',owners:['ajay'],tip:'2-week build: minimal viable classroom app in Flutter. Fixes 7 WebView issues at once (screen share, fullscreen, camera/mic permissions, whiteboard sizing, backgrounding). Backend and BBB engine unchanged. ⚠️ Ajay overlaps +977 S0/S1 in this window.'},
+      ]],
+      ms:[
+        {d:'2026-07-17',label:'Prototype go/no-go',color:C.red,tip:'🔴 Prototype validation decision: does the AI pen work natively on smartboard hardware? Gate for the 2-week build.'},
+        {d:'2026-08-01',label:'Native app MVP delivered',color:C.blue,tip:'Minimal classroom app complete — teachers can conduct class smoothly with AI pen, screen share, fullscreen, camera and mic all working.'},
+      ]
+    },
+    {
+      title:'Abhyas MVP1 — Bug Fixes',
+      sub:'Fix minor issues on previously-released MVP1 · Suman onboarding onto product',
+      pivotReason:'NEW SCOPE: separate bug-fix window on the existing MVP1 (previously released web product) to clean up remaining minor issues. Suman is being onboarded onto Abhyas here — he takes over MVP1 support while Ajay returns to revamp.',
+      planned:[],
+      tracks:[[
+        {s:'2026-08-01',e:'2026-08-15',label:'MVP1 bug fixes + Suman onboarding',color:C.orange,st:'dev',owners:['suman','pranuz','shreya'],tip:'Suman onboards onto Abhyas and fixes minor issues on the previously released MVP1 web product. QA & ground support: Pranuz + Shreya Awasti (shared load).'},
+      ]],
+      ms:[
+        {d:'2026-08-01',label:'Suman starts on Abhyas',color:C.green,tip:'Suman onboarded onto Abhyas MVP1 for bug fixes.'},
+        {d:'2026-08-15',label:'MVP1 bugs cleared',color:C.orange,tip:'MVP1 bug fixes complete. Ajay resumes revamp work.'},
+      ]
+    },
+    {
+      title:'Abhyas — Revamp (V2)',
+      sub:'Ajay returns after native app + bugs · 2–3 week revamp continuation',
+      pivotReason:'RESEQUENCED: revamp was originally the first thing (Jun 22 – Jul 15). Pushed here to after native app + MVP1 bug fixes, since a working classroom experience takes priority. Ajay leads once he\'s free of the native app.',
+      planned:[],
+      tracks:[[
+        {s:'2026-08-15',e:'2026-09-05',label:'Revamp (V2) — 2–3 weeks',color:C.green,st:'dev',owners:['ajay','pranuz','shreya'],tip:'Revamp resumes after native app + MVP1 bugs. Ajay leads. 2–3 week window (Aug 15 – Sep 5). QA & ground support shared: Pranuz + Shreya Awasti.'},
+      ]],
+      ms:[
+        {d:'2026-09-05',label:'Revamp complete',color:C.green,tip:'Abhyas V2 revamp complete. Feature sprint begins next.'},
+      ]
+    },
+    {
+      title:'Abhyas — Features',
+      sub:'Classroom, Homework, Live Tuition — after revamp',
+      pivotReason:'RESEQUENCED: originally planned Jul 15 – Aug 15. Now runs Sep 5 – Oct 15 (~8 weeks later) after the native app → MVP1 bug fix → revamp sequence.',
+      planned:[],
+      tracks:[[
+        {s:'2026-09-05',e:'2026-10-15',label:'Classroom + Homework + Live Tuition + improvements',color:C.green,st:'dev',owners:['ajay','suman','pranuz','shreya'],tip:'Feature sprint on top of the revamped V2: Classroom, Homework feature, Live Tuition integration, platform improvements. QA & ground support: Pranuz + Shreya Awasti.'},
+      ]],
+      ms:[
+        {d:'2026-10-15',label:'Features delivered',color:C.green,tip:'Classroom, Homework, and Live Tuition features shipped.'},
+      ]
+    },
+    {
+      title:'Abhyas Sales & Growth',
+      sub:'FY 83/84 targets · 4 quarters · Owner: Suraj Dhakal',
+      tracks:[[
+        {s:'2026-08-01',e:'2026-10-31',label:'Q1 · Shrawan–Ashoj',color:C.teallt,st:'planning',owners:['dhakal','suraj'],tip:'Q1 (Aug–Oct 2026): 8 new municipalities signed · cumulative 8 · ERDCN MOU unblocked · pipeline: Budhanilkantha, Godawari, Mahalaxmi · hire 2 Growth Officers · ~96 schools onboarded · ~15,920 students (Class 8–10) · ~1,000 teacher accounts · 8 training events.'},
+        {s:'2026-11-01',e:'2027-01-31',label:'Q2 · Kartik–Poush',color:C.teallt,st:'planning',owners:['dhakal'],tip:'Q2 (Nov 2026–Jan 2027): 12 new municipalities · cumulative 20 · ERDCN 1st referral active · pipeline: LMC, Bagmati, +5 new · hire 1 more Growth Officer if needed · ~240 schools · ~39,800 students · ~2,500 teachers · 12 events.'},
+        {s:'2027-02-01',e:'2027-04-30',label:'Q3 · Magh–Chaitra',color:C.teallt,st:'planning',owners:['dhakal'],tip:'Q3 (Feb–Apr 2027): 15 new municipalities · cumulative 35 · ERDCN 3+ referrals · pipeline: Terai districts +8 new · hiring under review · ~420 schools · ~69,650 students · ~4,200 teachers · 15 events.'},
+        {s:'2027-05-01',e:'2027-07-31',label:'Q4 · Baishakh–Ashad',color:C.teallt,st:'planning',owners:['dhakal'],tip:'Q4 (May–Jul 2027): 15 new municipalities · cumulative 50 · ERDCN 5+ referrals · pipeline consolidation +5 · hiring review · ~600 schools · ~99,500 students · ~6,000 teachers · 15 events. FY 83/84 close.'},
+      ]],
+      ms:[
+        {d:'2026-10-31',label:'Q1 close: 8 munis · 96 schools · 15.9k students',color:C.teallt,tip:'Q1 targets: 8 new municipalities signed (cumulative 8) · ERDCN MOU unblocked · ~96 schools onboarded · ~15,920 students reached (Class 8–10) · ~1,000 teacher accounts · 8 centralized training events · 2 Growth Officers hired. Owner: Suraj Dhakal.'},
+        {d:'2027-01-31',label:'Q2 close: 12 munis · 240 schools · 39.8k students',color:C.teallt,tip:'Q2 targets: 12 new municipalities (cumulative 20) · ERDCN 1st referral active · ~240 schools · ~39,800 students · ~2,500 teachers · 12 events. Pipeline: LMC, Bagmati, +5 new. Owner: Suraj Dhakal.'},
+        {d:'2027-04-30',label:'Q3 close: 15 munis · 420 schools · 69.6k students',color:C.teallt,tip:'Q3 targets: 15 new municipalities (cumulative 35) · ERDCN 3+ referrals · ~420 schools · ~69,650 students · ~4,200 teachers · 15 events. Pipeline: Terai districts +8 new. Owner: Suraj Dhakal.'},
+        {d:'2027-07-31',label:'Q4 / FY close: 15 munis · 600 schools · 99.5k students',color:C.red,tip:'🔴 FY 83/84 close — Q4 targets: 15 new municipalities (cumulative 50) · ERDCN 5+ referrals · ~600 schools · ~99,500 students · ~6,000 teachers · 15 events. Pipeline consolidation +5. Owner: Suraj Dhakal.'},
+      ]
+    }
+  ]},
+
+  {id:'mukhi',label:'Mukhi — Identity & Verification',tag:'product',rows:[
+    {
+      title:'Mukhi V2',
+      sub:'Yao ID + Liveness + Face Matching → packaging Sep',
+      pivotReason:'PIVOTED: original plan was to train a custom AI model (data collection + annotation + training). Decided to procure the Yao ID model and combine with existing Liveness + Face Matching models — faster, more reliable, avoids months of data ops.',
+      planned:[[
+        {s:'2026-06-19',e:'2026-06-30',label:'Data collection',color:'#1D9E75',st:'testing',owners:['ajay'],pivot:'DROPPED — data collection phase removed. Procuring Yao ID model instead of custom training.'},
+        {s:'2026-07-01',e:'2026-07-15',label:'Annotation + training',color:'#0F6E56',st:'dev',owners:['ajay'],pivot:'DROPPED — annotation and training removed. Yao ID model is production-ready; no in-house training needed.'},
+        {s:'2026-07-15',e:'2026-08-15',label:'Product packaging',color:'#185FA5',st:'dev',owners:['ajay'],pivot:'DEFERRED — packaging pushed to Sep 1–Oct 15 (was Jul 15–Aug 15). Now integrates procured Yao ID + existing Liveness + Face Matching.'},
+      ]],
+      tracks:[[
+        {s:'2026-06-19',e:'2026-08-31',label:'Yao ID procurement + Liveness & Face Matching planning',color:C.teallt,st:'planning',owners:['ajay'],tip:'Procure Yao ID model. Integrate existing Liveness and Face Matching model.'},
+        {s:'2026-09-01',e:'2026-10-15',label:'Product packaging',color:C.blue,st:'dev',owners:['ajay'],tip:'Mukhi V2 packaging: Yao ID + Liveness + Face Matching → product-ready build.'},
+      ]],
+      ms:[
+        {d:'2026-09-01',label:'Packaging starts',color:C.blue,tip:'Mukhi V2 packaging begins.'},
+        {d:'2026-10-15',label:'V2 packaged (target)',color:C.teal,tip:'Mukhi V2 fully packaged.'},
+      ]
+    },
+    {
+      title:'Mukhi V1',
+      sub:'Discontinued mid-Jul → support only, deployed on MOCO infra',
+      pivotReason:'PIVOTED: originally planned to run Zum Rides testing through Sep 15 with active dev support. Decision to discontinue active development mid-July — Mukhi V1 is stable, support-only mode on MOCO infra frees Ajay for V2 packaging + +977.',
+      planned:[[
+        {s:'2026-06-19',e:'2026-09-15',label:'Zum Rides — testing phase active',color:'#1D9E75',st:'testing',owners:['ajay'],pivot:'PIVOTED — active dev discontinued Jul 15. V1 moves to support-only mode on MOCO infra to free Ajay for V2 packaging and +977 sprints.'},
+      ]],
+      tracks:[[
+        {s:'2026-06-19',e:'2026-07-15',label:'Zum Rides testing (active dev discontinued)',color:C.teallt,st:'testing',owners:['ajay'],tip:'Zum Rides testing phase. Active development discontinued from mid-July.'},
+        {s:'2026-07-15',e:'2026-12-17',label:'Support only — deployed on MOCO infra',color:C.gray,st:'support',owners:['ajay'],tip:'From Jul 15: Mukhi V1 discontinued from active dev. Support only. Deployed and running on MOCO infrastructure.'},
+      ]],
+      ms:[
+        {d:'2026-07-15',label:'Discontinued → support mode',color:C.gray,tip:'Mukhi V1 moves to support-only mode on MOCO infra.'},
+      ]
+    }
+  ]},
+
+  {id:'apple',label:'Apple Entertainment',tag:'client',rows:[
+    {
+      title:'Apple — Branding',
+      sub:'Handled by Kris (freelancer) · Suraj R. & Rahul in loop',
+      pivotReason:'PIVOTED: originally Rahul was to complete branding by Jul 3 in-house. Extended scope + Rahul needed for Apple website design and +977 design track. Hired Kris (freelancer) to own branding through Jul 31.',
+      planned:[[
+        {s:'2026-06-20',e:'2026-06-24',label:'Print handover (Rahul)',color:'#534AB7',st:'consulting',owners:['rahul','suraj'],pivot:'Same window — no change.'},
+        {s:'2026-06-24',e:'2026-07-03',label:'Remaining branding (Rahul)',color:'#0F6E56',st:'dev',owners:['rahul'],pivot:'PIVOTED — scope grew, timeline extended to Jul 31. Kris (freelancer) hired to own branding so Rahul can focus on Apple website + +977 design.'},
+      ]],
+      tracks:[[
+        {s:'2026-06-20',e:'2026-06-24',label:'Print handover',color:C.purple,st:'consulting',owners:['kris','rahul','suraj'],tip:'Print assets handed over Jun 20–24. Kris (hired freelancer) leads; Suraj R. and Rahul in loop.'},
+        {s:'2026-06-24',e:'2026-07-31',label:'Remaining branding deliverables (Kris)',color:C.teal,st:'dev',owners:['kris','rahul','suraj'],tip:'All branding deliverables complete by Jul 31. Handled by Kris (hired freelancer); Suraj R. and Rahul kept in loop.'},
+      ]],
+      ms:[
+        {d:'2026-06-24',label:'Prints delivered',color:C.purple,tip:'Print assets delivered.'},
+        {d:'2026-07-31',label:'Branding complete',color:C.teal,tip:'Full branding package complete.'},
+      ]
+    },
+    {
+      title:'Apple — Website',
+      sub:'Design Jul 24 (Rahul) · Dev Jul 20–Aug 31 (Umang)',
+      pivotReason:'PIVOTED: original plan had Suman on development starting Jul 1. Reassigned to Umang (management + dev) to free Suman for RMS Phase 2 + Abhyas. Design timeline slipped from Jun 23 handoff to Jul 24. Dev extended to Aug 31 (was Aug 15).',
+      planned:[
+        [{s:'2026-06-19',e:'2026-06-23',label:'Homepage first draft (Rahul)',color:'#534AB7',st:'consulting',owners:['rahul'],pivot:'PIVOTED — homepage draft shifted from Jun 23 to Jul 24 (design work paced with other Rahul priorities).'}],
+        [{s:'2026-07-01',e:'2026-08-15',label:'Website development (Suman)',color:'#185FA5',st:'dev',owners:['suman'],pivot:'PIVOTED — Suman reassigned to RMS Phase 2 + Abhyas. Umang now leads Apple website dev Jul 20–Aug 31. Pranuz added for testing.'}],
+      ],
+      tracks:[
+        [{s:'2026-06-19',e:'2026-07-24',label:'Design — all pages (Rahul)',color:C.purple,st:'design',owners:['rahul'],tip:'All pages designed by Jul 24. Suraj R. coordinates and removes blockers.'}],
+        [{s:'2026-07-20',e:'2026-08-31',label:'Website development (Umang) + testing (Pranuz)',color:C.blue,st:'dev',owners:['umang','suraj','pranuz'],tip:'Development Jul 20–Aug 31. Umang: dev and management. Pranuz: testing. Suraj R.: monitors and unblocks.'}],
+      ],
+      ms:[
+        {d:'2026-07-24',label:'Design finalised',color:C.purple,tip:'All Apple website designs signed off.'},
+        {d:'2026-08-31',label:'Website live',color:C.blue,tip:'Apple Entertainment website goes live.'},
+      ]
+    },
+    {
+      title:'Apple — Consulting',
+      sub:'Closed early July',
+      pivotReason:'PIVOTED: originally ongoing through Sep 15. Closed early July — client concluded consulting engagement early. Frees Suraj R. time for +977 PM role and Olive & Lime handover.',
+      planned:[[
+        {s:'2026-06-19',e:'2026-09-15',label:'Ongoing consulting engagement',color:'#534AB7',st:'consulting',owners:['suraj'],pivot:'PIVOTED — engagement closed early July (was to run through Sep 15). Client concluded consulting phase; Suraj R. reallocated to +977 PM.'},
+      ]],
+      tracks:[[
+        {s:'2026-06-19',e:'2026-07-07',label:'Consulting (closed early July)',color:C.purple,st:'consulting',owners:['suraj'],tip:'Consulting engagement closed early July.'},
+      ]],
+      ms:[{d:'2026-07-07',label:'Consulting closed',color:C.purple,tip:'Apple consulting concluded.'}]
+    }
+  ]},
+
+  {id:'olive',label:'Olive & Lime — incl. +977 OTT',tag:'977',rows:[
+    {
+      title:'O&L Consulting',
+      sub:'Expired July — OTT report sent, no further engagement',
+      pivotReason:'CLOSED EARLY + NEW SCOPE: original consulting was to run discovery → infra report → ongoing advisory through Sep 15. Closed early July after report delivery. HOWEVER, Olive & Lime signed +977 as a full product build (new project below) — much bigger engagement than the consulting retainer.',
+      planned:[[
+        {s:'2026-06-19',e:'2026-07-31',label:'Discovery + requirements + infra + budget',color:'#534AB7',st:'consulting',owners:['suraj'],pivot:'DELIVERED EARLY — discovery report delivered and consulting concluded early July (planned till Jul 31).'},
+        {s:'2026-08-01',e:'2026-09-15',label:'Infra & budget report delivery (planned)',color:'#7F77DD',st:'consulting',owners:['suraj'],pivot:'PIVOTED OUT — this phase never happened as ongoing consulting. Instead, Olive & Lime signed +977 as a full product build (new project below). Consulting retainer closed.'},
+      ]],
+      tracks:[[
+        {s:'2026-06-19',e:'2026-07-01',label:'Consulting (expired July)',color:C.purple,st:'consulting',owners:['suraj'],tip:'Olive & Lime consulting engagement expired from July. OTT report sent. No further engagement on consulting.'},
+      ]],
+      ms:[
+        {d:'2026-07-01',label:'OTT report sent · engagement closed',color:C.purple,tip:'OTT infrastructure & budget report delivered. Consulting engagement concluded.'},
+      ]
+    },
+    {
+      title:'+977 Dev Track',
+      sub:'Olive & Lime product · Ajay lead · New hire Aug 31 · QA Pranuz · Suraj R. PM',
+      pivotReason:'NEW PROJECT: not in the original roadmap. Olive & Lime signed a full OTT platform build (short-drama, Netflix-style) after consulting engagement. 5-month plan through Dec 17 with sprints S0–S5, then R2, R3/R4.',
+      planned:[],
+      tracks:[[
+        {s:'2026-07-17',e:'2026-07-23',label:'S0 — Infra + setup + hiring',color:C.br,st:'sprint',owners:['ajay','suraj'],tip:'S0: Infra setup, outreach, hiring window. Legal pages (M-01X/Y), Bunny/DataHub dev setup (M-01), ADP enrollment (M-00D). Sprint planning S1–S5.'},
+        {s:'2026-07-24',e:'2026-08-06',label:'S1 — Identity + CMS foundations',color:C.br2,st:'sprint',owners:['ajay','pranuz'],tip:'S1: Features 1–5 (Identity), 26–28 (CMS ingest/transcode), Crashlytics + Firebase Analytics (M-01B). QA: Pranuz. Target: M-07.'},
+        {s:'2026-08-07',e:'2026-08-20',label:'S2 — Core watch loop',color:C.br,st:'sprint',owners:['ajay','pranuz'],tip:'S2: Features 6–8,10,13 (Discovery), 15–16,19 (Player), 29–31 (CMS), 42–44 cold-start. Firebase events (M-01C). QA: Pranuz. Target: M-08.'},
+        {s:'2026-08-21',e:'2026-09-03',label:'S3 — Engagement + new hire joins',color:C.br2,st:'sprint',owners:['ajay','pranuz'],tip:'S3: Features 9,11–12,14 (Discovery), 33 (CMS dashboard), 42–44 cold-start. New hire joins Aug 31. QA: Pranuz. Target: M-10.'},
+        {s:'2026-09-04',e:'2026-09-17',label:'S4 — Monetisation + App Store RC',color:C.br,st:'sprint',owners:['ajay','suraj','pranuz'],tip:'S4: Features 17–18 (Player), 20 (Coin), 21–24 (Ads), 25 (Notifs), 32 (CMS), 37–38 (Support), 45 (iOS). RC to App Store Sep 17 (M-11A). QA: Pranuz.'},
+        {s:'2026-09-18',e:'2026-10-01',label:'S5 — Hardening + launch prep',color:C.br2,st:'sprint',owners:['ajay','pranuz'],tip:'S5: Features 34–36 (CRM), 39–40 (Analytics), 41 (Platform), 45 completes (iOS). Overlaps App Store review. QA: Pranuz.'},
+        {s:'2026-10-02',e:'2026-11-12',label:'R2 — DCB + coin wallet (Kartik overlap)',color:C.br,st:'sprint',owners:['ajay','pranuz'],tip:'R2: Features 46–63: DCB, coin ledger, Google+Apple Sign-In, manual quality, notifications, executive analytics. QA: Pranuz. Target: M-16/M-18.'},
+        {s:'2026-11-13',e:'2026-12-17',label:'R3/R4 — Personalisation + subscription + offline',color:C.br2,st:'sprint',owners:['ajay','pranuz'],tip:'R3 (64–94) + R4 (95–112): Personalisation, subscription, offline, retention. QA: Pranuz. Contractual target Dec 17.'},
+      ]],
+      ms:[
+        {d:'2026-07-17',label:'S0 kick-off',color:C.br,tip:'Sprint 0 begins.'},
+        {d:'2026-07-24',label:'S1 start',color:C.br2,tip:'Sprint 1: Identity + CMS.'},
+        {d:'2026-08-07',label:'S2 start',color:C.br,tip:'Sprint 2: Core watch loop.'},
+        {d:'2026-08-21',label:'S3 start',color:C.br2,tip:'Sprint 3: Engagement.'},
+        {d:'2026-08-31',label:'New hire joins',color:C.red,tip:'🔴 Confirmed new dev joins mid-S3.'},
+        {d:'2026-09-04',label:'S4 start',color:C.br,tip:'Sprint 4: Monetisation.'},
+        {d:'2026-09-17',label:'App Store RC (M-11A)',color:C.red,tip:'🔴 RC submitted. MVP1 live gated on approval. Rejection cycles push into holiday period.'},
+        {d:'2026-09-18',label:'S5 start',color:C.br2,tip:'Sprint 5: Hardening.'},
+        {d:'2026-10-17',label:'MVP1 target live',color:C.red,tip:'🔴 MVP1 go-live target Oct 17 — best case, zero rejection cycles. One day before Kartik.'},
+        {d:'2026-10-02',label:'R2 start',color:C.br,tip:'R2: DCB + coin wallet.'},
+        {d:'2026-11-13',label:'R3/R4 start',color:C.br2,tip:'R3/R4: Personalisation, subscription.'},
+        {d:'2026-12-17',label:'R3/R4 target done',color:C.teal,tip:'Contractual Month 5 target. R3/R4 complete.'},
+      ]
+    },
+    {
+      title:'+977 Design (Rahul)',
+      sub:'One sprint ahead of dev · Final deliverable S4',
+      pivotReason:'NEW PROJECT: Rahul assigned as +977 designer, running one sprint ahead of dev through MVP1.',
+      planned:[],
+      tracks:[[
+        {s:'2026-07-17',e:'2026-07-23',label:'Design S1 — mobile app',color:C.ind,st:'design',owners:['rahul'],tip:'Rahul designs S1 screens during S0. Must be approved before S1 dev starts.'},
+        {s:'2026-07-24',e:'2026-08-06',label:'Design S2',color:C.indlt,st:'design',owners:['rahul'],tip:'Designs S2 screens during S1.'},
+        {s:'2026-08-07',e:'2026-08-20',label:'Design S3',color:C.ind,st:'design',owners:['rahul'],tip:'Designs S3 screens during S2.'},
+        {s:'2026-08-21',e:'2026-09-03',label:'Design S4',color:C.indlt,st:'design',owners:['rahul'],tip:'Designs S4 screens during S3.'},
+        {s:'2026-09-04',e:'2026-09-17',label:'Design S5 — final deliverable',color:C.ind,st:'design',owners:['rahul'],tip:'Last design deliverable for MVP1 (tight-window, Section 04).'},
+      ]],
+      ms:[{d:'2026-09-17',label:'Rahul design done',color:C.ind,tip:'Final design deliverable for +977 MVP1 approved.'}]
+    }
+  ]},
+
+  {id:'clients',label:'Other Client Work',tag:'client',rows:[
+    {
+      title:'NMCTH Website',
+      sub:'Contract pending — dev contingent on signature',
+      tracks:[[
+        {s:'2026-06-19',e:'2026-07-01',label:'Awaiting contract signature',color:C.gray,st:'blocked',owners:['suraj'],tip:'Contract sent. Awaiting NMCTH signature.',dashed:true},
+        {s:'2026-07-01',e:'2026-09-30',label:'Website development (if signed)',color:C.blue,st:'dev',owners:['suman'],tip:'Dev starts July if signed. NPR 18,00,000 Phase 1.',dashed:true},
+      ]],
+      ms:[
+        {d:'2026-07-01',label:'Contract gate',color:C.red,tip:'🔴 Contract must be signed to start dev.'},
+        {d:'2026-08-15',label:'Mid review',color:C.gray,tip:'Mid-project review (tentative).'},
+      ]
+    }
+  ]},
+
+  {id:'ops',label:'Operations & Procurement',tag:'ops',rows:[{
+    title:'Formula Hardware',
+    sub:'100 devices received Jul 6 → QA Jul 7–31 (Amit)',
+    pivotReason:'AHEAD OF SCHEDULE: devices arrived Jul 6 (planned Jul 10). QA reassigned from Pranuz to Amit to consolidate hardware ownership under Amit.',
+    planned:[[
+      {s:'2026-06-19',e:'2026-07-10',label:'Awaiting shipment (100 devices)',color:'#993556',st:'procurement',owners:['umang','abishek'],pivot:'AHEAD — devices received Jul 6 (planned Jul 10). Customs cleared faster than expected.'},
+      {s:'2026-07-10',e:'2026-07-20',label:'Customs + delivery',color:'#C4698A',st:'procurement',owners:['umang'],pivot:'MERGED — customs and delivery collapsed into the shipment bar since devices arrived directly.'},
+      {s:'2026-07-20',e:'2026-08-15',label:'QA + deployment prep (Pranuz)',color:'#BA7517',st:'support',owners:['pranuz'],pivot:'REASSIGNED — QA moved from Pranuz to Amit. QA window pulled forward to Jul 7–31 (was Jul 20–Aug 15).'},
+    ]],
+    tracks:[[
+      {s:'2026-06-19',e:'2026-07-06',label:'Shipment (received Jul 6)',color:C.pink,st:'procurement',owners:['umang','abishek'],tip:'100 Formula devices from China. Received Jul 6.'},
+      {s:'2026-07-07',e:'2026-07-31',label:'QA + deployment preparation (Amit)',color:C.amber,st:'support',owners:['amit'],tip:'Amit runs QA, support, and testing on 100 devices Jul 7–31. Deployment preparation.'},
+    ]],
+    ms:[
+      {d:'2026-07-06',label:'Devices received',color:C.pink,tip:'100 devices received.'},
+      {d:'2026-07-31',label:'QA complete',color:C.amber,tip:'Hardware QA complete.'},
+    ]
+  }]},
+];
+
+function esc(s){return(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;').replace(/\n/g,' ')}
+
+function ownerPills(ids){
+  return ids.map(id=>{
+    const m=TMEM[id];if(!m)return'';
+    return`<span class="opill" style="background:${m.color}18;color:${m.color};border:0.5px solid ${m.color}40"><span class="oa" style="background:${m.color}">${m.initials}</span>${m.name}</span>`;
+  }).join('');
+}
+
+function build(){
+  const tw=TW();
+  const g=document.getElementById('gantt');
+  let h='';
+
+  h+=`<div class="gantt-hrow">`;
+  h+=`<div class="hcorner">Track</div>`;
+  h+=`<div class="htimeline" style="width:${tw}px;position:sticky">`;
+  const todayOff=((new Date(2026,6,15))-TS)/864e5;
+  const todayPx=(todayOff/TDAYS*NCOLS*CW).toFixed(1);
+  h+=`<div class="today-header-marker" style="left:${todayPx}px"><div class="today-badge">TODAY</div><div class="today-tick"></div></div>`;
+  h+=`<div class="hcols">`;
+  for(let i=0;i<NCOLS;i++){
+    const maj=isMajor(i);const cd=colDate(i);
+    h+=`<div class="hcol${maj?' major month-line':''}" style="flex:0 0 ${CW}px;width:${CW}px">${maj?cd.mo+' '+cd.d:''}</div>`;
+  }
+  h+=`</div></div></div>`;
+
+  for(const grp of GROUPS){
+    h+=`<div class="grow" data-gid="${grp.id}" onclick="toggleGroup('${grp.id}')">`;
+    h+=`<div class="lc"><div class="glabel"><span class="garr" id="arr-${grp.id}">▾</span>${grp.label}</div></div>`;
+    h+=`<div class="tc" style="width:${tw}px;min-width:${tw}px">`;
+    for(let i=1;i<NCOLS;i++)if(isMajor(i))h+=`<div class="mline" style="left:${i*CW}px"></div>`;
+    h+=`</div></div>`;
+
+    for(const row of grp.rows){
+      const h_=rh(row);
+      const rowStatuses=[...new Set(row.tracks.flat().map(b=>b.st).filter(Boolean))];
+      const rowOwners=[...new Set(row.tracks.flat().flatMap(b=>b.owners||[]))];
+      const curLen=row.tracks.length;
+      const baseH = Math.max(54, VP*2 + curLen*TH + (curLen-1)*TG);
+      h+=`<div class="drow" data-group="${grp.id}" data-tag="${grp.tag}" data-statuses="${rowStatuses.join(',')}" data-owners="${rowOwners.join(',')}" data-base-h="${baseH}" data-full-h="${h_}" style="height:${h_}px">`;
+      h+=`<div class="lc" style="height:${h_}px"><div class="row-title">${row.title}</div><div class="row-sub">${row.sub||''}</div><div class="owner-pills">${ownerPills(rowOwners)}</div></div>`;
+      h+=`<div class="tc" style="width:${tw}px;min-width:${tw}px;height:${h_}px">`;
+      h+=`<div class="today-line" style="left:${todayPx}px"></div>`;
+      for(let i=1;i<NCOLS;i++)if(isMajor(i))h+=`<div class="mline" style="left:${i*CW}px"></div>`;
+
+      const planLen=(row.planned&&row.planned.length)?row.planned.length:0;
+      const PH=18, PG=3;
+      const planStackHeight = planLen>0 ? (planLen*PH + (planLen-1)*PG + 6) : 0;
+
+      // Draw PLANNED bars first (top of the row), each with a data-plan-shift attr for shifting current bars
+      if(planLen>0){
+        (row.planned||[]).forEach((segs,ti)=>{
+          const top=VP+ti*(PH+PG);
+          segs.forEach(bar=>{
+            const pivotText = bar.pivot || 'Planned scope — see current bar below.';
+            const rowPivotNote = row.pivotReason ? '<br><br><b>Why we pivoted:</b> ' + row.pivotReason : '';
+            const fullTip = pivotText + rowPivotNote;
+            const tip=`showTip(event,'${esc(fullTip)}','⚠️ PLANNED: ${esc(bar.label)}','${(bar.owners||[]).map(id=>TMEM[id]?.name||id).join(', ')}','${bar.st||''}','${fmtDate(bar.s)} → ${fmtDate(bar.e)} (was planned)')`;
+            h+=`<div class="bar planned" data-planned="1" data-st="${bar.st||''}" style="left:${px(bar.s)};width:${pw(bar.s,bar.e)};top:${top}px;background:${bar.color}" onmouseenter="${tip}" onmouseleave="hideTip()">${esc(bar.label)}</div>`;
+          });
+        });
+      }
+
+      // Draw CURRENT bars below planned stack — store shift amount as data attr for toggle
+      row.tracks.forEach((segs,ti)=>{
+        const top=VP+planStackHeight+ti*(TH+TG);
+        segs.forEach(bar=>{
+          const oa=(bar.owners||[]).join(',');
+          const tip=`showTip(event,'${esc(bar.tip)}','${esc(bar.label)}','${(bar.owners||[]).map(id=>TMEM[id]?.name||id).join(', ')}','${bar.st||''}','${fmtDate(bar.s)} → ${fmtDate(bar.e)}')`;
+          const baseTop = VP + ti*(TH+TG);
+          if(bar.dashed){
+            h+=`<div class="bar dashed current-bar" data-owners="${oa}" data-st="${bar.st||''}" data-base-top="${baseTop}" data-full-top="${top}" style="left:${px(bar.s)};width:${pw(bar.s,bar.e)};top:${top}px;border-color:${bar.color};color:${bar.color}" onmouseenter="${tip}" onmouseleave="hideTip()">${esc(bar.label)}</div>`;
+          }else{
+            h+=`<div class="bar current-bar" data-owners="${oa}" data-st="${bar.st||''}" data-base-top="${baseTop}" data-full-top="${top}" style="left:${px(bar.s)};width:${pw(bar.s,bar.e)};top:${top}px;background:${bar.color}" onmouseenter="${tip}" onmouseleave="hideTip()">${esc(bar.label)}</div>`;
+          }
+        });
+      });
+
+      (row.ms||[]).forEach(ms=>{
+        const tip=`showTip(event,'${esc(ms.tip)}','${esc(ms.label)}','','milestone','${fmtDate(ms.d)}')`;
+        h+=`<div class="ms" style="left:calc(${px(ms.d)} - 6px);top:50%;background:${ms.color}" onmouseenter="${tip}" onmouseleave="hideTip()"></div>`;
+      });
+
+      h+=`</div></div>`;
+    }
+  }
+  g.innerHTML=h;
+}
+
+let activeStatuses=new Set(),activeTrackTag='all',activePeople=new Set();
+
+function buildStatusChips(){
+  const row=document.getElementById('statusRow');
+  let h='';
+  ALL_STATUSES.forEach(st=>{
+    const b=BADGE[st];
+    h+=`<button class="chip" onclick="toggleStatus('${st}',this)">${b[2]}</button>`;
+  });
+  row.innerHTML=`<div class="filter-label">Status</div>`+h;
+}
+function toggleStatus(st,btn){
+  if(activeStatuses.has(st)){activeStatuses.delete(st);btn.classList.remove('active')}
+  else{activeStatuses.add(st);btn.classList.add('active')}
+  applyFilters();
+}
+function buildPeopleChips(){
+  const row=document.getElementById('peopleRow');
+  let h='';
+  TEAM.forEach(m=>{
+    h+=`<button class="pchip" id="pc-${m.id}" onclick="togglePerson('${m.id}',this)"><span class="avatar" style="background:${m.color}">${m.initials}</span>${m.name}</button>`;
+  });
+  row.innerHTML=`<div class="filter-label">People</div>`+h;
+}
+function togglePerson(id,btn){
+  if(activePeople.has(id)){activePeople.delete(id);btn.classList.remove('active')}
+  else{activePeople.add(id);btn.classList.add('active')}
+  applyFilters();applyEngage();
+}
+function trackFilter(tag,btn){
+  document.querySelectorAll('.filterbar .filter-row:first-child .chip').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  activeTrackTag=tag;applyFilters();
+}
+function applyFilters(){
+  document.querySelectorAll('.drow').forEach(el=>{
+    const tag=el.dataset.tag||'';
+    const sts=(el.dataset.statuses||'').split(',').filter(Boolean);
+    const own=(el.dataset.owners||'').split(',').filter(Boolean);
+    let show=true;
+    if(activeTrackTag!=='all'&&tag!==activeTrackTag)show=false;
+    if(activeStatuses.size>0&&!sts.some(s=>activeStatuses.has(s)))show=false;
+    if(activePeople.size>0&&!own.some(o=>activePeople.has(o)))show=false;
+    el.classList.toggle('hidden',!show);
+  });
+  document.querySelectorAll('.grow').forEach(el=>{
+    const gid=el.dataset.gid;
+    const grp=GROUPS.find(g=>g.id===gid);
+    if(!grp)return;
+    el.classList.toggle('hidden',activeTrackTag!=='all'&&grp.tag!==activeTrackTag);
+  });
+}
+function applyEngage(){
+  const has=activePeople.size>0;
+  document.querySelectorAll('.bar').forEach(b=>{
+    const own=(b.dataset.owners||'').split(',').filter(Boolean);
+    if(!has){b.classList.remove('dimmed','highlighted');return}
+    const m=own.some(o=>activePeople.has(o));
+    b.classList.toggle('dimmed',!m);b.classList.toggle('highlighted',m);
+  });
+  document.querySelectorAll('.ms').forEach(m=>m.classList.toggle('dimmed',has));
+}
+
+function fmtDate(s){
+  if(!s)return'';
+  const[y,m,d]=s.split('-').map(Number);
+  const mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1];
+  return`${mo} ${d}, ${y}`;
+}
+function showTip(e,body,title,owner,status,dateRange){
+  const t=document.getElementById('tt');
+  const b=BADGE[status]||BADGE.milestone;
+  let inner=`<div class="ttt">${title}</div>`;
+  if(b)inner+=`<span class="ttbadge" style="background:${b[0]};color:${b[1]}">${b[2]}</span><br>`;
+  if(dateRange)inner+=`<div style="font-size:10px;color:#333;font-weight:600;margin-top:4px">📅 ${dateRange}</div>`;
+  inner+=`<div class="ttb" style="margin-top:3px">${body}</div>`;
+  if(owner)inner+=`<div class="ttown">👤 ${owner}</div>`;
+  t.innerHTML=inner;t.classList.add('show');posT(e);
+}
+function hideTip(){document.getElementById('tt').classList.remove('show')}
+function posT(e){
+  const t=document.getElementById('tt');
+  let x=e.clientX+14,y=e.clientY+14;
+  if(x+290>window.innerWidth)x=e.clientX-302;
+  if(y+250>window.innerHeight)y=e.clientY-250;
+  t.style.left=x+'px';t.style.top=y+'px';
+}
+document.addEventListener('mousemove',e=>{if(document.getElementById('tt').classList.contains('show'))posT(e)});
+
+const collapsed={};
+function toggleGroup(id){
+  collapsed[id]=!collapsed[id];
+  document.querySelectorAll(`[data-group="${id}"]`).forEach(el=>el.classList.toggle('hidden',collapsed[id]));
+  const arr=document.getElementById('arr-'+id);
+  if(arr)arr.style.transform=collapsed[id]?'rotate(-90deg)':'';
+}
+function expandAll(){
+  GROUPS.forEach(g=>{
+    collapsed[g.id]=false;
+    document.querySelectorAll(`[data-group="${g.id}"]`).forEach(el=>el.classList.remove('hidden'));
+    const arr=document.getElementById('arr-'+g.id);
+    if(arr)arr.style.transform='';
+  });
+}
+
+// ── PLANNED-VS-CURRENT TOGGLE ──
+let showingPlanned = true; // default: show planned bars so pivots are visible on load
+function applyPlannedVisibility(){
+  document.querySelectorAll('.drow').forEach(row=>{
+    row.classList.toggle('planned-row-hidden', !showingPlanned);
+    const baseH = row.dataset.baseH;
+    const fullH = row.dataset.fullH;
+    const targetH = showingPlanned ? fullH : baseH;
+    row.style.height = targetH + 'px';
+    const lc = row.querySelector('.lc'); if(lc) lc.style.height = targetH + 'px';
+    const tc = row.querySelector('.tc'); if(tc) tc.style.height = targetH + 'px';
+    // Move current bars up when planned is hidden
+    row.querySelectorAll('.current-bar').forEach(b=>{
+      const top = showingPlanned ? b.dataset.fullTop : b.dataset.baseTop;
+      b.style.top = top + 'px';
+    });
+  });
+}
+function togglePlanned(btn){
+  showingPlanned = !showingPlanned;
+  btn.innerHTML = showingPlanned ? '👁 Hide planned' : '👁 Show planned';
+  btn.style.background = showingPlanned ? '#FFF9E6' : '';
+  btn.style.borderColor = showingPlanned ? '#E6C300' : '';
+  btn.style.color = showingPlanned ? '#7A5200' : '';
+  applyPlannedVisibility();
+}
+
+build();buildStatusChips();buildPeopleChips();
+applyPlannedVisibility();
+</script>
+</body>
+</html>
