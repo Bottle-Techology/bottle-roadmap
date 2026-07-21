@@ -274,39 +274,39 @@ const GROUPS=[
     },
     {
       title:'Abhyas MVP1 — Bug Fixes',
-      sub:'Fix minor issues on previously-released MVP1 · Suman onboarding onto product',
-      pivotReason:'NEW SCOPE: separate bug-fix window on the existing MVP1 (previously released web product) to clean up remaining minor issues. Suman is being onboarded onto Abhyas here — he takes over MVP1 support while Ajay returns to revamp.',
+      sub:'Fix minor issues on previously-released MVP1 · Ajay & Suman, in parallel with Revamp V2, from Jul 27',
+      pivotReason:'RESEQUENCED: bug fixes now run in parallel with Revamp V2 (not sequential) starting Jul 27, once the native app MVP is delivered. Ajay and Suman split time across both tracks together instead of a single owner per phase.',
       planned:[],
       tracks:[[
-        {s:'2026-08-01',e:'2026-08-15',label:'MVP1 bug fixes + Suman onboarding',color:C.orange,st:'dev',owners:['suman','pranuz','shreya'],tip:'Suman onboards onto Abhyas and fixes minor issues on the previously released MVP1 web product. QA & ground support: Pranuz + Shreya Awasti (shared load).'},
+        {s:'2026-07-27',e:'2026-08-10',label:'MVP1 bug fixes (Ajay + Suman)',color:C.orange,st:'dev',owners:['ajay','suman','pranuz','shreya'],tip:'Ajay and Suman fix minor issues on the previously released MVP1 web product, in parallel with Revamp V2. QA & ground support: Pranuz + Shreya Awasti (shared load).'},
       ]],
       ms:[
-        {d:'2026-08-01',label:'Suman starts on Abhyas',color:C.green,tip:'Suman onboarded onto Abhyas MVP1 for bug fixes.'},
-        {d:'2026-08-15',label:'MVP1 bugs cleared',color:C.orange,tip:'MVP1 bug fixes complete. Ajay resumes revamp work.'},
+        {d:'2026-07-27',label:'Bug fixes + revamp start (parallel)',color:C.green,tip:'Ajay and Suman start MVP1 bug fixes and Revamp V2 in parallel.'},
+        {d:'2026-08-10',label:'MVP1 bugs cleared',color:C.orange,tip:'MVP1 bug fixes complete.'},
       ]
     },
     {
       title:'Abhyas — Revamp (V2)',
-      sub:'Ajay returns after native app + bugs · 2–3 week revamp continuation',
-      pivotReason:'RESEQUENCED: revamp was originally the first thing (Jun 22 – Jul 15). Pushed here to after native app + MVP1 bug fixes, since a working classroom experience takes priority. Ajay leads once he\'s free of the native app.',
+      sub:'Ajay & Suman, in parallel with MVP1 bug fixes, from Jul 27 · 3 weeks',
+      pivotReason:'RESEQUENCED: revamp was originally the first thing (Jun 22 – Jul 15), then pushed after MVP1 bug fixes as a sequential step. Now runs in parallel with MVP1 bug fixes starting Jul 27, with Ajay and Suman both on it.',
       planned:[],
       tracks:[[
-        {s:'2026-08-15',e:'2026-09-05',label:'Revamp (V2) — 2–3 weeks',color:C.green,st:'dev',owners:['ajay','pranuz','shreya'],tip:'Revamp resumes after native app + MVP1 bugs. Ajay leads. 2–3 week window (Aug 15 – Sep 5). QA & ground support shared: Pranuz + Shreya Awasti.'},
+        {s:'2026-07-27',e:'2026-08-17',label:'Revamp (V2) — 3 weeks (Ajay + Suman)',color:C.green,st:'dev',owners:['ajay','suman','pranuz','shreya'],tip:'Revamp runs in parallel with MVP1 bug fixes. Ajay and Suman both on it. 3-week window (Jul 27 – Aug 17). QA & ground support shared: Pranuz + Shreya Awasti.'},
       ]],
       ms:[
-        {d:'2026-09-05',label:'Revamp complete',color:C.green,tip:'Abhyas V2 revamp complete. Feature sprint begins next.'},
+        {d:'2026-08-17',label:'Revamp complete',color:C.green,tip:'Abhyas V2 revamp complete. Feature sprint begins next.'},
       ]
     },
     {
       title:'Abhyas — Features',
       sub:'Classroom, Homework, Live Tuition — after revamp',
-      pivotReason:'RESEQUENCED: originally planned Jul 15 – Aug 15. Now runs Sep 5 – Oct 15 (~8 weeks later) after the native app → MVP1 bug fix → revamp sequence.',
+      pivotReason:'RESEQUENCED: originally planned Jul 15 – Aug 15, then Sep 5 – Oct 15. Now runs Aug 17 – Sep 26, since MVP1 bug fixes and Revamp V2 run in parallel (Jul 27 – Aug 17) instead of sequentially.',
       planned:[],
       tracks:[[
-        {s:'2026-09-05',e:'2026-10-15',label:'Classroom + Homework + Live Tuition + improvements',color:C.green,st:'dev',owners:['ajay','suman','pranuz','shreya'],tip:'Feature sprint on top of the revamped V2: Classroom, Homework feature, Live Tuition integration, platform improvements. QA & ground support: Pranuz + Shreya Awasti.'},
+        {s:'2026-08-17',e:'2026-09-26',label:'Classroom + Homework + Live Tuition + improvements',color:C.green,st:'dev',owners:['ajay','suman','pranuz','shreya'],tip:'Feature sprint on top of the revamped V2: Classroom, Homework feature, Live Tuition integration, platform improvements. QA & ground support: Pranuz + Shreya Awasti.'},
       ]],
       ms:[
-        {d:'2026-10-15',label:'Features delivered',color:C.green,tip:'Classroom, Homework, and Live Tuition features shipped.'},
+        {d:'2026-09-26',label:'Features delivered',color:C.green,tip:'Classroom, Homework, and Live Tuition features shipped.'},
       ]
     },
     {
@@ -526,7 +526,7 @@ function build(){
   h+=`<div class="gantt-hrow">`;
   h+=`<div class="hcorner">Track</div>`;
   h+=`<div class="htimeline" style="width:${tw}px;position:sticky">`;
-  const todayOff=((new Date(2026,6,15))-TS)/864e5;
+  const todayOff=((new Date(2026,6,21))-TS)/864e5;
   const todayPx=(todayOff/TDAYS*NCOLS*CW).toFixed(1);
   h+=`<div class="today-header-marker" style="left:${todayPx}px"><div class="today-badge">TODAY</div><div class="today-tick"></div></div>`;
   h+=`<div class="hcols">`;
