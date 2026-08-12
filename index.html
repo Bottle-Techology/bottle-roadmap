@@ -235,18 +235,23 @@ const GROUPS=[
 
   {id:'rms',label:'Formula RMS',tag:'product',rows:[{
     title:'Formula RMS',
-    sub:'Phase 1 → cooling → Phase 2 Aug 1 · QA & support Pranuz (all phases)',
-    pivotReason:'Phase 1 delivery pushed from Jun 30 to Jul 17 due to IRD integration complexity. Cooling compressed to 2 weeks (was 4). Phase 2 timeline held.',
+    sub:'Phase 1 → cooling + credit/customer mgmt (Jul 23–30) → Phase 2 Aug 1 · QA & support Pranuz (all phases)',
+    pivotReason:'Phase 1 delivery pushed from Jun 30 to Jul 17 due to IRD integration complexity. Cooling compressed to 2 weeks (was 4). Credit management + customer registration module pulled forward into Jul 23–30, running alongside cooling period bug fixes, ahead of the rest of Phase 2 scope (improvements, tablet, mobile app for waiters, Formula device app).',
     planned:[[
       {s:'2026-06-20',e:'2026-06-30',label:'Phase 1: QR ordering + IRD + inventory',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'Delivery slipped by 17 days to Jul 17 due to IRD verification integration taking longer than estimated. Sip & Skip aligned with new date.'},
       {s:'2026-07-01',e:'2026-07-31',label:'Cooling period + support',color:'#888780',st:'support',owners:['suman'],pivot:'Cooling window compressed to Jul 17–Aug 1 (2 weeks instead of 4) to protect Phase 2 start date.'},
       {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + Formula app',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'No change — Phase 2 dates held despite Phase 1 slip. Pranuz added for QA across all phases.'},
     ]],
-    tracks:[[
-      {s:'2026-06-20',e:'2026-07-17',label:'Phase 1: QR ordering + IRD + inventory',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 1: QR-based ordering, inventory, IRD verification. Delivered to Sip & Skip Jul 17. QA: Pranuz.'},
-      {s:'2026-07-17',e:'2026-08-01',label:'Cooling period + support (Suman, Pranuz)',color:C.gray,st:'support',owners:['suman','pranuz'],tip:'Cooling period Jul 17–Aug 1. Bug fixes and post-launch support by Suman. Support & QA: Pranuz.'},
-      {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + app',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 2: improvements, tablet app, Formula app. Full August sprint. QA: Pranuz.'},
-    ]],
+    tracks:[
+      [
+        {s:'2026-06-20',e:'2026-07-17',label:'Phase 1: QR ordering + IRD + inventory',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 1: QR-based ordering, inventory, IRD verification. Delivered to Sip & Skip Jul 17. QA: Pranuz.'},
+        {s:'2026-07-17',e:'2026-08-01',label:'Cooling period + support (Suman, Pranuz)',color:C.gray,st:'support',owners:['suman','pranuz'],tip:'Cooling period Jul 17–Aug 1. Bug fixes and post-launch support by Suman. Support & QA: Pranuz.'},
+        {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + mobile app (waiters) + Formula device app',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 2: improvements, tablet app, mobile app for waiters, and app for the Formula device. Runs after credit management + customer registration module. Full August sprint. QA: Pranuz.'},
+      ],
+      [
+        {s:'2026-07-23',e:'2026-07-30',label:'Credit management + customer registration module',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Credit management and customer registration module — first piece of Phase 2 scope, pulled forward into the cooling period alongside bug fixes. QA: Pranuz.'},
+      ],
+    ],
     ms:[
       {d:'2026-07-17',label:'Phase 1 live',color:C.blue,tip:'Phase 1 delivered to Sip & Skip.'},
       {d:'2026-08-01',label:'Phase 2 start',color:C.blue,tip:'Phase 2 begins.'},
@@ -526,7 +531,7 @@ function build(){
   h+=`<div class="gantt-hrow">`;
   h+=`<div class="hcorner">Track</div>`;
   h+=`<div class="htimeline" style="width:${tw}px;position:sticky">`;
-  const todayOff=((new Date(2026,6,21))-TS)/864e5;
+  const todayOff=((new Date())-TS)/864e5;
   const todayPx=(todayOff/TDAYS*NCOLS*CW).toFixed(1);
   h+=`<div class="today-header-marker" style="left:${todayPx}px"><div class="today-badge">TODAY</div><div class="today-tick"></div></div>`;
   h+=`<div class="hcols">`;
