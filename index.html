@@ -352,6 +352,7 @@ body{font-family:var(--font);background:#f0eff0;color:var(--text);height:100vh;d
 </head>
 <body>
 
+
 <!-- ══ TOP NAV ══ -->
 <div class="topnav">
   <div class="nav-left">
@@ -452,12 +453,12 @@ const PRODUCTS = [
     fyGoal:'20 municipalities, ~120 schools, ~24k Class 8–10 students by Ashad',
     currentGoal:'Deliver native smartboard app, stabilise MVP1, then complete V2 revamp + Classroom/Homework/Live Tuition features.',
     health:'a', // g/a/r/paused/closed
-    healthNote:'Native app in build. V2 revamp deferred to dedicated dev (joins Sep 14). Feature sprint now Oct 12 – Nov 26.',
+    healthNote:'Native app in build. V2 revamp Aug 17 – Sep 16 covered by Suman. Features (Classroom / Homework / Live Tuition) earliest start Sep 17 — GATED on dedicated Abhyas dev hire.',
     execStatus:'dev',
     progress:35,
-    currentPhase:'Native Smartboard App build → MVP1 support until Sep 14',
-    nextMilestone:'Native app MVP delivered',
-    nextMilestoneDate:'2026-08-01',
+    currentPhase:'V2 Revamp in progress (Suman) → features gated on hire',
+    nextMilestone:'V2 revamp complete',
+    nextMilestoneDate:'2026-09-16',
     owner:'Ajay',
     resources:['ajay','suman','rahul','pranuz','shreya','dhakal','suraj'],
     risks:[
@@ -483,7 +484,7 @@ const PRODUCTS = [
     fyGoal:'100 restaurants signed, NPR 300k/mo revenue by Ashad',
     currentGoal:'Deliver Phase 1 to Sip & Skip, then extended cooling + Phase 2 (tablet + Formula app).',
     health:'g',
-    healthNote:'Phase 1 delivered Jul 17. Phase 2 restored to full 2-month window Aug 1–Sep 30 (Suman full-time; Abhyas revamp reassigned to dedicated dev).',
+    healthNote:'Phase 1 delivered. Phase 2 new-feature development PAUSED Aug 17 – Sep 17 while Suman covers Abhyas V2 revamp. Resumes Sep 17, delivery pushed to end-Oct.',
     execStatus:'dev',
     progress:55,
     currentPhase:'Phase 1 delivery → extended cooling',
@@ -753,7 +754,8 @@ const ENGAGEMENTS = [
   ['umang','_tbd',             [0,0,0,0.4,0,0,0,0,0,0,0,0]],
   ['umang','_reflexion',       [0,0,0,0,0.4,0,0,0,0,0,0,0]],
 
-  ['suman','formula-rms',      [1,1,1,1,1,1,1,1,1,1,1,1]],
+  ['suman','formula-rms',      [1,0.2,1,1,1,1,1,1,1,1,1,1]],
+  ['suman','abhyas',           [0,0.8,0,0,0,0,0,0,0,0,0,0]],
 
   ['rahul','abhyas',           [0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3]],
   ['rahul','olive-977',        [0.5,0.5,0.25,0,0,0,0,0,0,0,0,0]],
@@ -799,6 +801,12 @@ const SPECIAL_PROJECTS = {
 
 /* ── PIVOTS ────────────────────────────────────────────────── */
 const PIVOTS = [
+  {id:'P-012', date:'2026-08-17', product:'abhyas', type:'Resource',
+   from:'Dedicated Abhyas dev joins Sep 14 → leads V2 revamp Sep 14–Oct 12',
+   to:'Hire paused (no fit candidate) → Suman reassigned from RMS to cover V2 revamp Aug 17 – Sep 16',
+   reason:'Candidate search stalled — recruiting couldn\'t find a good fit within budget/timeline',
+   impact:'RMS Phase 2 new-feature dev paused Aug 17 – Sep 17, delivery pushed 1 month to Oct 31. Abhyas features remain gated on hire.',
+   decision:'Approved (interim mitigation)', status:'in-flight'},
   {id:'P-001', date:'2026-07-15', product:'abhyas', type:'Technology',
    from:'Web revamp → Classroom/Homework/Live Tuition features',
    to:'Native Flutter smartboard app first → MVP1 bug fixes → V2 revamp → features',
@@ -868,6 +876,13 @@ const PIVOTS = [
 
 /* ── DECISIONS (pending / recent) ──────────────────────────── */
 const DECISIONS = [
+  {id:'D-005', date:'2026-08-14', product:'abhyas',
+   question:'Abhyas dedicated dev hire — no fit candidate found. Continue search, raise budget, or restructure role?',
+   options:['Continue current search','Raise offered comp / broaden JD','Contract-to-hire route','Restructure: promote from within + junior hire'],
+   status:'resolved', decisionMaker:'CEO + Suraj R.', dueDate:'2026-09-01',
+   resolvedDate:'2026-08-14', resolvedBy:'Engineering meeting',
+   attendees:['ajay','suraj','umang','abishek'],
+   resolution:'Continue current search AND deploy Suman to Abhyas (interim mitigation). Suman covers V2 revamp Aug 17 – Sep 16 while hiring continues in parallel. No JD/comp change at this stage.'},
   {id:'D-001', date:'2026-07-17', product:'abhyas',
    question:'Native app prototype go/no-go — does AI pen work natively on smartboard hardware?',
    options:['GO — proceed to 2-week build','NO-GO — reassess approach'],
@@ -889,6 +904,9 @@ const DECISIONS = [
 
 /* ── RISKS ─────────────────────────────────────────────────── */
 const RISKS = [
+  {id:'R-009', product:'abhyas', label:'Abhyas dedicated-dev hire remains open — cascading delays each week the role stays unfilled',
+   probability:'High', impact:'High', severity:'r', mitigation:'Suman covering V2 through Sep 16; broaden JD and comp; consider contract-to-hire',
+   owner:'CEO + Suraj R.'},
   {id:'R-001', product:'olive-977', label:'App Store rejection cycle pushes MVP1 into holiday period',
    probability:'Medium', impact:'High', severity:'r', mitigation:'Submit RC Sep 17 (M-11A) with buffer for one rejection cycle',
    owner:'Ajay + Suraj R.'},
@@ -5686,7 +5704,7 @@ function renderDecisions() {
         <tr><th>ID</th><th>Due</th><th>Product</th><th>Question</th><th>Options</th><th>Decision Maker</th><th>Status</th></tr>
       </thead>
       <tbody>
-        ${sortedDecisions.map(d => `
+        ${sortedDecisions.filter(d=>d.status!=='resolved').map(d => `
           <tr>
             <td class="strong mono">${d.id}</td>
             <td class="nowrap">${d.dueDate}</td>
@@ -5699,6 +5717,27 @@ function renderDecisions() {
         `).join('')}
       </tbody>
     </table>
+
+    ${sortedDecisions.filter(d=>d.status==='resolved').length ? `
+    <div class="section-title">Resolved Decisions</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>ID</th><th>Decided</th><th>Product</th><th>Question</th><th>Decision</th><th>Attendees</th><th>Forum</th></tr>
+      </thead>
+      <tbody>
+        ${sortedDecisions.filter(d=>d.status==='resolved').map(d => `
+          <tr>
+            <td class="strong mono">${d.id}</td>
+            <td class="nowrap">${fmtDate(d.resolvedDate||d.date)}</td>
+            <td>${PRODUCTS.find(p=>p.id===d.product)?.name || d.product}</td>
+            <td class="muted">${d.question}</td>
+            <td class="strong">${d.resolution||'—'}</td>
+            <td class="muted">${(d.attendees||[]).map(a=>PMAP[a]?.name.split(' ')[0]||a).join(', ')||d.decisionMaker}</td>
+            <td class="muted">${d.resolvedBy||'—'}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>` : ''}
 
     <div class="section-title">Pivot Register (${sortedPivots.length} pivots)</div>
     <div class="timeline">
@@ -6169,22 +6208,26 @@ const GROUPS=[
 
   {id:'rms',label:'Formula RMS',tag:'product',rows:[{
     title:'Formula RMS',
-    sub:'Phase 1 → cooling (Jul 17–Aug 1) → Phase 2 Aug 1–Sep 30 · Suman leads (Abhyas revamp reassigned to dedicated dev)',
-    pivotReason:'Phase 1 delivery pushed from Jun 30 to Jul 17 due to IRD integration complexity. Cooling Jul 17–Aug 1 (bug fixes only). Phase 2 restored to full 2-month window Aug 1–Sep 30 — Suman no longer needed for Abhyas revamp (reassigned to dedicated dev joining Sep 14).',
+    sub:'Phase 1 → cooling → Phase 2 Aug 1–17 (Suman covers Abhyas) → paused → resumes Sep 17 through end-October',
+    pivotReason:'PAUSED MID-PHASE: Phase 1 delivered Jul 17. Phase 2 kicked off Aug 1 but new-feature development (tablet + Formula app) paused Aug 17 while Suman covers Abhyas V2 revamp (dedicated dev hiring stalled). Phase 2 resumes Sep 17 with the same scope, delivery pushed one month to late October.',
     planned:[[
       {s:'2026-06-20',e:'2026-06-30',label:'Phase 1: QR ordering + IRD + inventory',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'Delivery slipped by 17 days to Jul 17 due to IRD verification integration taking longer than estimated. Sip & Skip aligned with new date.'},
       {s:'2026-07-01',e:'2026-07-31',label:'Cooling period + support',color:'#888780',st:'support',owners:['suman'],pivot:'PIVOTED — cooling Jul 17–Aug 1. Suman moves directly to Phase 2 Aug 1 (Abhyas revamp reassigned to dedicated dev joining Sep 14).'},
-      {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + Formula app',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'EXTENDED — Phase 2 now runs Aug 1 – Sep 30 (2 months). Suman full-time (Abhyas revamp reassigned to dedicated dev). More room for tablet + Formula app + AI recommendations.'},
+      {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + Formula app',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'PAUSED MID-PHASE — Phase 2 kicked off Aug 1 as planned but new-feature dev paused Aug 17 while Suman covers Abhyas V2 revamp (Abhyas dedicated-dev hire stalled). Resumes Sep 17, delivery pushed one month to Oct 31.'},
     ]],
     tracks:[[
       {s:'2026-06-20',e:'2026-07-17',label:'Phase 1: QR ordering + IRD + inventory',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 1: QR-based ordering, inventory, IRD verification. Delivered to Sip & Skip Jul 17. QA: Pranuz.'},
       {s:'2026-07-17',e:'2026-08-01',label:'Cooling — bug fixes only (Jul 17–Aug 1)',color:C.gray,st:'support',owners:['suman','pranuz'],tip:'Cooling period Jul 17–Aug 1. Bug fixes only — no new development. Suman then moves to Phase 2 (Abhyas revamp reassigned to dedicated dev). QA & support: Pranuz.'},
-      {s:'2026-08-01',e:'2026-09-30',label:'Phase 2: improvements + tablet + app (Suman leads)',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 2: improvements, tablet app, Formula app. Aug 1 – Sep 30 (2 months). Suman leads dev full-time. Ajay supports. QA: Pranuz.'},
+      {s:'2026-08-01',e:'2026-08-17',label:'Phase 2 kickoff (Suman leads)',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 2 kickoff Aug 1–17: Suman scoping tablet + Formula app work. Paused Aug 17 while Suman covers Abhyas V2 revamp.'},
+        {s:'2026-08-17',e:'2026-09-17',label:'Phase 2 PAUSED (new features on hold)',color:C.red,st:'blocked',owners:['pranuz'],tip:'🔴 Phase 2 new-feature development PAUSED Aug 17 – Sep 17 while Suman covers Abhyas V2 revamp (dedicated Abhyas dev hire paused, no fit candidate). Only critical bug support during this window. QA: Pranuz.'},
+        {s:'2026-09-17',e:'2026-10-31',label:'Phase 2 resumes: tablet + Formula app (Suman)',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 2 resumes Sep 17 after Suman completes Abhyas V2. Tablet app + Formula app feature development through end-October (pushed one month from original Sep 30 target).'},
     ]],
     ms:[
       {d:'2026-07-17',label:'Phase 1 live',color:C.blue,tip:'Phase 1 delivered to Sip & Skip.'},
-      {d:'2026-08-01',label:'Phase 2 start',color:C.blue,tip:'Phase 2 begins — Suman leads (Abhyas revamp reassigned to dedicated dev).'},
-      {d:'2026-09-30',label:'Phase 2 target',color:C.teal,tip:'Phase 2 feature-complete target (was Aug 31, shifted to Sep 30).'},
+      {d:'2026-08-01',label:'Phase 2 start (kickoff)',color:C.blue,tip:'Phase 2 begins — 2-week kickoff before Suman pauses to cover Abhyas.'},
+        {d:'2026-08-17',label:'Phase 2 PAUSED',color:C.red,tip:'🔴 Phase 2 new-feature development paused while Suman covers Abhyas V2 revamp.'},
+        {d:'2026-09-17',label:'Phase 2 resumes',color:C.blue,tip:'Suman returns from Abhyas; tablet + Formula app development resumes.'},
+      {d:'2026-10-31',label:'Phase 2 target (pushed)',color:C.teal,tip:'Phase 2 feature-complete target pushed to Oct 31 (was Sep 30) due to Aug 17 – Sep 17 pause while Suman covered Abhyas.'},
     ]
   },
   {
@@ -6249,29 +6292,29 @@ const GROUPS=[
     },
     {
       title:'Abhyas — Revamp (V2)',
-      sub:'Starts when dedicated dev joins Sep 14 · 4-week revamp to Oct 12',
-      pivotReason:'RESEQUENCED: revamp was originally the first thing (Jun 22 – Jul 15). Now deferred until dedicated Abhyas dev joins Sep 14 — 4-week revamp Sep 14 – Oct 12. Suman stays on RMS Phase 2 through the interim. Ajay unavailable (+977 sprints + Mukhi V2 packaging).',
+      sub:'Suman covers V2 revamp Aug 17 – Sep 16 while Abhyas dedicated dev hiring paused (candidate search)',
+      pivotReason:'RESEQUENCED AGAIN: dedicated Abhyas dev hiring paused — no good fit candidate found by target Sep 14. Suman reassigned from RMS Phase 2 to cover V2 revamp Aug 17 – Sep 16. RMS Phase 2 new-feature development (tablet + Formula app) paused during this window, resumes Sep 17.',
       planned:[],
       tracks:[[
-        {s:'2026-08-01',e:'2026-09-14',label:'MVP1 support (waiting for dedicated dev)',color:C.gray,st:'support',owners:['pranuz','shreya'],tip:'MVP1 bug-fix support only until dedicated Abhyas dev joins Sep 14. No revamp work in this window — Suman on RMS Phase 2, Ajay on +977/Mukhi. QA & ground support: Pranuz + Support Staff.'},
-        {s:'2026-09-14',e:'2026-10-12',label:'Revamp (V2) — Dedicated dev (4 wk)',color:C.green,st:'dev',owners:['abhyasdev','pranuz','shreya'],tip:'V2 revamp begins when dedicated Abhyas dev joins Sep 14. 4-week window to Oct 12. QA & ground support: Pranuz + Support Staff.'},
+        {s:'2026-08-01',e:'2026-08-17',label:'MVP1 support gap',color:C.gray,st:'support',owners:['pranuz','shreya'],tip:'Aug 1–17: MVP1 bug-fix support. Suman still on RMS Phase 2. QA & ground support: Pranuz + Support Staff.'},
+        {s:'2026-08-17',e:'2026-09-16',label:'V2 Revamp — Suman (covering paused hire)',color:C.green,st:'dev',owners:['suman','pranuz','shreya'],tip:'Suman reassigned from RMS to lead V2 revamp Aug 17 – Sep 16 while dedicated Abhyas dev candidate search continues. RMS Phase 2 new features paused in parallel. QA: Pranuz + Support Staff.'},
       ]],
       ms:[
-        {d:'2026-09-14',label:'Dedicated Abhyas dev joins → V2 starts',color:C.green,tip:'Dedicated Abhyas dev onboards. V2 revamp begins.'},
-        {d:'2026-10-12',label:'V2 revamp complete',color:C.green,tip:'V2 revamp fully complete after 4 weeks. Feature sprint (Classroom / Homework / Live Tuition) begins next.'},
+        {d:'2026-08-17',label:'Suman starts V2 revamp',color:C.blue,tip:'Suman reassigned from RMS to cover V2 revamp while Abhyas dedicated-dev hire is paused.'},
+        {d:'2026-09-16',label:'V2 revamp complete (Suman)',color:C.green,tip:'V2 revamp done. Suman returns to RMS Phase 2 Sep 17. Feature sprint deferred until dedicated Abhyas dev is hired.'},
       ]
     },
     {
       title:'Abhyas — Features',
-      sub:'Classroom, Homework, Live Tuition — Oct 12 – Nov 26 (~6 weeks) · after V2 completion',
-      pivotReason:'RESEQUENCED TWICE: originally planned Jul 15 – Aug 15. Now Oct 12 – Nov 26 after native app → MVP1 bug fix → dedicated-dev V2 revamp (starts Sep 14). ~14 weeks slip vs original plan.',
+      sub:'Classroom, Homework, Live Tuition — earliest start Sep 17 · GATED on dedicated Abhyas dev hire',
+      pivotReason:'GATED ON HIRE: originally planned Jul 15 – Aug 15. Suman completes V2 revamp Sep 16, so features can start Sep 17 at the earliest — but ONLY if dedicated Abhyas dev has been hired. Suman returns to RMS Phase 2 Sep 17 per the Aug 14 engineering decision. Features remain the dedicated dev\'s scope.',
       planned:[],
       tracks:[[
-        {s:'2026-10-12',e:'2026-11-26',label:'Classroom + Homework + Live Tuition + improvements',color:C.green,st:'dev',owners:['ajay','abhyasdev','pranuz','shreya'],tip:'Feature sprint Oct 12 – Nov 26 on top of the revamped V2: Classroom, Homework, Live Tuition, improvements. Ajay + dedicated Abhyas dev. QA & ground support: Pranuz + Support Staff.'},
+        {s:'2026-09-17',e:'2026-11-05',label:'Classroom + Homework + Live Tuition (GATED on hire)',color:C.green,st:'dev',owners:['ajay','abhyasdev','pranuz','shreya'],dashed:true,tip:'🚧 GATED: Feature sprint (Classroom, Homework, Live Tuition, improvements) starts Sep 17 at the earliest ONLY IF dedicated Abhyas dev is hired by then. Suman is unavailable — he returns to RMS Phase 2 Sep 17. If hire slips, this bar slips with it.'},
       ]],
       ms:[
-        {d:'2026-10-12',label:'Feature sprint starts',color:C.green,tip:'Feature sprint begins after V2 completion.'},
-        {d:'2026-11-26',label:'Features delivered',color:C.green,tip:'Classroom, Homework, and Live Tuition features shipped.'},
+        {d:'2026-09-17',label:'Feature sprint earliest start (gated)',color:C.amber,tip:'🚧 Earliest possible start IF dedicated Abhyas dev is hired by Sep 17. Otherwise slips.'},
+        {d:'2026-11-05',label:'Features delivery target (gated)',color:C.amber,tip:'~7-week feature sprint if it starts Sep 17. Slips with any hire delay.'},
       ]
     },
     {
@@ -6778,6 +6821,7 @@ applyPlannedVisibility();
     <div id="releaseModalBody"></div>
   </div>
 </div>
+
 
 </body>
 </html>
