@@ -32,8 +32,13 @@ RELEASES_TO_SYNC = [
         "redmine_version_id": 29,
         "release_label": "V2 Revamp",
     },
+    {
+        "portfolio_id": "977-R1",  # Olive OTT (977) — MVP1 row in the Release Scorecards
+        "redmine_project": "olive-ott-977",
+        "redmine_version_id": 28,
+        "release_label": "MVP1",
+    },
     # Add more releases here as they get set up in Redmine:
-    # {"portfolio_id":"abhyas-R3","redmine_project":"abhyas-dev","redmine_version_id":??,...},
     # {"portfolio_id":"rms-R1","redmine_project":"formula-rms","redmine_version_id":??,...},
 ]
 
