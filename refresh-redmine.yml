@@ -1,0 +1,49 @@
+name: Refresh Redmine Snapshot
+
+on:
+  schedule:
+    # Runs daily at 00:15 UTC (05:00 NPT). GitHub cron uses UTC.
+    - cron: '15 0 * * *'
+  workflow_dispatch:  # allows manual run from Actions tab
+  push:
+    paths:
+      - 'scripts/fetch_redmine.py'
+      - '.github/workflows/refresh-redmine.yml'
+
+concurrency:
+  group: redmine-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write  # to push the updated JSON back to the repo
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch Redmine data
+        env:
+          REDMINE_API_KEY: ${{ secrets.REDMINE_API_KEY }}
+        run: python scripts/fetch_redmine.py
+
+      - name: Commit + push if changed
+        run: |
+          git config user.name  "redmine-bot"
+          git config user.email "redmine-bot@users.noreply.github.com"
+          git add data/redmine.json
+          if git diff --staged --quiet; then
+            echo "No changes; skipping commit."
+            exit 0
+          fi
+          # Extract snapshot timestamp for a clean commit message
+          TS=$(python3 -c "import json;print(json.load(open('data/redmine.json'))['generated_at'])")
+          git commit -m "chore(data): redmine snapshot $TS"
+          git push
