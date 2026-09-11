@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T09:28:41+00:00",
+  "generated_at": "2026-09-11T06:16:00+00:00",
   "redmine_base": "https://redmine.bottle.com.np",
   "status_weights": {
     "Done": 1.0,
@@ -25,22 +25,22 @@
       "due_date": "2026-09-16",
       "created_on": "2026-08-19T05:31:31Z",
       "updated_on": "2026-08-19T05:31:31Z",
-      "total_issues": 116,
+      "total_issues": 121,
       "story_count": 82,
       "epic_count": 18,
-      "orphan_count": 34,
+      "orphan_count": 39,
       "status_counts": {
-        "Done": 60,
-        "In Progress": 4,
-        "Re Open": 2,
-        "To Do": 4,
         "Hold": 16,
-        "QA": 27,
+        "In Progress": 1,
+        "QA": 17,
+        "Done": 81,
+        "To Do": 2,
+        "Re Open": 1,
         "Backlogs": 3
       },
-      "scope_pct": 70,
-      "dev_pct": 75,
-      "qa_pct": 52,
+      "scope_pct": 78,
+      "dev_pct": 81,
+      "qa_pct": 67,
       "epics": [
         {
           "id": 4682,
@@ -60,10 +60,10 @@
           "children_count": 5,
           "stories_count": 5,
           "status_counts": {
-            "Done": 2,
-            "QA": 3
+            "Done": 3,
+            "QA": 2
           },
-          "weighted_pct": 85
+          "weighted_pct": 90
         },
         {
           "id": 4040,
@@ -84,9 +84,10 @@
           "children_count": 6,
           "stories_count": 6,
           "status_counts": {
-            "QA": 6
+            "QA": 5,
+            "Re Open": 1
           },
-          "weighted_pct": 75
+          "weighted_pct": 62
         },
         {
           "id": 4038,
@@ -95,23 +96,21 @@
           "children_count": 10,
           "stories_count": 10,
           "status_counts": {
-            "QA": 6,
-            "Re Open": 1,
-            "Done": 3
+            "QA": 3,
+            "Done": 7
           },
-          "weighted_pct": 75
+          "weighted_pct": 92
         },
         {
           "id": 4037,
           "subject": "Student Module",
-          "status": "QA",
+          "status": "Done",
           "children_count": 6,
           "stories_count": 6,
           "status_counts": {
-            "QA": 2,
-            "Done": 4
+            "Done": 6
           },
-          "weighted_pct": 92
+          "weighted_pct": 100
         },
         {
           "id": 4036,
@@ -120,10 +119,9 @@
           "children_count": 3,
           "stories_count": 3,
           "status_counts": {
-            "QA": 1,
-            "Done": 2
+            "Done": 3
           },
-          "weighted_pct": 92
+          "weighted_pct": 100
         },
         {
           "id": 4035,
@@ -165,10 +163,10 @@
           "children_count": 6,
           "stories_count": 6,
           "status_counts": {
-            "QA": 5,
-            "Done": 1
+            "Done": 5,
+            "QA": 1
           },
-          "weighted_pct": 79
+          "weighted_pct": 96
         },
         {
           "id": 4031,
@@ -185,14 +183,13 @@
         {
           "id": 4030,
           "subject": "Teacher Profile & Verification",
-          "status": "QA",
+          "status": "Done",
           "children_count": 5,
           "stories_count": 5,
           "status_counts": {
-            "Done": 4,
-            "To Do": 1
+            "Done": 5
           },
-          "weighted_pct": 80
+          "weighted_pct": 100
         },
         {
           "id": 4029,
@@ -212,10 +209,9 @@
           "children_count": 8,
           "stories_count": 8,
           "status_counts": {
-            "Done": 7,
-            "QA": 1
+            "Done": 8
           },
-          "weighted_pct": 97
+          "weighted_pct": 100
         },
         {
           "id": 4027,
@@ -248,6 +244,71 @@
         }
       ],
       "issues": [
+        {
+          "id": 4775,
+          "subject": "Integrate Microsoft Clarity for User Behavior Monitoring",
+          "tracker": "Improvements",
+          "status": "Hold",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2026-09-11T05:16:30Z",
+          "updated_on": "2026-09-11T05:17:35Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/4775"
+        },
+        {
+          "id": 4774,
+          "subject": "Integrate Google Analytics",
+          "tracker": "Improvements",
+          "status": "Hold",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2026-09-11T05:15:57Z",
+          "updated_on": "2026-09-11T05:17:37Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/4774"
+        },
+        {
+          "id": 4773,
+          "subject": "Implement Bot Attack Prevention and Protection",
+          "tracker": "Improvements",
+          "status": "In Progress",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2026-09-10T10:47:35Z",
+          "updated_on": "2026-09-10T11:17:00Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/4773"
+        },
+        {
+          "id": 4772,
+          "subject": "Implement SEO and Open Graph (OG) Tags Across Website Pages",
+          "tracker": "Improvements",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2026-09-10T10:02:08Z",
+          "updated_on": "2026-09-10T16:40:19Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/4772"
+        },
+        {
+          "id": 4771,
+          "subject": "Cancellation reason for class and should also be displayed in class detail page",
+          "tracker": "Improvements",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2026-09-10T09:41:31Z",
+          "updated_on": "2026-09-10T16:40:24Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/4771"
+        },
         {
           "id": 4770,
           "subject": "Hide coming soon pages and tabs across platform",
@@ -291,12 +352,12 @@
           "id": 4767,
           "subject": "Join the class button should be active only after class has started",
           "tracker": "Improvements",
-          "status": "In Progress",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T08:52:31Z",
-          "updated_on": "2026-09-08T18:31:14Z",
+          "updated_on": "2026-09-10T06:32:17Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4767"
         },
@@ -304,12 +365,12 @@
           "id": 4766,
           "subject": "Add able to view profile detail page from admin user",
           "tracker": "Improvements",
-          "status": "In Progress",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T08:41:56Z",
-          "updated_on": "2026-09-09T08:55:25Z",
+          "updated_on": "2026-09-10T05:50:08Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4766"
         },
@@ -317,12 +378,12 @@
           "id": 4765,
           "subject": "School filter dropdown not resulting any school in both teacher and student dashboard",
           "tracker": "Bug",
-          "status": "Re Open",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T08:37:30Z",
-          "updated_on": "2026-09-08T08:37:30Z",
+          "updated_on": "2026-09-10T08:52:10Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4765"
         },
@@ -343,12 +404,12 @@
           "id": 4763,
           "subject": "Add Class Details to Class Cards",
           "tracker": "Improvements",
-          "status": "In Progress",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T07:03:01Z",
-          "updated_on": "2026-09-09T09:02:58Z",
+          "updated_on": "2026-09-10T05:53:02Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4763"
         },
@@ -369,12 +430,12 @@
           "id": 4761,
           "subject": "Generate 6 digit numeric class PIN for Recievers",
           "tracker": "Improvements",
-          "status": "To Do",
+          "status": "QA",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T06:41:31Z",
-          "updated_on": "2026-09-09T05:31:30Z",
+          "updated_on": "2026-09-10T09:48:24Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4761"
         },
@@ -408,12 +469,12 @@
           "id": 4758,
           "subject": "Improve Student View in Join Classroom",
           "tracker": "Improvements",
-          "status": "In Progress",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T06:37:15Z",
-          "updated_on": "2026-09-09T09:02:47Z",
+          "updated_on": "2026-09-10T05:49:46Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4758"
         },
@@ -460,12 +521,12 @@
           "id": 4754,
           "subject": "Add Policy Agreement and Privacy Policy page",
           "tracker": "Improvements",
-          "status": "To Do",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T06:36:25Z",
-          "updated_on": "2026-09-09T05:31:08Z",
+          "updated_on": "2026-09-10T06:19:26Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4754"
         },
@@ -473,12 +534,12 @@
           "id": 4753,
           "subject": "Add School Logo and Address Dropdown in School Selection (signup page)",
           "tracker": "Improvements",
-          "status": "Hold",
+          "status": "To Do",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T06:36:03Z",
-          "updated_on": "2026-09-08T06:36:03Z",
+          "updated_on": "2026-09-10T17:55:57Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4753"
         },
@@ -564,12 +625,12 @@
           "id": 4746,
           "subject": "Add Dropdown/Search Filters Across All Pages",
           "tracker": "Improvements",
-          "status": "Hold",
+          "status": "To Do",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T06:30:33Z",
-          "updated_on": "2026-09-08T06:32:06Z",
+          "updated_on": "2026-09-10T17:55:44Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4746"
         },
@@ -772,12 +833,12 @@
           "id": 4351,
           "subject": "Automatic recording & playback",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4041,
           "epic_subject": "Virtual Classroom (BBB Web)",
           "created_on": "2026-07-17T04:37:07Z",
-          "updated_on": "2026-08-30T14:26:31Z",
+          "updated_on": "2026-09-10T10:04:28Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4351"
         },
@@ -889,12 +950,12 @@
           "id": 4342,
           "subject": "School \u2014 student monitoring",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Re Open",
           "assignee": "Suman Lamichhane",
           "epic_id": 4039,
           "epic_subject": "School Panel",
           "created_on": "2026-07-17T04:37:06Z",
-          "updated_on": "2026-09-04T04:50:24Z",
+          "updated_on": "2026-09-11T05:09:20Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4342"
         },
@@ -946,7 +1007,7 @@
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:06Z",
-          "updated_on": "2026-09-05T11:24:10Z",
+          "updated_on": "2026-09-10T11:16:11Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4338"
         },
@@ -954,12 +1015,12 @@
           "id": 4337,
           "subject": "Reports & Abuses queue (municipality)",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:05Z",
-          "updated_on": "2026-09-07T04:09:41Z",
+          "updated_on": "2026-09-10T08:41:49Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4337"
         },
@@ -972,7 +1033,7 @@
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:05Z",
-          "updated_on": "2026-09-07T05:57:51Z",
+          "updated_on": "2026-09-10T11:16:09Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4336"
         },
@@ -980,12 +1041,12 @@
           "id": 4335,
           "subject": "Class monitoring (municipality)",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:05Z",
-          "updated_on": "2026-09-05T11:17:26Z",
+          "updated_on": "2026-09-10T08:39:10Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4335"
         },
@@ -993,12 +1054,12 @@
           "id": 4334,
           "subject": "Student oversight (municipality)",
           "tracker": "Story",
-          "status": "Re Open",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:05Z",
-          "updated_on": "2026-09-08T08:41:05Z",
+          "updated_on": "2026-09-10T05:57:25Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4334"
         },
@@ -1006,12 +1067,12 @@
           "id": 4333,
           "subject": "Teacher oversight (municipality)",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:05Z",
-          "updated_on": "2026-09-07T05:28:06Z",
+          "updated_on": "2026-09-10T08:37:06Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4333"
         },
@@ -1063,7 +1124,7 @@
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:04Z",
-          "updated_on": "2026-09-07T05:27:23Z",
+          "updated_on": "2026-09-10T11:16:13Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4329"
         },
@@ -1071,12 +1132,12 @@
           "id": 4328,
           "subject": "Student-side reporting",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4037,
           "epic_subject": "Student Module",
           "created_on": "2026-07-17T04:37:04Z",
-          "updated_on": "2026-09-04T04:43:48Z",
+          "updated_on": "2026-09-10T06:38:48Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4328"
         },
@@ -1084,12 +1145,12 @@
           "id": 4327,
           "subject": "Class & teacher review",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4037,
           "epic_subject": "Student Module",
           "created_on": "2026-07-17T04:37:04Z",
-          "updated_on": "2026-09-04T10:23:29Z",
+          "updated_on": "2026-09-10T06:38:32Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4327"
         },
@@ -1149,12 +1210,12 @@
           "id": 4322,
           "subject": "School public profile page",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4036,
           "epic_subject": "Public Profile Pages",
           "created_on": "2026-07-17T04:37:03Z",
-          "updated_on": "2026-09-04T04:45:03Z",
+          "updated_on": "2026-09-11T05:01:44Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4322"
         },
@@ -1305,12 +1366,12 @@
           "id": 4310,
           "subject": "Class status lifecycle",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4032,
           "epic_subject": "Class Creation & Management",
           "created_on": "2026-07-17T04:37:02Z",
-          "updated_on": "2026-08-27T04:47:44Z",
+          "updated_on": "2026-09-10T09:12:31Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4310"
         },
@@ -1344,12 +1405,12 @@
           "id": 4307,
           "subject": "Class creation \u2014 Session Breakdown step",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4032,
           "epic_subject": "Class Creation & Management",
           "created_on": "2026-07-17T04:37:02Z",
-          "updated_on": "2026-08-27T04:47:52Z",
+          "updated_on": "2026-09-10T09:11:45Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4307"
         },
@@ -1357,12 +1418,12 @@
           "id": 4306,
           "subject": "Class creation \u2014 Schedule step",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4032,
           "epic_subject": "Class Creation & Management",
           "created_on": "2026-07-17T04:37:02Z",
-          "updated_on": "2026-08-27T04:47:47Z",
+          "updated_on": "2026-09-10T09:11:12Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4306"
         },
@@ -1370,12 +1431,12 @@
           "id": 4305,
           "subject": "Class creation \u2014 General Details step",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4032,
           "epic_subject": "Class Creation & Management",
           "created_on": "2026-07-17T04:37:01Z",
-          "updated_on": "2026-08-26T04:28:35Z",
+          "updated_on": "2026-09-10T09:10:27Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4305"
         },
@@ -1474,12 +1535,12 @@
           "id": 4297,
           "subject": "Optional verification documents",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4030,
           "epic_subject": "Teacher Profile & Verification",
           "created_on": "2026-07-17T04:37:01Z",
-          "updated_on": "2026-09-09T09:05:07Z",
+          "updated_on": "2026-09-10T06:24:06Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4297"
         },
@@ -1604,12 +1665,12 @@
           "id": 4287,
           "subject": "Teacher sign-up (form)",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4028,
           "epic_subject": "Authentication & Onboarding",
           "created_on": "2026-07-17T04:37:00Z",
-          "updated_on": "2026-09-08T11:02:07Z",
+          "updated_on": "2026-09-10T06:02:22Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4287"
         },
@@ -1747,12 +1808,12 @@
           "id": 3547,
           "subject": "Nepali Date (BS) Input overall the platform specially in signup ",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-03-23T06:42:58Z",
-          "updated_on": "2026-09-09T08:55:06Z",
+          "updated_on": "2026-09-10T05:50:19Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3547"
         }
@@ -1775,8 +1836,8 @@
       "status_counts": {
         "Hold": 4,
         "QA": 27,
-        "Backlogs": 7,
-        "To Do": 7
+        "Backlogs": 5,
+        "To Do": 9
       },
       "scope_pct": 45,
       "dev_pct": 60,
@@ -1865,11 +1926,11 @@
         {
           "id": 4569,
           "subject": "MVP1 - Notifications & Engagement",
-          "status": "Backlogs",
+          "status": "To Do",
           "children_count": 1,
           "stories_count": 1,
           "status_counts": {
-            "Backlogs": 1
+            "To Do": 1
           },
           "weighted_pct": 0
         },
@@ -1899,7 +1960,7 @@
         {
           "id": 4566,
           "subject": "MVP1 - Video Player & Viewing",
-          "status": "To Do",
+          "status": "In Progress",
           "children_count": 5,
           "stories_count": 5,
           "status_counts": {
@@ -1930,7 +1991,7 @@
           "stories_count": 5,
           "status_counts": {
             "QA": 4,
-            "Backlogs": 1
+            "To Do": 1
           },
           "weighted_pct": 60
         }
@@ -2200,12 +2261,12 @@
           "id": 4601,
           "subject": "25. Manual push composer (CMS-composed)",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4569,
           "epic_subject": "MVP1 - Notifications & Engagement",
           "created_on": "2026-08-04T10:11:48Z",
-          "updated_on": "2026-08-11T06:23:41Z",
+          "updated_on": "2026-09-09T09:51:01Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4601"
         },
@@ -2473,12 +2534,12 @@
           "id": 4580,
           "subject": "4. Bilingual UI (Nepali + English)",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4564,
           "epic_subject": "MVP1 - User Identity & Onboarding",
           "created_on": "2026-08-04T10:11:29Z",
-          "updated_on": "2026-08-11T06:27:00Z",
+          "updated_on": "2026-09-09T09:51:33Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4580"
         },
