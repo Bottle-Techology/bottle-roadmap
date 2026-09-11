@@ -597,7 +597,7 @@ const PRODUCTS = [
     fyGoal:'MVP1 live Oct 17 (best case) → R2 (DCB + wallet) Nov 12 → R3/R4 (personalisation + subscription) Dec 17',
     currentGoal:'S3 (Engagement) complete — no new hire joined, Ajay continues solo. S4 (Monetisation + App Store RC) now active.',
     health:'a',
-    healthNote:'S3 complete, but the planned Fullstack hire never joined by Aug 31 as expected — Ajay continuing solo into S4. Live scope tracked from Redmine version 28 (MVP1): 47% scope (up from 45%) — Content Discovery & Browsing now majority in QA (67%), Notifications & Engagement kicked off. Ads System items un-groomed back to Backlogs — watch for slip risk on Ads + Support System. Contractual Oct 17 gated on Apple Store approval after Sep 17 RC.',
+    healthNote:'S3 complete, but the planned Fullstack hire never joined by Aug 31 as expected — Ajay continuing solo into S4. Live scope tracked from Redmine version 28 (MVP1): 47% scope (up from 45%) — Content Discovery & Browsing now majority in QA (67%), Notifications & Engagement kicked off. Ads System items un-groomed back to Backlogs — watch for slip risk on Ads + Support System. BLOCKER: DUNS number allocation taking longer than expected, blocking AdMob, AppLovin MAX, Play Store, and App Store account creation. Contractual Oct 17 gated on Apple Store approval after Sep 17 RC.',
     execStatus:'sprint',
     progress:47,
     currentPhase:'S4 — Monetisation + App Store RC (solo, no new hire)',
@@ -606,6 +606,7 @@ const PRODUCTS = [
     owner:'Ajay',
     resources:['ajay','rahul','suraj','qaformula'],
     risks:[
+      {label:'DUNS number allocation taking longer than expected — blocking Ads accounts (AdMob, AppLovin MAX) and Play Store / App Store account creation', sev:'r'},
       {label:'App Store rejection cycle would push MVP1 into holiday period', sev:'r'},
       {label:'Planned Fullstack hire never joined — Ajay solo through S4/S5, capacity risk on remaining scope (Ads, Support, Analytics, Notifications, Coin groomed but not yet started)', sev:'r'},
       {label:'Rahul design bandwidth (S1–S5 must run one sprint ahead)', sev:'a'},
@@ -614,6 +615,8 @@ const PRODUCTS = [
       {label:'Bunny/DataHub dev setup (M-01)', status:'a', due:'2026-07-23'},
       {label:'ADP enrollment (M-00D)', status:'a', due:'2026-07-23'},
       {label:'Apple Developer account', status:'a', due:'2026-09-17'},
+      {label:'DUNS number allocation — blocks AdMob, AppLovin MAX, Play Store & App Store account creation', status:'r', due:'delayed, pending'},
+      {label:'QA allocation for 977', status:'a', due:'2026-09-15'},
     ],
     kpis:[
       {label:'MVP1 live target', target:'2026-10-17', current:'On track (best case) — but solo dev capacity risk in S4/S5'},
