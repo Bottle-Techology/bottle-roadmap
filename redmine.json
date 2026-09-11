@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T06:16:00+00:00",
+  "generated_at": "2026-09-11T10:00:30+00:00",
   "redmine_base": "https://redmine.bottle.com.np",
   "status_weights": {
     "Done": 1.0,
@@ -25,17 +25,15 @@
       "due_date": "2026-09-16",
       "created_on": "2026-08-19T05:31:31Z",
       "updated_on": "2026-08-19T05:31:31Z",
-      "total_issues": 121,
+      "total_issues": 122,
       "story_count": 82,
       "epic_count": 18,
-      "orphan_count": 39,
+      "orphan_count": 40,
       "status_counts": {
+        "In Progress": 4,
         "Hold": 16,
-        "In Progress": 1,
         "QA": 17,
-        "Done": 81,
-        "To Do": 2,
-        "Re Open": 1,
+        "Done": 82,
         "Backlogs": 3
       },
       "scope_pct": 78,
@@ -85,9 +83,9 @@
           "stories_count": 6,
           "status_counts": {
             "QA": 5,
-            "Re Open": 1
+            "In Progress": 1
           },
-          "weighted_pct": 62
+          "weighted_pct": 66
         },
         {
           "id": 4038,
@@ -96,10 +94,10 @@
           "children_count": 10,
           "stories_count": 10,
           "status_counts": {
-            "QA": 3,
-            "Done": 7
+            "QA": 2,
+            "Done": 8
           },
-          "weighted_pct": 92
+          "weighted_pct": 95
         },
         {
           "id": 4037,
@@ -244,6 +242,19 @@
         }
       ],
       "issues": [
+        {
+          "id": 4776,
+          "subject": "Add Typeable Dropdown Filters Across Admin Panel",
+          "tracker": "Improvements",
+          "status": "In Progress",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2026-09-11T06:26:15Z",
+          "updated_on": "2026-09-11T06:35:20Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/4776"
+        },
         {
           "id": 4775,
           "subject": "Integrate Microsoft Clarity for User Behavior Monitoring",
@@ -534,12 +545,12 @@
           "id": 4753,
           "subject": "Add School Logo and Address Dropdown in School Selection (signup page)",
           "tracker": "Improvements",
-          "status": "To Do",
+          "status": "QA",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T06:36:03Z",
-          "updated_on": "2026-09-10T17:55:57Z",
+          "updated_on": "2026-09-11T06:35:31Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4753"
         },
@@ -625,12 +636,12 @@
           "id": 4746,
           "subject": "Add Dropdown/Search Filters Across All Pages",
           "tracker": "Improvements",
-          "status": "To Do",
+          "status": "In Progress",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-08T06:30:33Z",
-          "updated_on": "2026-09-10T17:55:44Z",
+          "updated_on": "2026-09-11T06:35:15Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4746"
         },
@@ -950,12 +961,12 @@
           "id": 4342,
           "subject": "School \u2014 student monitoring",
           "tracker": "Story",
-          "status": "Re Open",
+          "status": "In Progress",
           "assignee": "Suman Lamichhane",
           "epic_id": 4039,
           "epic_subject": "School Panel",
           "created_on": "2026-07-17T04:37:06Z",
-          "updated_on": "2026-09-11T05:09:20Z",
+          "updated_on": "2026-09-11T06:35:38Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4342"
         },
@@ -1119,12 +1130,12 @@
           "id": 4329,
           "subject": "Municipality dashboard",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4038,
           "epic_subject": "Municipality Panel",
           "created_on": "2026-07-17T04:37:04Z",
-          "updated_on": "2026-09-10T11:16:13Z",
+          "updated_on": "2026-09-11T06:59:24Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4329"
         },
@@ -1834,23 +1845,24 @@
       "epic_count": 13,
       "orphan_count": 0,
       "status_counts": {
-        "Hold": 4,
-        "QA": 27,
-        "Backlogs": 5,
-        "To Do": 9
+        "Backlogs": 6,
+        "QA": 28,
+        "Hold": 2,
+        "To Do": 8,
+        "In Progress": 1
       },
-      "scope_pct": 45,
-      "dev_pct": 60,
+      "scope_pct": 47,
+      "dev_pct": 62,
       "qa_pct": 0,
       "epics": [
         {
           "id": 4576,
           "subject": "MVP1 - iOS Distribution",
-          "status": "Hold",
+          "status": "To Do",
           "children_count": 1,
           "stories_count": 1,
           "status_counts": {
-            "Hold": 1
+            "Backlogs": 1
           },
           "weighted_pct": 0
         },
@@ -1885,26 +1897,25 @@
           "children_count": 2,
           "stories_count": 2,
           "status_counts": {
-            "Backlogs": 1,
-            "To Do": 1
+            "To Do": 2
           },
           "weighted_pct": 0
         },
         {
           "id": 4572,
           "subject": "MVP1 - Support System",
-          "status": "Backlogs",
+          "status": "To Do",
           "children_count": 2,
           "stories_count": 2,
           "status_counts": {
-            "Backlogs": 2
+            "To Do": 2
           },
           "weighted_pct": 0
         },
         {
           "id": 4571,
           "subject": "MVP1 - CRM & User Management",
-          "status": "Backlogs",
+          "status": "QA",
           "children_count": 3,
           "stories_count": 3,
           "status_counts": {
@@ -1926,30 +1937,29 @@
         {
           "id": 4569,
           "subject": "MVP1 - Notifications & Engagement",
-          "status": "To Do",
+          "status": "In Progress",
           "children_count": 1,
           "stories_count": 1,
           "status_counts": {
-            "To Do": 1
+            "In Progress": 1
           },
-          "weighted_pct": 0
+          "weighted_pct": 20
         },
         {
           "id": 4568,
           "subject": "MVP1 - Ads System",
-          "status": "To Do",
+          "status": "Backlogs",
           "children_count": 4,
           "stories_count": 4,
           "status_counts": {
-            "To Do": 3,
-            "Backlogs": 1
+            "Backlogs": 4
           },
           "weighted_pct": 0
         },
         {
           "id": 4567,
           "subject": "MVP1 - Coin System & Monetisation (Free Tier Only)",
-          "status": "To Do",
+          "status": "In Progress",
           "children_count": 1,
           "stories_count": 1,
           "status_counts": {
@@ -1978,10 +1988,9 @@
           "stories_count": 9,
           "status_counts": {
             "To Do": 1,
-            "QA": 7,
-            "Hold": 1
+            "QA": 8
           },
-          "weighted_pct": 58
+          "weighted_pct": 67
         },
         {
           "id": 4564,
@@ -2001,12 +2010,12 @@
           "id": 4621,
           "subject": "45. App Store submission via Reader App / External Link Account entitlement",
           "tracker": "Story",
-          "status": "Hold",
+          "status": "Backlogs",
           "assignee": "Ajay Maharjan",
           "epic_id": 4576,
           "epic_subject": "MVP1 - iOS Distribution",
           "created_on": "2026-08-04T10:12:06Z",
-          "updated_on": "2026-08-17T06:38:26Z",
+          "updated_on": "2026-09-11T09:50:42Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4621"
         },
@@ -2066,12 +2075,12 @@
           "id": 4616,
           "subject": "40. Per-episode analytics (drop-off, unlock, completion)",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4573,
           "epic_subject": "MVP1 - Analytics & Reporting",
           "created_on": "2026-08-04T10:12:01Z",
-          "updated_on": "2026-08-11T06:24:39Z",
+          "updated_on": "2026-09-11T09:50:14Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4616"
         },
@@ -2092,12 +2101,12 @@
           "id": 4614,
           "subject": "38. WhatsApp + email support channels",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4572,
           "epic_subject": "MVP1 - Support System",
           "created_on": "2026-08-04T10:12:00Z",
-          "updated_on": "2026-08-11T06:24:33Z",
+          "updated_on": "2026-09-11T09:46:48Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4614"
         },
@@ -2105,12 +2114,12 @@
           "id": 4613,
           "subject": "37. In-app FAQ/Help Centre",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4572,
           "epic_subject": "MVP1 - Support System",
           "created_on": "2026-08-04T10:11:59Z",
-          "updated_on": "2026-08-11T06:25:08Z",
+          "updated_on": "2026-09-11T09:46:38Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4613"
         },
@@ -2261,12 +2270,12 @@
           "id": 4601,
           "subject": "25. Manual push composer (CMS-composed)",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "In Progress",
           "assignee": "Ajay Maharjan",
           "epic_id": 4569,
           "epic_subject": "MVP1 - Notifications & Engagement",
           "created_on": "2026-08-04T10:11:48Z",
-          "updated_on": "2026-09-09T09:51:01Z",
+          "updated_on": "2026-09-11T06:23:15Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4601"
         },
@@ -2274,12 +2283,12 @@
           "id": 4600,
           "subject": "24. Ad revenue reporting",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "Backlogs",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:47Z",
-          "updated_on": "2026-09-04T06:15:34Z",
+          "updated_on": "2026-09-11T09:51:50Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4600"
         },
@@ -2292,7 +2301,7 @@
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:46Z",
-          "updated_on": "2026-08-11T06:23:39Z",
+          "updated_on": "2026-09-11T09:51:57Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4599"
         },
@@ -2300,12 +2309,12 @@
           "id": 4598,
           "subject": "22. Daily/session ad caps",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "Backlogs",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:45Z",
-          "updated_on": "2026-09-04T06:15:37Z",
+          "updated_on": "2026-09-11T09:51:37Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4598"
         },
@@ -2313,12 +2322,12 @@
           "id": 4597,
           "subject": "21. Rewarded ads (user-initiated)",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "Backlogs",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:44Z",
-          "updated_on": "2026-09-04T06:15:29Z",
+          "updated_on": "2026-09-11T09:51:29Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4597"
         },
@@ -2469,12 +2478,12 @@
           "id": 4585,
           "subject": "9. Rule-based (heuristic) personalisation",
           "tracker": "Story",
-          "status": "Hold",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4565,
           "epic_subject": "MVP1 - Content Discovery & Browsing",
           "created_on": "2026-08-04T10:11:33Z",
-          "updated_on": "2026-08-17T06:41:29Z",
+          "updated_on": "2026-09-11T09:45:40Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4585"
         },
