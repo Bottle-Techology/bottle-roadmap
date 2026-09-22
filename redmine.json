@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T06:53:48+00:00",
+  "generated_at": "2026-09-22T04:37:36+00:00",
   "redmine_base": "https://redmine.bottle.com.np",
   "status_weights": {
     "Done": 1.0,
@@ -27,43 +27,39 @@
       "updated_on": "2026-08-19T05:31:31Z",
       "total_issues": 139,
       "story_count": 86,
-      "epic_count": 20,
+      "epic_count": 18,
       "orphan_count": 48,
       "status_counts": {
-        "In Progress": 1,
-        "QA": 5,
-        "Done": 114,
+        "Done": 120,
         "To Do": 3,
         "Hold": 13,
         "Backlogs": 3
       },
-      "scope_pct": 85,
+      "scope_pct": 86,
       "dev_pct": 86,
-      "qa_pct": 82,
+      "qa_pct": 86,
       "epics": [
         {
           "id": 4786,
           "subject": "Platform Responsiveness",
-          "status": "QA",
+          "status": "Done",
           "children_count": 6,
           "stories_count": 1,
           "status_counts": {
-            "QA": 4,
-            "Done": 2
+            "Done": 6
           },
-          "weighted_pct": 83
+          "weighted_pct": 100
         },
         {
           "id": 4778,
           "subject": "Notifications and Emails ",
-          "status": "QA",
+          "status": "Done",
           "children_count": 3,
           "stories_count": 3,
           "status_counts": {
-            "QA": 1,
-            "Done": 2
+            "Done": 3
           },
-          "weighted_pct": 92
+          "weighted_pct": 100
         },
         {
           "id": 4682,
@@ -240,24 +236,6 @@
             "Done": 5
           },
           "weighted_pct": 100
-        },
-        {
-          "id": 2278,
-          "subject": "Abhyas Meeting and management ",
-          "status": "Done",
-          "children_count": 0,
-          "stories_count": 0,
-          "status_counts": {},
-          "weighted_pct": 0
-        },
-        {
-          "id": 2271,
-          "subject": "Designs for abhyas platform",
-          "status": "Done",
-          "children_count": 0,
-          "stories_count": 0,
-          "status_counts": {},
-          "weighted_pct": 0
         }
       ],
       "issues": [
@@ -265,12 +243,12 @@
           "id": 4795,
           "subject": "Add Mandatory Agreement Page for Teacher Users in signup flow",
           "tracker": "Improvements",
-          "status": "In Progress",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2026-09-16T10:41:04Z",
-          "updated_on": "2026-09-16T11:58:18Z",
+          "updated_on": "2026-09-17T11:26:46Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4795"
         },
@@ -278,12 +256,12 @@
           "id": 4794,
           "subject": "Implement Responsive Design for School Account Pages",
           "tracker": "Improvements",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4786,
           "epic_subject": "Platform Responsiveness",
           "created_on": "2026-09-16T04:36:00Z",
-          "updated_on": "2026-09-16T05:46:14Z",
+          "updated_on": "2026-09-18T10:06:55Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4794"
         },
@@ -291,12 +269,12 @@
           "id": 4793,
           "subject": "Implement Responsive Design for Municipality Account Pages",
           "tracker": "Improvements",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4786,
           "epic_subject": "Platform Responsiveness",
           "created_on": "2026-09-16T04:34:34Z",
-          "updated_on": "2026-09-16T05:46:12Z",
+          "updated_on": "2026-09-18T10:07:04Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4793"
         },
@@ -304,12 +282,12 @@
           "id": 4792,
           "subject": "Implement Responsive Design for Student Account Pages",
           "tracker": "Improvements",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4786,
           "epic_subject": "Platform Responsiveness",
           "created_on": "2026-09-16T04:33:14Z",
-          "updated_on": "2026-09-16T05:46:07Z",
+          "updated_on": "2026-09-18T05:27:17Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4792"
         },
@@ -317,12 +295,12 @@
           "id": 4791,
           "subject": "Implement Responsive Design for Teacher Account Pages",
           "tracker": "Improvements",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4786,
           "epic_subject": "Platform Responsiveness",
           "created_on": "2026-09-16T04:32:22Z",
-          "updated_on": "2026-09-16T05:46:10Z",
+          "updated_on": "2026-09-18T04:20:14Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4791"
         },
@@ -434,12 +412,12 @@
           "id": 4781,
           "subject": "Implement Notifications",
           "tracker": "Story",
-          "status": "QA",
+          "status": "Done",
           "assignee": "Suman Lamichhane",
           "epic_id": 4778,
           "epic_subject": "Notifications and Emails ",
           "created_on": "2026-09-14T06:50:22Z",
-          "updated_on": "2026-09-15T06:25:25Z",
+          "updated_on": "2026-09-17T08:40:58Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4781"
         },
@@ -2088,10 +2066,10 @@
         "Backlogs": 6,
         "QA": 28,
         "Hold": 2,
-        "To Do": 8,
-        "In Progress": 1
+        "To Do": 7,
+        "In Progress": 2
       },
-      "scope_pct": 47,
+      "scope_pct": 48,
       "dev_pct": 62,
       "qa_pct": 0,
       "epics": [
@@ -2148,9 +2126,10 @@
           "children_count": 2,
           "stories_count": 2,
           "status_counts": {
-            "To Do": 2
+            "To Do": 1,
+            "In Progress": 1
           },
-          "weighted_pct": 0
+          "weighted_pct": 10
         },
         {
           "id": 4571,
@@ -2354,12 +2333,12 @@
           "id": 4613,
           "subject": "37. In-app FAQ/Help Centre",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "In Progress",
           "assignee": "Ajay Maharjan",
           "epic_id": 4572,
           "epic_subject": "MVP1 - Support System",
           "created_on": "2026-08-04T10:11:59Z",
-          "updated_on": "2026-09-11T09:46:38Z",
+          "updated_on": "2026-09-21T05:33:15Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4613"
         },
