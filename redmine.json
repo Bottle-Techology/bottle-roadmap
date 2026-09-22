@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T04:37:36+00:00",
+  "generated_at": "2026-09-22T05:04:26+00:00",
   "redmine_base": "https://redmine.bottle.com.np",
   "status_weights": {
     "Done": 1.0,
@@ -2063,13 +2063,13 @@
       "epic_count": 13,
       "orphan_count": 0,
       "status_counts": {
-        "Backlogs": 6,
+        "Backlogs": 5,
         "QA": 28,
-        "Hold": 2,
-        "To Do": 7,
-        "In Progress": 2
+        "In Progress": 5,
+        "To Do": 6,
+        "Hold": 1
       },
-      "scope_pct": 48,
+      "scope_pct": 49,
       "dev_pct": 62,
       "qa_pct": 0,
       "epics": [
@@ -2087,15 +2087,14 @@
         {
           "id": 4575,
           "subject": "MVP1 - Cold-Start Credibility",
-          "status": "Backlogs",
+          "status": "In Progress",
           "children_count": 3,
           "stories_count": 3,
           "status_counts": {
             "QA": 1,
-            "Backlogs": 1,
-            "Hold": 1
+            "In Progress": 2
           },
-          "weighted_pct": 25
+          "weighted_pct": 38
         },
         {
           "id": 4574,
@@ -2206,10 +2205,10 @@
           "children_count": 9,
           "stories_count": 9,
           "status_counts": {
-            "To Do": 1,
+            "In Progress": 1,
             "QA": 8
           },
-          "weighted_pct": 67
+          "weighted_pct": 69
         },
         {
           "id": 4564,
@@ -2255,12 +2254,12 @@
           "id": 4619,
           "subject": "43. Launch-cohort tagging",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "In Progress",
           "assignee": "Ajay Maharjan",
           "epic_id": 4575,
           "epic_subject": "MVP1 - Cold-Start Credibility",
           "created_on": "2026-08-04T10:12:04Z",
-          "updated_on": "2026-08-11T06:25:41Z",
+          "updated_on": "2026-09-22T05:03:44Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4619"
         },
@@ -2268,12 +2267,12 @@
           "id": 4618,
           "subject": "42. Real editorial curation",
           "tracker": "Story",
-          "status": "Hold",
+          "status": "In Progress",
           "assignee": "Ajay Maharjan",
           "epic_id": 4575,
           "epic_subject": "MVP1 - Cold-Start Credibility",
           "created_on": "2026-08-04T10:12:03Z",
-          "updated_on": "2026-08-17T06:47:24Z",
+          "updated_on": "2026-09-22T05:02:57Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4618"
         },
@@ -2494,7 +2493,7 @@
           "epic_id": 4569,
           "epic_subject": "MVP1 - Notifications & Engagement",
           "created_on": "2026-08-04T10:11:48Z",
-          "updated_on": "2026-09-11T06:23:15Z",
+          "updated_on": "2026-09-22T05:02:22Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4601"
         },
@@ -2632,12 +2631,12 @@
           "id": 4590,
           "subject": "14. Maturity-gated (18+) visibility",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "In Progress",
           "assignee": "Ajay Maharjan",
           "epic_id": 4565,
           "epic_subject": "MVP1 - Content Discovery & Browsing",
           "created_on": "2026-08-04T10:11:38Z",
-          "updated_on": "2026-08-17T06:40:27Z",
+          "updated_on": "2026-09-22T04:59:26Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4590"
         },
