@@ -38,6 +38,12 @@ RELEASES_TO_SYNC = [
         "redmine_version_id": 28,
         "release_label": "MVP1",
     },
+    {
+        "portfolio_id": "sarvanam-R1",  # Formula Room — Sarvanam Collab — Release 1.1 row in the Release Scorecards
+        "redmine_project": "pod-sarvanam-collab",
+        "redmine_version_id": 20,
+        "release_label": "Release 1.1",
+    },
     # Add more releases here as they get set up in Redmine:
     # {"portfolio_id":"rms-R1","redmine_project":"formula-rms","redmine_version_id":??,...},
 ]

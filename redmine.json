@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T05:39:34+00:00",
+  "generated_at": "2026-09-25T07:10:09+00:00",
   "redmine_base": "https://redmine.bottle.com.np",
   "status_weights": {
     "Done": 1.0,
@@ -2609,6 +2609,313 @@
           "updated_on": "2026-09-04T05:15:25Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4577"
+        }
+      ]
+    },
+    "sarvanam-R1": {
+      "portfolio_id": "sarvanam-R1",
+      "release_label": "Release 1.1",
+      "redmine_version_id": 20,
+      "redmine_project": "pod-sarvanam-collab",
+      "redmine_url": "https://redmine.bottle.com.np/versions/20",
+      "version_status": "open",
+      "due_date": "2025-11-14",
+      "created_on": "2025-11-07T03:41:37Z",
+      "updated_on": "2025-11-07T03:41:37Z",
+      "total_issues": 19,
+      "story_count": 12,
+      "epic_count": 3,
+      "orphan_count": 2,
+      "status_counts": {
+        "QA": 16,
+        "To Do": 3
+      },
+      "scope_pct": 63,
+      "dev_pct": 84,
+      "qa_pct": 0,
+      "epics": [
+        {
+          "id": 3343,
+          "subject": "Menu Browsing and Ordering",
+          "status": "Backlogs",
+          "children_count": 1,
+          "stories_count": 1,
+          "status_counts": {
+            "QA": 1
+          },
+          "weighted_pct": 75
+        },
+        {
+          "id": 3334,
+          "subject": "Billing and payment",
+          "status": "Backlogs",
+          "children_count": 6,
+          "stories_count": 6,
+          "status_counts": {
+            "To Do": 3,
+            "QA": 3
+          },
+          "weighted_pct": 38
+        },
+        {
+          "id": 3327,
+          "subject": "UI/UX Improvements",
+          "status": "Backlogs",
+          "children_count": 10,
+          "stories_count": 5,
+          "status_counts": {
+            "QA": 10
+          },
+          "weighted_pct": 75
+        }
+      ],
+      "issues": [
+        {
+          "id": 3433,
+          "subject": "Wrong message while placing Order | outlet and shift status needs to be displayed",
+          "tracker": "Bug",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2025-11-25T08:38:59Z",
+          "updated_on": "2026-09-25T07:05:15Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3433"
+        },
+        {
+          "id": 3432,
+          "subject": "While switching the outlets the rooms are not updated",
+          "tracker": "Bug",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": null,
+          "epic_subject": null,
+          "created_on": "2025-11-25T08:38:21Z",
+          "updated_on": "2026-09-25T07:05:15Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3432"
+        },
+        {
+          "id": 3431,
+          "subject": "Order Detail page improvemnt",
+          "tracker": "Improvements",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-25T08:34:52Z",
+          "updated_on": "2026-09-25T07:05:13Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3431"
+        },
+        {
+          "id": 3430,
+          "subject": "Detail edit page for cart",
+          "tracker": "Improvements",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-25T08:34:35Z",
+          "updated_on": "2026-09-25T07:05:13Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3430"
+        },
+        {
+          "id": 3342,
+          "subject": "Item Detail Page Enhancements with addons selection",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3343,
+          "epic_subject": "Menu Browsing and Ordering",
+          "created_on": "2025-11-07T03:53:33Z",
+          "updated_on": "2026-09-25T07:05:15Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3342"
+        },
+        {
+          "id": 3341,
+          "subject": "Battery Percentage in main page",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:52:15Z",
+          "updated_on": "2026-09-25T07:05:13Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3341"
+        },
+        {
+          "id": 3340,
+          "subject": "Khalti  payment Integration",
+          "tracker": "Story",
+          "status": "To Do",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3334,
+          "epic_subject": "Billing and payment",
+          "created_on": "2025-11-07T03:51:30Z",
+          "updated_on": "2026-09-25T07:05:14Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3340"
+        },
+        {
+          "id": 3339,
+          "subject": "Success/failed Page for payment",
+          "tracker": "Story",
+          "status": "To Do",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3334,
+          "epic_subject": "Billing and payment",
+          "created_on": "2025-11-07T03:51:13Z",
+          "updated_on": "2026-09-25T07:05:14Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3339"
+        },
+        {
+          "id": 3338,
+          "subject": "Payment Method Selection (Khalti)",
+          "tracker": "Story",
+          "status": "To Do",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3334,
+          "epic_subject": "Billing and payment",
+          "created_on": "2025-11-07T03:50:55Z",
+          "updated_on": "2026-09-25T07:05:14Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3338"
+        },
+        {
+          "id": 3337,
+          "subject": "Billing Details Selection",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3334,
+          "epic_subject": "Billing and payment",
+          "created_on": "2025-11-07T03:50:36Z",
+          "updated_on": "2026-09-25T07:05:14Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3337"
+        },
+        {
+          "id": 3336,
+          "subject": "Bill Details Page",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3334,
+          "epic_subject": "Billing and payment",
+          "created_on": "2025-11-07T03:50:24Z",
+          "updated_on": "2026-09-25T07:05:14Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3336"
+        },
+        {
+          "id": 3335,
+          "subject": "Placed Order View (Bill in Bottom Navbar)",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3334,
+          "epic_subject": "Billing and payment",
+          "created_on": "2025-11-07T03:50:11Z",
+          "updated_on": "2026-09-25T07:05:14Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3335"
+        },
+        {
+          "id": 3333,
+          "subject": "Menu Refresh Mechanism",
+          "tracker": "Improvements",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:47:57Z",
+          "updated_on": "2026-09-25T07:05:13Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3333"
+        },
+        {
+          "id": 3332,
+          "subject": "Room Number Display",
+          "tracker": "Improvements",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:47:46Z",
+          "updated_on": "2026-09-25T07:05:13Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3332"
+        },
+        {
+          "id": 3331,
+          "subject": "Change \u201cRs\u201d to \u201cNPR\u201d",
+          "tracker": "Improvements",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:47:25Z",
+          "updated_on": "2026-09-25T07:05:13Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3331"
+        },
+        {
+          "id": 3330,
+          "subject": "Image for Menu Items",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:47:17Z",
+          "updated_on": "2026-09-25T07:05:13Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3330"
+        },
+        {
+          "id": 3329,
+          "subject": "UX for Main Menu Scroll ",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:46:20Z",
+          "updated_on": "2026-09-25T07:05:12Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3329"
+        },
+        {
+          "id": 3328,
+          "subject": "Dynamic Logo and Branding",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:45:29Z",
+          "updated_on": "2026-09-25T07:05:12Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3328"
+        },
+        {
+          "id": 3326,
+          "subject": "Setup Page with Multi-click Access",
+          "tracker": "Story",
+          "status": "QA",
+          "assignee": "Suman Lamichhane",
+          "epic_id": 3327,
+          "epic_subject": "UI/UX Improvements",
+          "created_on": "2025-11-07T03:43:52Z",
+          "updated_on": "2026-09-25T07:05:12Z",
+          "done_ratio": 0,
+          "url": "https://redmine.bottle.com.np/issues/3326"
         }
       ]
     }
