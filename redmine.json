@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T05:14:13+00:00",
+  "generated_at": "2026-09-25T05:39:34+00:00",
   "redmine_base": "https://redmine.bottle.com.np",
   "status_weights": {
     "Done": 1.0,
@@ -1866,14 +1866,13 @@
       "epic_count": 13,
       "orphan_count": 0,
       "status_counts": {
-        "Backlogs": 5,
-        "QA": 28,
-        "In Progress": 7,
-        "To Do": 4,
-        "Hold": 1
+        "Hold": 2,
+        "QA": 35,
+        "In Progress": 1,
+        "To Do": 7
       },
-      "scope_pct": 50,
-      "dev_pct": 62,
+      "scope_pct": 59,
+      "dev_pct": 78,
       "qa_pct": 0,
       "epics": [
         {
@@ -1883,21 +1882,20 @@
           "children_count": 1,
           "stories_count": 1,
           "status_counts": {
-            "Backlogs": 1
+            "Hold": 1
           },
           "weighted_pct": 0
         },
         {
           "id": 4575,
           "subject": "MVP1 - Cold-Start Credibility",
-          "status": "In Progress",
+          "status": "QA",
           "children_count": 3,
           "stories_count": 3,
           "status_counts": {
-            "QA": 1,
-            "In Progress": 2
+            "QA": 3
           },
-          "weighted_pct": 38
+          "weighted_pct": 75
         },
         {
           "id": 4574,
@@ -1917,9 +1915,10 @@
           "children_count": 2,
           "stories_count": 2,
           "status_counts": {
-            "In Progress": 2
+            "In Progress": 1,
+            "QA": 1
           },
-          "weighted_pct": 20
+          "weighted_pct": 48
         },
         {
           "id": 4572,
@@ -1929,9 +1928,9 @@
           "stories_count": 2,
           "status_counts": {
             "To Do": 1,
-            "In Progress": 1
+            "QA": 1
           },
-          "weighted_pct": 10
+          "weighted_pct": 38
         },
         {
           "id": 4571,
@@ -1958,22 +1957,23 @@
         {
           "id": 4569,
           "subject": "MVP1 - Notifications & Engagement",
-          "status": "In Progress",
+          "status": "QA",
           "children_count": 1,
           "stories_count": 1,
           "status_counts": {
-            "In Progress": 1
+            "QA": 1
           },
-          "weighted_pct": 20
+          "weighted_pct": 75
         },
         {
           "id": 4568,
           "subject": "MVP1 - Ads System",
-          "status": "Backlogs",
+          "status": "To Do",
           "children_count": 4,
           "stories_count": 4,
           "status_counts": {
-            "Backlogs": 4
+            "Hold": 1,
+            "To Do": 3
           },
           "weighted_pct": 0
         },
@@ -1991,32 +1991,30 @@
         {
           "id": 4566,
           "subject": "MVP1 - Video Player & Viewing",
-          "status": "In Progress",
+          "status": "QA",
           "children_count": 5,
           "stories_count": 5,
           "status_counts": {
-            "Hold": 1,
-            "QA": 3,
+            "QA": 4,
             "To Do": 1
           },
-          "weighted_pct": 45
+          "weighted_pct": 60
         },
         {
           "id": 4565,
           "subject": "MVP1 - Content Discovery & Browsing",
-          "status": "In Progress",
+          "status": "QA",
           "children_count": 9,
           "stories_count": 9,
           "status_counts": {
-            "In Progress": 1,
-            "QA": 8
+            "QA": 9
           },
-          "weighted_pct": 69
+          "weighted_pct": 75
         },
         {
           "id": 4564,
           "subject": "MVP1 - User Identity & Onboarding",
-          "status": "In Progress",
+          "status": "QA",
           "children_count": 5,
           "stories_count": 5,
           "status_counts": {
@@ -2031,12 +2029,12 @@
           "id": 4621,
           "subject": "45. App Store submission via Reader App / External Link Account entitlement",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "Hold",
           "assignee": "Ajay Maharjan",
           "epic_id": 4576,
           "epic_subject": "MVP1 - iOS Distribution",
           "created_on": "2026-08-04T10:12:06Z",
-          "updated_on": "2026-09-11T09:50:42Z",
+          "updated_on": "2026-09-25T05:21:00Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4621"
         },
@@ -2057,12 +2055,12 @@
           "id": 4619,
           "subject": "43. Launch-cohort tagging",
           "tracker": "Story",
-          "status": "In Progress",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4575,
           "epic_subject": "MVP1 - Cold-Start Credibility",
           "created_on": "2026-08-04T10:12:04Z",
-          "updated_on": "2026-09-22T05:03:44Z",
+          "updated_on": "2026-09-25T05:37:47Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4619"
         },
@@ -2070,12 +2068,12 @@
           "id": 4618,
           "subject": "42. Real editorial curation",
           "tracker": "Story",
-          "status": "In Progress",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4575,
           "epic_subject": "MVP1 - Cold-Start Credibility",
           "created_on": "2026-08-04T10:12:03Z",
-          "updated_on": "2026-09-22T05:02:57Z",
+          "updated_on": "2026-09-25T05:37:56Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4618"
         },
@@ -2109,12 +2107,12 @@
           "id": 4615,
           "subject": "39. Top-performing content",
           "tracker": "Story",
-          "status": "In Progress",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4573,
           "epic_subject": "MVP1 - Analytics & Reporting",
           "created_on": "2026-08-04T10:12:00Z",
-          "updated_on": "2026-09-23T11:22:02Z",
+          "updated_on": "2026-09-25T05:37:32Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4615"
         },
@@ -2135,12 +2133,12 @@
           "id": 4613,
           "subject": "37. In-app FAQ/Help Centre",
           "tracker": "Story",
-          "status": "In Progress",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4572,
           "epic_subject": "MVP1 - Support System",
           "created_on": "2026-08-04T10:11:59Z",
-          "updated_on": "2026-09-21T05:33:15Z",
+          "updated_on": "2026-09-25T05:37:52Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4613"
         },
@@ -2291,12 +2289,12 @@
           "id": 4601,
           "subject": "25. Manual push composer (CMS-composed)",
           "tracker": "Story",
-          "status": "In Progress",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4569,
           "epic_subject": "MVP1 - Notifications & Engagement",
           "created_on": "2026-08-04T10:11:48Z",
-          "updated_on": "2026-09-23T11:23:09Z",
+          "updated_on": "2026-09-25T05:38:09Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4601"
         },
@@ -2304,12 +2302,12 @@
           "id": 4600,
           "subject": "24. Ad revenue reporting",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "Hold",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:47Z",
-          "updated_on": "2026-09-11T09:51:50Z",
+          "updated_on": "2026-09-25T05:21:18Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4600"
         },
@@ -2317,12 +2315,12 @@
           "id": 4599,
           "subject": "23. Google AdMob rewarded inventory",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:46Z",
-          "updated_on": "2026-09-11T09:51:57Z",
+          "updated_on": "2026-09-25T05:20:56Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4599"
         },
@@ -2330,12 +2328,12 @@
           "id": 4598,
           "subject": "22. Daily/session ad caps",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:45Z",
-          "updated_on": "2026-09-11T09:51:37Z",
+          "updated_on": "2026-09-25T05:21:21Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4598"
         },
@@ -2343,12 +2341,12 @@
           "id": 4597,
           "subject": "21. Rewarded ads (user-initiated)",
           "tracker": "Story",
-          "status": "Backlogs",
+          "status": "To Do",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:44Z",
-          "updated_on": "2026-09-11T09:51:29Z",
+          "updated_on": "2026-09-25T05:21:14Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4597"
         },
@@ -2369,12 +2367,12 @@
           "id": 4595,
           "subject": "19. Screenshots allowed (no block)",
           "tracker": "Story",
-          "status": "Hold",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4566,
           "epic_subject": "MVP1 - Video Player & Viewing",
           "created_on": "2026-08-04T10:11:42Z",
-          "updated_on": "2026-08-17T06:41:40Z",
+          "updated_on": "2026-09-25T05:38:21Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4595"
         },
@@ -2434,12 +2432,12 @@
           "id": 4590,
           "subject": "14. Maturity-gated (18+) visibility",
           "tracker": "Story",
-          "status": "In Progress",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4565,
           "epic_subject": "MVP1 - Content Discovery & Browsing",
           "created_on": "2026-08-04T10:11:38Z",
-          "updated_on": "2026-09-22T04:59:26Z",
+          "updated_on": "2026-09-25T05:38:06Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4590"
         },
