@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T07:10:09+00:00",
+  "generated_at": "2026-09-30T08:03:15+00:00",
   "redmine_base": "https://redmine.bottle.com.np",
   "status_weights": {
     "Done": 1.0,
@@ -1867,12 +1867,12 @@
       "orphan_count": 0,
       "status_counts": {
         "Hold": 2,
-        "QA": 35,
-        "In Progress": 1,
-        "To Do": 7
+        "QA": 39,
+        "To Do": 2,
+        "In Progress": 2
       },
-      "scope_pct": 59,
-      "dev_pct": 78,
+      "scope_pct": 66,
+      "dev_pct": 87,
       "qa_pct": 0,
       "epics": [
         {
@@ -1911,14 +1911,13 @@
         {
           "id": 4573,
           "subject": "MVP1 - Analytics & Reporting",
-          "status": "In Progress",
+          "status": "QA",
           "children_count": 2,
           "stories_count": 2,
           "status_counts": {
-            "In Progress": 1,
-            "QA": 1
+            "QA": 2
           },
-          "weighted_pct": 48
+          "weighted_pct": 75
         },
         {
           "id": 4572,
@@ -1968,25 +1967,26 @@
         {
           "id": 4568,
           "subject": "MVP1 - Ads System",
-          "status": "To Do",
+          "status": "QA",
           "children_count": 4,
           "stories_count": 4,
           "status_counts": {
             "Hold": 1,
-            "To Do": 3
+            "In Progress": 2,
+            "QA": 1
           },
-          "weighted_pct": 0
+          "weighted_pct": 29
         },
         {
           "id": 4567,
           "subject": "MVP1 - Coin System & Monetisation (Free Tier Only)",
-          "status": "In Progress",
+          "status": "QA",
           "children_count": 1,
           "stories_count": 1,
           "status_counts": {
-            "To Do": 1
+            "QA": 1
           },
-          "weighted_pct": 0
+          "weighted_pct": 75
         },
         {
           "id": 4566,
@@ -1995,10 +1995,9 @@
           "children_count": 5,
           "stories_count": 5,
           "status_counts": {
-            "QA": 4,
-            "To Do": 1
+            "QA": 5
           },
-          "weighted_pct": 60
+          "weighted_pct": 75
         },
         {
           "id": 4565,
@@ -2094,12 +2093,12 @@
           "id": 4616,
           "subject": "40. Per-episode analytics (drop-off, unlock, completion)",
           "tracker": "Story",
-          "status": "In Progress",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4573,
           "epic_subject": "MVP1 - Analytics & Reporting",
           "created_on": "2026-08-04T10:12:01Z",
-          "updated_on": "2026-09-23T11:22:24Z",
+          "updated_on": "2026-09-30T08:00:35Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4616"
         },
@@ -2315,12 +2314,12 @@
           "id": 4599,
           "subject": "23. Google AdMob rewarded inventory",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "In Progress",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:46Z",
-          "updated_on": "2026-09-25T05:20:56Z",
+          "updated_on": "2026-09-30T08:00:46Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4599"
         },
@@ -2328,12 +2327,12 @@
           "id": 4598,
           "subject": "22. Daily/session ad caps",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "In Progress",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:45Z",
-          "updated_on": "2026-09-25T05:21:21Z",
+          "updated_on": "2026-09-30T08:00:43Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4598"
         },
@@ -2341,12 +2340,12 @@
           "id": 4597,
           "subject": "21. Rewarded ads (user-initiated)",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4568,
           "epic_subject": "MVP1 - Ads System",
           "created_on": "2026-08-04T10:11:44Z",
-          "updated_on": "2026-09-25T05:21:14Z",
+          "updated_on": "2026-09-30T08:00:39Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4597"
         },
@@ -2354,12 +2353,12 @@
           "id": 4596,
           "subject": "20. Free tier \u2014 ads + free episodes per series",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4567,
           "epic_subject": "MVP1 - Coin System & Monetisation (Free Tier Only)",
           "created_on": "2026-08-04T10:11:43Z",
-          "updated_on": "2026-09-04T06:13:40Z",
+          "updated_on": "2026-09-30T08:00:50Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4596"
         },
@@ -2393,12 +2392,12 @@
           "id": 4593,
           "subject": "17. Rewarded-ad unlock at episode end",
           "tracker": "Story",
-          "status": "To Do",
+          "status": "QA",
           "assignee": "Ajay Maharjan",
           "epic_id": 4566,
           "epic_subject": "MVP1 - Video Player & Viewing",
           "created_on": "2026-08-04T10:11:40Z",
-          "updated_on": "2026-09-04T06:13:53Z",
+          "updated_on": "2026-09-30T08:00:48Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/4593"
         },
@@ -2679,7 +2678,7 @@
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2025-11-25T08:38:59Z",
-          "updated_on": "2026-09-25T07:05:15Z",
+          "updated_on": "2026-09-26T11:58:44Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3433"
         },
@@ -2692,7 +2691,7 @@
           "epic_id": null,
           "epic_subject": null,
           "created_on": "2025-11-25T08:38:21Z",
-          "updated_on": "2026-09-25T07:05:15Z",
+          "updated_on": "2026-09-26T11:58:43Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3432"
         },
@@ -2705,7 +2704,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-25T08:34:52Z",
-          "updated_on": "2026-09-25T07:05:13Z",
+          "updated_on": "2026-09-26T11:58:43Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3431"
         },
@@ -2718,7 +2717,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-25T08:34:35Z",
-          "updated_on": "2026-09-25T07:05:13Z",
+          "updated_on": "2026-09-26T11:58:42Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3430"
         },
@@ -2731,7 +2730,7 @@
           "epic_id": 3343,
           "epic_subject": "Menu Browsing and Ordering",
           "created_on": "2025-11-07T03:53:33Z",
-          "updated_on": "2026-09-25T07:05:15Z",
+          "updated_on": "2026-09-26T11:58:48Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3342"
         },
@@ -2744,7 +2743,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:52:15Z",
-          "updated_on": "2026-09-25T07:05:13Z",
+          "updated_on": "2026-09-26T11:58:40Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3341"
         },
@@ -2757,7 +2756,7 @@
           "epic_id": 3334,
           "epic_subject": "Billing and payment",
           "created_on": "2025-11-07T03:51:30Z",
-          "updated_on": "2026-09-25T07:05:14Z",
+          "updated_on": "2026-09-27T14:21:52Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3340"
         },
@@ -2770,7 +2769,7 @@
           "epic_id": 3334,
           "epic_subject": "Billing and payment",
           "created_on": "2025-11-07T03:51:13Z",
-          "updated_on": "2026-09-25T07:05:14Z",
+          "updated_on": "2026-09-27T14:21:51Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3339"
         },
@@ -2783,7 +2782,7 @@
           "epic_id": 3334,
           "epic_subject": "Billing and payment",
           "created_on": "2025-11-07T03:50:55Z",
-          "updated_on": "2026-09-25T07:05:14Z",
+          "updated_on": "2026-09-27T14:21:51Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3338"
         },
@@ -2796,7 +2795,7 @@
           "epic_id": 3334,
           "epic_subject": "Billing and payment",
           "created_on": "2025-11-07T03:50:36Z",
-          "updated_on": "2026-09-25T07:05:14Z",
+          "updated_on": "2026-09-26T11:58:47Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3337"
         },
@@ -2809,7 +2808,7 @@
           "epic_id": 3334,
           "epic_subject": "Billing and payment",
           "created_on": "2025-11-07T03:50:24Z",
-          "updated_on": "2026-09-25T07:05:14Z",
+          "updated_on": "2026-09-26T11:58:39Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3336"
         },
@@ -2822,7 +2821,7 @@
           "epic_id": 3334,
           "epic_subject": "Billing and payment",
           "created_on": "2025-11-07T03:50:11Z",
-          "updated_on": "2026-09-25T07:05:14Z",
+          "updated_on": "2026-09-26T11:58:38Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3335"
         },
@@ -2835,7 +2834,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:47:57Z",
-          "updated_on": "2026-09-25T07:05:13Z",
+          "updated_on": "2026-09-26T11:58:37Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3333"
         },
@@ -2848,7 +2847,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:47:46Z",
-          "updated_on": "2026-09-25T07:05:13Z",
+          "updated_on": "2026-09-26T11:58:21Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3332"
         },
@@ -2861,7 +2860,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:47:25Z",
-          "updated_on": "2026-09-25T07:05:13Z",
+          "updated_on": "2026-09-26T11:58:35Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3331"
         },
@@ -2874,7 +2873,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:47:17Z",
-          "updated_on": "2026-09-25T07:05:13Z",
+          "updated_on": "2026-09-26T11:58:46Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3330"
         },
@@ -2887,7 +2886,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:46:20Z",
-          "updated_on": "2026-09-25T07:05:12Z",
+          "updated_on": "2026-09-26T11:58:34Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3329"
         },
@@ -2900,7 +2899,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:45:29Z",
-          "updated_on": "2026-09-25T07:05:12Z",
+          "updated_on": "2026-09-26T11:58:45Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3328"
         },
@@ -2913,7 +2912,7 @@
           "epic_id": 3327,
           "epic_subject": "UI/UX Improvements",
           "created_on": "2025-11-07T03:43:52Z",
-          "updated_on": "2026-09-25T07:05:12Z",
+          "updated_on": "2026-09-26T11:58:33Z",
           "done_ratio": 0,
           "url": "https://redmine.bottle.com.np/issues/3326"
         }
