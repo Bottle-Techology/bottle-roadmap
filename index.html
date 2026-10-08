@@ -453,16 +453,16 @@ const PRODUCTS = [
     fyGoal:'20 municipalities, ~120 schools, ~24k Class 8–10 students by Ashad',
     currentGoal:'Fix Native Smartboard App stability (top priority), keep V2 revamp sign-off moving — Features on hold pending further decision.',
     health:'a', // g/a/r/paused/closed
-    healthNote:'DEVIATION (Sep 25 review): V2 revamp RELEASED Sep 23 (was targeting Sep 16, 7 days late — reason not specified). Abhyas — Features (Classroom/Homework/Live Tuition) put ON HOLD pending further decision — the Native Smartboard App stability issue has been elevated to TOP PRIORITY, redirecting dev focus there instead of features. No confirmed dates for either the fix or a Features restart. Latest Redmine sync: 99% scope — all 18 named epics fully Done, unsorted feedback bucket now 97% Done (32/33).',
+    healthNote:'DEADLINE SET (Oct 8 review): smartboard issue still not fixed — must be fixed before the Dashain/Tihar holiday ends, hard deadline Oct 13. Features still on hold. Sales: Nagarjun municipality acquired; Q1 on plan. DEVIATION (Sep 25 review): V2 revamp RELEASED Sep 23 (was targeting Sep 16, 7 days late — reason not specified). Abhyas — Features (Classroom/Homework/Live Tuition) put ON HOLD pending further decision — the Native Smartboard App stability issue has been elevated to TOP PRIORITY, redirecting dev focus there instead of features. No confirmed dates for either the fix or a Features restart. Latest Redmine sync: 99% scope — all 18 named epics fully Done, unsorted feedback bucket now 97% Done (32/33).',
     execStatus:'dev',
     progress:99, // fallback only — live value pulled from abhyas-R1 via productLiveProgress()
     currentPhase:'Smartboard stability fix (TOP PRIORITY) — Features on hold pending further decision',
-    nextMilestone:'Smartboard stability fix complete',
-    nextMilestoneDate:'2026-10-15',
+    nextMilestone:'Smartboard stability fix complete (before Dashain/Tihar holiday ends)',
+    nextMilestoneDate:'2026-10-13',
     owner:'Suman',
     resources:['ajay','suman','rahul','pranuz','shreya','dhakal','suraj'],
     risks:[
-      {label:'Native Smartboard App instability elevated to TOP PRIORITY — Features work paused to free up capacity, no confirmed fix-complete date', sev:'r'},
+      {label:'Native Smartboard App instability still not fixed (Oct 8) — hard deadline Oct 13, before the Dashain/Tihar holiday ends; Features paused to free up capacity', sev:'r'},
       {label:'Abhyas — Features (Classroom/Homework/Live Tuition) ON HOLD pending further decision — no confirmed restart date', sev:'a'},
       {label:'Further releases and support depend on the dedicated Abhyas dev hire (post-revamp)', sev:'r'},
       {label:'Municipality onboarding depends on new hires', sev:'a'},
@@ -472,7 +472,7 @@ const PRODUCTS = [
       {label:'Growth Officer hire × 2 (Ashwin/Kartik)', status:'a', due:'2026-09'},
     ],
     kpis:[
-      {label:'Q1 municipalities', target:'3 new', current:'0'},
+      {label:'Q1 municipalities', target:'3 new', current:'1 (Nagarjun)'},
       {label:'Q1 schools', target:'~18', current:'0'},
       {label:'Q1 students reached', target:'~3,580', current:'0'},
     ],
@@ -485,12 +485,12 @@ const PRODUCTS = [
     fyGoal:'100 restaurants signed, NPR 300k/mo revenue by Ashad',
     currentGoal:'Bring Phase 1 to full market release (90% complete — final QA + onboarding SOP), then extended cooling + Phase 2 (tablet + Formula app).',
     health:'a',
-    healthNote:'DEVIATION (Sep 25 review): Phase 1 still 90% complete, final QA (IRD integration) and onboarding SOP pending (target Sep 10, twice-extended). Phase 2 pause extended to Sep 23 (was Sep 17) — migration issues + minor improvements/bugs took longer. Suman then diverted onto the Sarvanam PMS room service app Sep 23 – Oct 2 (new engagement, not yet tracked as its own product). Phase 2 now resumes Oct 2 (was Sep 17); new target ~Nov 15 (was Oct 31, estimate).',
+    healthNote:'SPLIT FOCUS (Oct 8 review): Phase 2 resumed Oct 2 as planned; from Oct 6 Suman also on the Formula app for the Pokhara NPL event (through Oct 16), Phase 2 Formula app work continuing in parallel. Nov 15 target and R1 unchanged. DEVIATION (Sep 25 review): Phase 1 still 90% complete, final QA (IRD integration) and onboarding SOP pending (target Sep 10, twice-extended). Phase 2 pause extended to Sep 23 (was Sep 17) — migration issues + minor improvements/bugs took longer. Suman then diverted onto the Sarvanam PMS room service app Sep 23 – Oct 2 (new engagement, not yet tracked as its own product). Phase 2 now resumes Oct 2 (was Sep 17); new target ~Nov 15 (was Oct 31, estimate).',
     execStatus:'dev',
     progress:90,
-    currentPhase:'Phase 1 — final QA before market release (90%), target Sep 10',
-    nextMilestone:'Phase 1 market release',
-    nextMilestoneDate:'2026-09-10',
+    currentPhase:'Phase 2 (tablet + Formula app) — Suman split with Pokhara NPL event through Oct 16',
+    nextMilestone:'Pokhara NPL event wraps (Suman back full-time on Phase 2)',
+    nextMilestoneDate:'2026-10-16',
     owner:'Suman',
     resources:['ajay','suman','umang','rahul','pranuz','amit','suraj'],
     risks:[
@@ -514,12 +514,12 @@ const PRODUCTS = [
     fyGoal:'Marriott stable + Solti + 5+ prospects signed',
     currentGoal:'Complete Marriott monitoring, deploy Solti Hotel + prospects with Puran Ji.',
     health:'a',
-    healthNote:'DEVIATION (Sep 25 review): Marriott trial passed and Solti deployment is on track (started Jul 15, running through Dec). But the Marriott full contract — expected finalized by Aug 1 — is not: formal contract sent Jul 27, still under Marriott management review, and now ON HOLD due to an internal issue within Marriott. No confirmed resolution date. 50 devices received 4 days ahead of plan (Jul 6).',
+    healthNote:'STILL ON HOLD (Oct 8 review): Marriott contract has not moved forward — on hold extended to Oct 31 (placeholder). Solti deployment on track. DEVIATION (Sep 25 review): Marriott trial passed and Solti deployment is on track (started Jul 15, running through Dec). But the Marriott full contract — expected finalized by Aug 1 — is not: formal contract sent Jul 27, still under Marriott management review, and now ON HOLD due to an internal issue within Marriott. No confirmed resolution date. 50 devices received 4 days ahead of plan (Jul 6).',
     execStatus:'trial',
     progress:65,
     currentPhase:'Marriott contract on hold (Marriott-side) → Solti deployment ongoing',
-    nextMilestone:'Solti Hotel deploy begins',
-    nextMilestoneDate:'2026-07-15',
+    nextMilestone:'Marriott contract on-hold revisit',
+    nextMilestoneDate:'2026-10-31',
     owner:'Ajay',
     resources:['ajay','suman','umang','rahul','amit','suraj','puran','abishek'],
     risks:[
@@ -543,16 +543,17 @@ const PRODUCTS = [
     objective:'Room-service ordering Pod app collaboration for Sarvanam — menu browsing, billing & payment (Khalti), UI/UX improvements.',
     fyGoal:'Release 1.1 live Oct 2',
     currentGoal:'Close remaining Khalti payment integration items and QA sign-off ahead of the Oct 2 release.',
-    health:'a',
-    healthNote:'NEW (added Sep 25 review): Suman pulled onto this Sep 24 – Oct 2, on top of the Formula RMS Phase 2 pause. Live scope tracked from Redmine version 20 (Release 1.1, project pod-sarvanam-collab): 63% scope, 84% dev-complete (16 of 19 items in QA). 3 Khalti payment integration items still To Do with a tight ~1-week runway to the Oct 2 release date.',
+    health:'r',
+    healthNote:'ON HOLD (Oct 8 review): Release 1.1 did not ship Oct 2. On hold since Oct 2 due to lack of collaboration from the Sarvanam dev team — resume date to be reconfirmed with the Sarvanam team (placeholder Oct 31). Previously — NEW (added Sep 25 review): Suman pulled onto this Sep 24 – Oct 2, on top of the Formula RMS Phase 2 pause. Live scope tracked from Redmine version 20 (Release 1.1, project pod-sarvanam-collab): 63% scope, 84% dev-complete (16 of 19 items in QA). 3 Khalti payment integration items still To Do with a tight ~1-week runway to the Oct 2 release date.',
     execStatus:'dev',
     progress:63, // fallback only — live value pulled from sarvanam-R1 via productLiveProgress()
-    currentPhase:'Release 1.1 — QA closure + remaining Khalti payment integration',
-    nextMilestone:'Release 1.1 ships',
-    nextMilestoneDate:'2026-10-02',
+    currentPhase:'ON HOLD — Release 1.1 not shipped; awaiting Sarvanam dev team collaboration',
+    nextMilestone:'Reconfirm resume plan with Sarvanam team',
+    nextMilestoneDate:'2026-10-31',
     owner:'Suman',
     resources:['suman'],
     risks:[
+      {label:'ON HOLD since Oct 2 — lack of collaboration from the Sarvanam dev team; Release 1.1 not shipped, no resume date', sev:'r'},
       {label:'3 Khalti payment integration items still To Do with release Oct 2 (~1 week runway)', sev:'a'},
       {label:'Suman split across this, RMS Phase 2, and Abhyas over the same period', sev:'a'},
     ],
@@ -565,14 +566,14 @@ const PRODUCTS = [
     tag:'product',
     objective:'Identity verification (face + liveness) platform for banks, telcos, gov, and enterprises.',
     fyGoal:'~NPR 21L weighted forecast; Zum Rides annual + WorldLink + 3× BFI + International SDK',
-    currentGoal:'V1: support-only mode on MOCO infra. V2: Yao ID + Liveness + Face Matching → packaging Sep 1 – Oct 15.',
-    health:'g',
-    healthNote:'V1 discontinued from active dev (support only). V2 pivoted to procured Yao ID model.',
+    currentGoal:'V1: support-only mode on MOCO infra. V2: procure Yao ID + licensing modules, then packaging (Yao ID + Liveness + Face Matching) after Nov 16.',
+    health:'a',
+    healthNote:'ON HOLD (Oct 8 review): V2 packaging did not resume Oct 1 — ID module and licensing module not procured from Yao. Resumes after Nov 16 (~Nov 17 – Dec 31, est.). V1 discontinued from active dev (support only). V2 pivoted to procured Yao ID model.',
     execStatus:'planning',
     progress:40,
-    currentPhase:'V2 procurement + integration planning',
-    nextMilestone:'V2 packaging starts',
-    nextMilestoneDate:'2026-09-01',
+    currentPhase:'V2 packaging ON HOLD — awaiting Yao ID + licensing module procurement',
+    nextMilestone:'V2 packaging resumes',
+    nextMilestoneDate:'2026-11-17',
     owner:'Ajay',
     resources:['ajay','pranuz','suraj'],
     risks:[
@@ -580,7 +581,7 @@ const PRODUCTS = [
       {label:'iBeta pre-assessment USD 5,000 in Bhadra', sev:'b'},
     ],
     dependencies:[
-      {label:'Yao ID model procurement', status:'a', due:'2026-08'},
+      {label:'Yao ID module + licensing module procurement (blocking V2 packaging)', status:'r', due:'before 2026-11-16'},
       {label:'Fullstack Dev hire (joins Ashwin)', status:'a', due:'2026-09'},
     ],
     kpis:[
@@ -593,21 +594,20 @@ const PRODUCTS = [
     name:'Apple Entertainment',
     tag:'client',
     objective:'Client engagement: branding, website, and initial CMS/deployment for Apple Entertainment.',
-    fyGoal:'Website RELEASED ~Sep 18 (was deadline Sep 10). Branding — sonic logo + photoshoot/video both extended to Sep 30. Consulting concluded.',
-    currentGoal:'Post-launch data population, bug fixes, improvements, and support. Get official support contract signed. Close out sonic logo (pending Apple in-theatre testing) and photoshoot/video final edit.',
+    fyGoal:'Website RELEASED ~Sep 18 (was deadline Sep 10). Branding — photoshoot/video completed; sonic logo on hold pending in-theatre demo (~Nov 15). Consulting concluded.',
+    currentGoal:'Website minor support. Get official support contract signed. Close out sonic logo once an in-theatre demo slot is available.',
     health:'a',
-    healthNote:'DEVIATION (Sep 25 review): website RELEASED ~Sep 18 — 8 days past the Sep 10 hard deadline. Data population, minor bug fixes, and improvements continue post-launch; official support contract still pending (not yet signed). Branding: sonic logo extended to Sep 30 (was Sep 10) — revised animated logo sent to Apple for in-theatre testing, but Apple hasn\'t been able to try it yet due to their own movie release schedule. Photoshoot & video also extended to Sep 30 (was Aug 28) — final edit still needed, not yet delivered to Apple.',
+    healthNote:'ON HOLD (Oct 8 review): sonic logo final verification needs an in-theatre demo — on hold, theatre schedule packed due to the festival season and movies pipeline; placeholder ~Nov 15. Photoshoot & video COMPLETED. Website data population + fixes DONE, minor support only. DEVIATION (Sep 25 review): website RELEASED ~Sep 18 — 8 days past the Sep 10 hard deadline. Data population, minor bug fixes, and improvements continue post-launch; official support contract still pending (not yet signed). Branding: sonic logo extended to Sep 30 (was Sep 10) — revised animated logo sent to Apple for in-theatre testing, but Apple hasn\'t been able to try it yet due to their own movie release schedule. Photoshoot & video also extended to Sep 30 (was Aug 28) — final edit still needed, not yet delivered to Apple.',
     execStatus:'dev',
     progress:95,
-    currentPhase:'Post-launch: data population + bug fixes + support (contract pending) · Branding: sonic logo + photoshoot final edit outstanding',
-    nextMilestone:'Sonic logo + photoshoot/video delivered to Apple',
-    nextMilestoneDate:'2026-09-30',
+    currentPhase:'Website: minor support (contract pending) · Branding: sonic logo on hold pending in-theatre demo',
+    nextMilestone:'Sonic logo in-theatre demo + final verification (placeholder)',
+    nextMilestoneDate:'2026-11-15',
     owner:'Umang',
     resources:['ajay','umang','rahul','pranuz','suraj','kris'],
     risks:[
       {label:'Official support contract still pending — not yet signed, despite site being live and in active post-launch support', sev:'a'},
-      {label:'Sonic logo blocked on Apple\'s own testing availability (movie release schedule) — not in our control, no confirmed date', sev:'a'},
-      {label:'Photoshoot & video final edit still outstanding — not yet delivered to Apple', sev:'a'},
+      {label:'Sonic logo on hold — final in-theatre demo blocked by packed theatre schedule (festival season + movies pipeline), no confirmed date', sev:'a'},
     ],
     dependencies:[
       {label:'Rahul design signoff', status:'g', due:'2026-07-24'},
@@ -624,14 +624,14 @@ const PRODUCTS = [
     tag:'977',
     objective:'Full OTT platform build (short-drama, Netflix-style) for Olive & Lime — 5-month MVP1 with sprints S0–S5, then R2, R3/R4.',
     fyGoal:'MVP1 live Oct 8 (Play Store only, was Oct 17) — Apple/App Store deferred to Release 2 → R2 (DCB + wallet) Nov 12 → R3/R4 (personalisation + subscription) Dec 17',
-    currentGoal:'S4 (Monetisation) complete, App Store RC deferred. S5 (Hardening + launch prep) in progress, targeting a Play Store-only release Oct 8. Rahul now designing Release 2 (Sep 22 – Oct 2).',
+    currentGoal:'MVP1 live on Play Store (Oct 8). Release prep + bug fixes continuing. Rahul finalising Release 2 design (review to Oct 16) and the publisher dashboard + CMS design CR (Oct 5–9).',
     health:'a',
-    healthNote:'DEVIATION (Sep 25 review): S4 (Monetisation) COMPLETE, but App Store RC not submitted — Apple Developer account (DUNS) still pending. This release now targets Play Store only; Apple submission deferred to Release 2. Live target moves to Oct 8 (was Oct 17). S5 (Hardening + launch prep) confirmed in progress. Rahul has started a new sprint-wise design plan for Release 2 (Sep 22 – Oct 2). Branding deadline extended to Sep 30 (was Sep 15). Sep 30 sync: 66% scope, 87% dev-complete (up from 59/78) — 39 of 45 stories in QA, 2 To Do, Ads System now started. Still 0 stories Done with 8 days to the Oct 8 launch — QA sign-off is the critical path.',
+    healthNote:'Oct 8 review: MVP1 app LIVE on the Play Store (on target). Release prep + bug fixes ongoing. 977 branding COMPLETED. Release 2 design completed but not verified — review + finalisation extended Oct 2 → Oct 16. New change request: publisher dashboard + CMS design changes (Oct 5–9). DEVIATION (Sep 25 review): S4 (Monetisation) COMPLETE, but App Store RC not submitted — Apple Developer account (DUNS) still pending. This release now targets Play Store only; Apple submission deferred to Release 2. Live target moves to Oct 8 (was Oct 17). S5 (Hardening + launch prep) confirmed in progress. Rahul has started a new sprint-wise design plan for Release 2 (Sep 22 – Oct 2). Branding deadline extended to Sep 30 (was Sep 15). Sep 30 sync: 66% scope, 87% dev-complete (up from 59/78) — 39 of 45 stories in QA, 2 To Do, Ads System now started. Still 0 stories Done with 8 days to the Oct 8 launch — QA sign-off is the critical path.',
     execStatus:'sprint',
     progress:66,
-    currentPhase:'S5 — Hardening + launch prep (Play Store only, target Oct 8)',
-    nextMilestone:'MVP1 live (Play Store only)',
-    nextMilestoneDate:'2026-10-08',
+    currentPhase:'MVP1 live (Play Store) — bug fixes · R2 design review + publisher dashboard/CMS CR',
+    nextMilestone:'Release 2 design finalised',
+    nextMilestoneDate:'2026-10-16',
     owner:'Ajay',
     resources:['ajay','rahul','suraj','qaformula'],
     risks:[
@@ -639,7 +639,7 @@ const PRODUCTS = [
       {label:'DUNS number allocation taking longer than expected — blocking Ads accounts (AdMob, AppLovin MAX) and App Store account creation', sev:'r'},
       {label:'Planned Fullstack hire never joined — Ajay solo through S4/S5, capacity risk on remaining scope (Ads System in progress, 1 Support + 1 Onboarding story still To Do)', sev:'r'},
       {label:'QA sign-off bottleneck — 39 of 45 stories sitting in QA, 0 Done, 8 days before Oct 8 launch', sev:'r'},
-      {label:'Rahul now split between MVP1 wrap-up and Release 2 design (Sep 22 – Oct 2)', sev:'a'},
+      {label:'Rahul split between Release 2 design review/finalisation (to Oct 16) and the new publisher dashboard + CMS design CR (Oct 5–9)', sev:'a'},
     ],
     dependencies:[
       {label:'Bunny/DataHub dev setup (M-01)', status:'a', due:'2026-07-23'},
@@ -659,14 +659,14 @@ const PRODUCTS = [
     tag:'client',
     objective:'Client website redevelopment (Phase 1) for NMCTH — NPR 18,00,000 scope.',
     fyGoal:'Website delivered',
-    currentGoal:'Awaiting contract signature. Dev starts once signed (optimistic: end of June, now July).',
-    health:'r',
-    healthNote:'BLOCKED — contract not yet signed. Every day of slip pushes delivery.',
+    currentGoal:'ARCHIVED (Oct 8 review) — contract never signed; no active work.',
+    health:'closed',
+    healthNote:'ARCHIVED (Oct 8 review). Contract was never signed; the planned Jul 1 – Sep 30 development did not happen. Previously: BLOCKED — contract not yet signed.',
     execStatus:'blocked',
     progress:5,
-    currentPhase:'Awaiting contract signature',
-    nextMilestone:'Contract signed (gate)',
-    nextMilestoneDate:'2026-07-01',
+    currentPhase:'ARCHIVED',
+    nextMilestone:'—',
+    nextMilestoneDate:'2026-10-08',
     owner:'Suraj R.',
     resources:['suman','suraj','abishek'],
     risks:[
@@ -708,16 +708,17 @@ const PRODUCTS = [
     objective:'Hardware-based attendance system for schools and offices — RFID card provisioning, biometric potential, cloud-connected reporting.',
     fyGoal:'Working attendance MVP + 3 pilot deployments by Ashad',
     currentGoal:'Aug 10–14: hardware functional + previous payment firmware repurposed for card provisioning + API endpoints spec. 4-week full attendance system build ends Sep 11.',
-    health:'g',
-    healthNote:'New initiative kicking off Aug 10. Reusing existing payment system hardware + firmware — de-risks the build significantly.',
-    execStatus:'planning',
+    health:'paused',
+    healthNote:'ON HOLD (Oct 8 review): completed from our side — no response from the other party. Support + pilots paused; placeholder Oct 31 to revisit. Previously: new initiative kicking off Aug 10, reusing existing payment system hardware + firmware.',
+    execStatus:'blocked',
     progress:5,
-    currentPhase:'Hardware functionality + card provisioning setup',
-    nextMilestone:'Hardware functional + firmware loaded',
-    nextMilestoneDate:'2026-08-14',
+    currentPhase:'ON HOLD — completed from our side, awaiting other party response',
+    nextMilestone:'Revisit on-hold status (other party response)',
+    nextMilestoneDate:'2026-10-31',
     owner:'Amit',
     resources:['amit','umang','abishek','suraj'],
     risks:[
+      {label:'ON HOLD — no response from the other party; pilots cannot start', sev:'r'},
       {label:'Reusing payment firmware for attendance may need protocol adaptation', sev:'a'},
       {label:'Amit already carrying Formula Signage deployment (Solti + prospects)', sev:'a'},
     ],
@@ -933,7 +934,9 @@ const DECISIONS = [
   {id:'D-004', date:'2026-07-01', product:'nmcth',
    question:'NMCTH contract not signed — proceed or pull deal?',
    options:['Wait','Set hard deadline','Withdraw offer'],
-   status:'pending', decisionMaker:'CEO', dueDate:'2026-07-15 (revised)'},
+   status:'resolved', decisionMaker:'CEO', dueDate:'2026-07-15 (revised)',
+   resolvedDate:'2026-10-08', resolvedBy:'Oct 8 roadmap review',
+   resolution:'NMCTH archived — contract never signed.'},
 ];
 
 /* ── RISKS ─────────────────────────────────────────────────── */
@@ -947,8 +950,8 @@ const RISKS = [
   {id:'R-002', product:'abhyas', label:'Native app AI pen validation could fail Jul 17 go/no-go',
    probability:'Medium', impact:'Critical', severity:'r', mitigation:'3-day prototype spike with pass/fail criteria per issue',
    owner:'Ajay'},
-  {id:'R-003', product:'nmcth', label:'Contract still unsigned — deal could fall through',
-   probability:'Medium', impact:'Medium', severity:'r', mitigation:'CEO follow-up with hard deadline',
+  {id:'R-003', product:'nmcth', label:'[ARCHIVED Oct 8] Contract still unsigned — deal could fall through',
+   probability:'Medium', impact:'Medium', severity:'b', mitigation:'CEO follow-up with hard deadline',
    owner:'CEO / Suraj R.'},
   {id:'R-004', product:'abhyas', label:'Municipality onboarding blocked without Growth Officer hires',
    probability:'High', impact:'High', severity:'a', mitigation:'Growth Officer 1 hire target Ashwin; Growth 2 Kartik',
@@ -6604,17 +6607,18 @@ const GROUPS=[
   {id:'signage',label:'Formula Signage',tag:'product',rows:[{
     title:'Formula Signage',
     sub:'Marriott monitoring till Aug 1 → Solti expansion · Monitoring, support & QA: Amit',
-    pivotReason:'DEVIATION (Sep 25 review): Marriott contract not finalized by Aug 1 as planned. Formal contract sent to Marriott Jul 27 — follow-up in progress, under review by Marriott management. Procurement + contract review now ON HOLD due to an internal issue on Marriott\'s side — no confirmed resolution date as of this review. Previously: monitoring window extended to Aug 1 (was Jun 30) after positive Marriott trial. Amit added for on-site support & QA — Pranuz was overloaded.',
+    pivotReason:'STILL ON HOLD (Oct 8 review): Marriott contract has not moved forward since the Sep 25 review — on-hold window extended from Sep 25 to Oct 31 (placeholder, revisit next review). DEVIATION (Sep 25 review): Marriott contract not finalized by Aug 1 as planned. Formal contract sent to Marriott Jul 27 — follow-up in progress, under review by Marriott management. Procurement + contract review now ON HOLD due to an internal issue on Marriott\'s side — no confirmed resolution date as of this review. Previously: monitoring window extended to Aug 1 (was Jun 30) after positive Marriott trial. Amit added for on-site support & QA — Pranuz was overloaded.',
     planned:[[
       {s:'2026-06-19',e:'2026-06-30',label:'Monitoring + support + contract (Marriott)',color:'#888780',st:'support',owners:['ajay','suraj'],pivot:'Monitoring window extended to Aug 1 after positive trial result. QA reassigned from Pranuz to Amit to balance workload.'},
       {s:'2026-07-15',e:'2026-09-15',label:'Deploy to Solti Hotel + other prospects',color:'#BA7517',st:'trial',owners:['ajay','puran'],pivot:'Solti deployment extended through Dec (client pipeline larger than planned). Amit added for deployment support.'},
       {s:'2026-06-19',e:'2026-08-01',label:'Monitoring + support + contract (Marriott)',color:C.gray,st:'support',owners:['ajay','suraj','amit'],pivot:'SLIPPED — contract was expected to be finalised by Aug 1. Instead: formal contract sent Jul 27, still under Marriott management review, and now ON HOLD due to an internal issue within Marriott. No confirmed resolution date as of the Sep 25 review.'},
+      {s:'2026-06-19',e:'2026-09-25',label:'Monitoring + support + contract (Marriott) — ON HOLD',color:C.gray,st:'blocked',owners:['ajay','suraj','amit'],pivot:'EXTENDED — on hold was expected to clear by Sep 25. As of the Oct 8 review the contract has not moved forward; on-hold window extended to Oct 31 as a placeholder.'},
     ],[
       {s:'2026-07-10',e:'2026-07-15',label:'50 devices — planned receipt window',color:'#993556',st:'procurement',owners:['umang','abishek'],pivot:'AHEAD OF SCHEDULE — devices arrived Jul 6, earlier than the planned Jul 10–15 receipt window. Timeline was not replanned; the earlier arrival is a positive schedule variance.'},
     ]],
     tracks:[
       [
-        {s:'2026-06-19',e:'2026-09-25',label:'Monitoring + support + contract (Marriott) — ON HOLD',color:C.red,st:'blocked',owners:['ajay','suraj','amit'],tip:'🔴 Contract sent to Marriott Jul 27; follow-up in progress, under review by Marriott management. Procurement + contract review now ON HOLD due to an internal issue within Marriott — no confirmed resolution date. Monitoring & support: Amit.'},
+        {s:'2026-06-19',e:'2026-10-31',label:'Monitoring + support + contract (Marriott) — ON HOLD',color:C.red,st:'blocked',owners:['ajay','suraj','amit'],tip:'🔴 Contract sent to Marriott Jul 27; under review by Marriott management, then ON HOLD due to an internal issue within Marriott. Oct 8 review: contract still has not moved forward — on hold extended Sep 25 → Oct 31 (placeholder, revisit next review). Monitoring & support: Amit.'},
         {s:'2026-07-15',e:'2026-12-17',label:'Deploy to Solti Hotel + other prospects (Puran Ji)',color:C.amber,st:'trial',owners:['ajay','puran','amit'],tip:'Deployment to Solti Hotel and other prospects from Jul 15 with Puran Ji. Deployment support: Amit. On track — no change this review.'},
       ],
       [
@@ -6627,6 +6631,7 @@ const GROUPS=[
       {d:'2026-07-15',label:'Solti deploy',color:C.amber,tip:'Deployment to Solti Hotel begins.'},
       {d:'2026-08-01',label:'Marriott monitoring ends',color:C.gray,tip:'Marriott monitoring & support phase concludes Aug 1.'},
       {d:'2026-07-27',label:'Marriott contract sent — now on hold',color:C.red,tip:'🔴 DEVIATION: formal contract sent to Marriott Jul 27. Follow-up in progress, under review by Marriott management. Procurement + contract review now ON HOLD due to an internal issue within Marriott — no confirmed resolution date as of the Sep 25 review.'},
+      {d:'2026-09-25',label:'Marriott still on hold — extended to Oct 31',color:C.red,tip:'🔴 Still on hold as the contract has not moved forward. On-hold window extended from Sep 25 to Oct 31 (placeholder until Marriott resolves its internal issue).'},
     ]
   },
   {
@@ -6654,14 +6659,15 @@ const GROUPS=[
 
   {id:'rms',label:'Formula RMS',tag:'product',rows:[{
     title:'Formula RMS',
-    sub:'Phase 1 → cooling → Phase 2 Aug 1–17 (Suman covers Abhyas) → paused (extended to Sep 23) → Suman on Sarvanam PMS through Oct 2 → resumes Oct 2 through ~Nov 15 (est.)',
-    pivotReason:'RESEQUENCED AGAIN (Sep 25 review): Phase 2 pause extended to Sep 23 (was Sep 17) — migration issues + minor improvement/bug-fix work took longer than expected. Suman then diverted onto the Sarvanam PMS room service app Sep 23 – Oct 2 (a new, not-yet-tracked engagement). Phase 2 now resumes Oct 2 (was Sep 17); new target ~Nov 15 (was Oct 31) is an estimate — same scope, shifted by the delay, pending confirmation. Previously: PAUSED MID-PHASE: Phase 1 CORRECTED — not fully delivered Jul 17 as previously logged, 90% complete, final QA pending, target extended Jun 30 → Aug 27 → Sep 10. Phase 2 kicked off Aug 1 but new-feature development (tablet + Formula app) paused Aug 17 while Suman covers Abhyas V2 revamp (dedicated dev hire search continues). Phase 2 resumes Sep 17 with the same scope, delivery pushed one month to late October.',
+    sub:'Phase 1 → cooling → Phase 2 Aug 1–17 (Suman covers Abhyas) → paused (extended to Sep 23) → Suman on Sarvanam PMS through Oct 2 → resumes Oct 2 through ~Nov 15 (est.) · Oct 6–16 Suman split with Pokhara NPL event',
+    pivotReason:'SPLIT FOCUS (Oct 8 review): Phase 2 resumed Oct 2 as planned (Suman back Oct 2–6). From Oct 6 Suman diverted again — Formula app for the Pokhara NPL event, through Oct 16. Phase 2 Formula app work continues in parallel; Nov 15 target and R1 (Oct) unchanged for now. Previously: RESEQUENCED AGAIN (Sep 25 review): Phase 2 pause extended to Sep 23 (was Sep 17) — migration issues + minor improvement/bug-fix work took longer than expected. Suman then diverted onto the Sarvanam PMS room service app Sep 23 – Oct 2 (a new, not-yet-tracked engagement). Phase 2 now resumes Oct 2 (was Sep 17); new target ~Nov 15 (was Oct 31) is an estimate — same scope, shifted by the delay, pending confirmation. Previously: PAUSED MID-PHASE: Phase 1 CORRECTED — not fully delivered Jul 17 as previously logged, 90% complete, final QA pending, target extended Jun 30 → Aug 27 → Sep 10. Phase 2 kicked off Aug 1 but new-feature development (tablet + Formula app) paused Aug 17 while Suman covers Abhyas V2 revamp (dedicated dev hire search continues). Phase 2 resumes Sep 17 with the same scope, delivery pushed one month to late October.',
     planned:[[
       {s:'2026-06-20',e:'2026-06-30',label:'Phase 1: QR ordering + IRD + inventory',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'Delivery slipped by 17 days to Jul 17 due to IRD verification integration taking longer than estimated. Sip & Skip aligned with new date.'},
       {s:'2026-07-01',e:'2026-07-31',label:'Cooling period + support',color:'#888780',st:'support',owners:['suman'],pivot:'PIVOTED — cooling Jul 17–Aug 1. Suman moves directly to Phase 2 Aug 1 (Abhyas revamp reassigned to dedicated dev joining Sep 14).'},
       {s:'2026-08-01',e:'2026-08-31',label:'Phase 2: improvements + tablet + Formula app',color:'#185FA5',st:'dev',owners:['ajay','suman'],pivot:'PAUSED MID-PHASE — Phase 2 kicked off Aug 1 as planned but new-feature dev paused Aug 17 while Suman covers Abhyas V2 revamp (Abhyas dedicated-dev hire still in progress — search continues). Resumes Sep 17, delivery pushed one month to Oct 31.'},
       {s:'2026-08-17',e:'2026-09-17',label:'Phase 2 PAUSED (new features on hold)',color:C.red,st:'blocked',owners:['pranuz'],pivot:'EXTENDED — pause stretched from Sep 17 to Sep 23 due to migration issues and minor improvement/bug-fix work.'},
       {s:'2026-09-17',e:'2026-10-31',label:'Phase 2 resumes: tablet + Formula app (Suman)',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],pivot:'SLIPPED — resume pushed from Sep 17 to Oct 2. Suman diverted to the Sarvanam PMS room service app Sep 23 – Oct 2 on top of the extended pause. New end date (Nov 15) is an estimate.'},
+      {s:'2026-10-02',e:'2026-11-15',label:'Phase 2: tablet + Formula app (Suman, full focus)',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],pivot:'SPLIT FOCUS — from Oct 6 Suman diverted to the Formula app for the Pokhara NPL event (through Oct 16). Phase 2 Formula app work continues in parallel; end date not moved yet.'},
     ]],
     tracks:[[
       {s:'2026-06-20',e:'2026-09-10',label:'Phase 1: QR ordering + IRD + inventory (90%, target Sep 10)',color:C.amber,st:'dev',owners:['ajay','suman','pranuz'],tip:'Phase 1: QR-based ordering, inventory, IRD verification. CORRECTED: not fully delivered Jul 17 as previously logged — 90% complete, final QA on IRD integration + onboarding SOP pending. Target extended twice: Jun 30 → Aug 27 → Sep 10. QA: Pranuz.'},
@@ -6670,12 +6676,15 @@ const GROUPS=[
         {s:'2026-08-17',e:'2026-09-23',label:'Phase 2 PAUSED (new features on hold, extended)',color:C.red,st:'blocked',owners:['pranuz'],tip:'🔴 EXTENDED — pause now runs Aug 17 – Sep 23 (was Aug 17 – Sep 17), a few extra days for migration issues and minor improvement/bug-fix work. Only critical bug support during this window. QA: Pranuz.'},
         {s:'2026-09-23',e:'2026-10-02',label:'Suman diverted — Sarvanam PMS room service app',color:C.p2,st:'dev',owners:['suman'],tip:'Suman pulled onto the Sarvanam PMS room service app Sep 23 – Oct 2, on top of the RMS Phase 2 pause. Not yet a tracked product in this roadmap.'},
         {s:'2026-10-02',e:'2026-11-15',label:'Phase 2 resumes: tablet + Formula app (Suman)',color:C.blue,st:'dev',owners:['ajay','suman','pranuz'],releaseId:'rms-R1',tip:'Phase 2 resumes Oct 2 (was Sep 17) after the extended pause and the Sarvanam PMS diversion. Tablet app + Formula app feature development — end date Nov 15 is an estimate (same ~6-week scope, shifted by the delay); confirm when known. Click to open Phase 2 scorecard.'},
+    ],[
+        {s:'2026-10-06',e:'2026-10-16',label:'Suman diverted — Formula app for Pokhara NPL event',color:C.red,st:'dev',owners:['suman'],tip:'🔴 From Oct 6 Suman diverted to the Formula app for the Pokhara NPL event, through Oct 16. Phase 2 Formula app work continues in parallel.'},
     ]],
     ms:[
       {d:'2026-09-10',label:'Phase 1 target (extended, 90%)',color:C.amber,tip:'CORRECTED: Phase 1 was not fully delivered Jul 17 as previously logged — 90% complete. Target extended Jun 30 → Aug 27 → Sep 10 for final QA on IRD integration + onboarding SOP.'},
       {d:'2026-08-01',label:'Phase 2 start (kickoff)',color:C.blue,tip:'Phase 2 begins — 2-week kickoff before Suman pauses to cover Abhyas.'},
         {d:'2026-08-17',label:'Phase 2 PAUSED',color:C.red,tip:'🔴 Phase 2 new-feature development paused while Suman covers Abhyas V2 revamp.'},
         {d:'2026-09-17',label:'DEVIATION: resume slipped — pause extended + Sarvanam diversion',color:C.red,tip:'🔴 DEVIATION: Phase 2 pause extended to Sep 23 (migration issues + minor improvements/bugs), then Suman diverted to the Sarvanam PMS room service app through Oct 2. Phase 2 now resumes Oct 2 (was Sep 17); new target ~Nov 15 (was Oct 31, estimate).'},
+        {d:'2026-10-06',label:'Suman split — Pokhara NPL event',color:C.red,tip:'🔴 Suman diverted Oct 6 to the Formula app for the Pokhara NPL event, through Oct 16. Phase 2 Formula app work continues in parallel; Nov 15 target and R1 unchanged for now.'},
         {d:'2026-10-02',label:'Phase 2 resumes (actual)',color:C.blue,tip:'Suman returns from the extended pause + Sarvanam PMS diversion; tablet + Formula app development resumes.'},
       {d:'2026-11-15',label:'Phase 2 target (pushed again, estimate)',color:C.teal,tip:'Phase 2 feature-complete target now ~Nov 15 (was Oct 31, was Sep 30) due to the extended pause + Sarvanam PMS diversion. Estimate — confirm once Phase 2 resumes.'},
     ]
@@ -6711,14 +6720,19 @@ const GROUPS=[
 
   {id:'sarvanam',label:'Formula Room — Sarvanam Collab',tag:'product',rows:[{
     title:'Sarvanam Collab — Release 1.1',
-    sub:'Suman, Sep 24 – Oct 2 · menu browsing, billing & payment (Khalti), UI/UX improvements',
-    planned:[],
+    sub:'Suman, Sep 24 – Oct 2 · menu browsing, billing & payment (Khalti), UI/UX improvements · ON HOLD from Oct 2 (Sarvanam dev team)',
+    pivotReason:'ON HOLD (Oct 8 review): Release 1.1 did not ship Oct 2 as planned. Project on hold since Oct 2 due to lack of collaboration from the Sarvanam dev team. Resume date to be reconfirmed with the Sarvanam team — Oct 31 used as a placeholder to revisit next review.',
+    planned:[[
+      {s:'2026-09-24',e:'2026-10-02',label:'Release 1.1 — Suman (ship Oct 2)',color:C.p2,st:'sprint',owners:['suman'],pivot:'NOT SHIPPED — Release 1.1 did not ship Oct 2. On hold from Oct 2 due to lack of collaboration from the Sarvanam dev team.'},
+    ]],
     tracks:[[
-      {s:'2026-09-24',e:'2026-10-02',label:'Release 1.1 — Suman',color:C.p2,st:'sprint',owners:['suman'],releaseId:'sarvanam-R1',tip:'Suman on Sarvanam Collab (Formula Room Pod app) Sep 24 – Oct 2, on top of the Formula RMS Phase 2 pause. 63% scope, 84% dev-complete (16/19 in QA) as of the Sep 25 review — 3 Khalti payment items still To Do. Click to open R1 scorecard.'},
+      {s:'2026-09-24',e:'2026-10-02',label:'Release 1.1 — Suman (not shipped)',color:C.p2,st:'sprint',owners:['suman'],releaseId:'sarvanam-R1',tip:'Suman on Sarvanam Collab (Formula Room Pod app) Sep 24 – Oct 2, on top of the Formula RMS Phase 2 pause. 63% scope, 84% dev-complete (16/19 in QA) as of the Sep 25 review — 3 Khalti payment items still To Do. Did not ship Oct 2. Click to open R1 scorecard.'},
+      {s:'2026-10-02',e:'2026-10-31',label:'ON HOLD — Sarvanam dev team collaboration',color:C.red,st:'blocked',owners:['suman'],tip:'🔴 On hold since Oct 2 due to lack of collaboration from the Sarvanam dev team. Resume date to be reconfirmed with the Sarvanam team; Oct 31 is a placeholder.'},
     ]],
     ms:[
       {d:'2026-09-24',label:'Suman starts Sarvanam Collab',color:C.blue,tip:'Suman pulled onto Sarvanam Collab, on top of the Formula RMS Phase 2 pause.'},
-      {d:'2026-10-02',label:'Release 1.1 ships',color:C.green,tip:'Target ship date for Release 1.1 — Khalti payment integration + QA sign-off must close by then.'},
+      {d:'2026-10-02',label:'Release 1.1 ships (planned — missed)',color:C.gray,tip:'Planned ship date for Release 1.1. Did not ship.'},
+      {d:'2026-10-02',label:'ON HOLD — Release 1.1 not shipped',color:C.red,tip:'🔴 Release 1.1 did not ship Oct 2. On hold since Oct 2 due to lack of collaboration from the Sarvanam dev team — resume date to be reconfirmed with the Sarvanam team.'},
     ]
   }]},
 
@@ -6726,20 +6740,23 @@ const GROUPS=[
     {
       title:'Abhyas — Native Smartboard App',
       sub:'DELIVERED Aug 1 (Ajay) · Unstable in production — TOP PRIORITY fix (Sep 25 review), Features work put on hold to make room for it',
-      pivotReason:'TOP PRIORITY (Sep 25 review): smartboard stability issue elevated to top priority — Abhyas — Features (Classroom/Homework/Live Tuition) put on hold to free up dev focus for this fix. No confirmed fix-complete date yet. Previously: MAJOR PIVOT: original plan was a straight revamp + feature sprint (Classroom, Homework, Live Tuition). Blocked by 7+ WebView-level issues affecting live classes on smartboards — screen share failure, fullscreen crash, camera/mic permission failures, whiteboard sizing, backgrounding disconnects. Root cause: Abhyas app WebView does not fully implement Android WebChromeClient callbacks. Decision: build React Native app to solve these at once, then bug-fix MVP1, then resume revamp, then features.',
+      pivotReason:'DEADLINE SET, STILL NOT FIXED (Oct 8 review): smartboard issue still not fixed. Must be fixed before the Dashain/Tihar holiday ends — hard deadline Oct 13 (was a placeholder Oct 15). Previously: TOP PRIORITY (Sep 25 review): smartboard stability issue elevated to top priority — Abhyas — Features (Classroom/Homework/Live Tuition) put on hold to free up dev focus for this fix. No confirmed fix-complete date yet. Previously: MAJOR PIVOT: original plan was a straight revamp + feature sprint (Classroom, Homework, Live Tuition). Blocked by 7+ WebView-level issues affecting live classes on smartboards — screen share failure, fullscreen crash, camera/mic permission failures, whiteboard sizing, backgrounding disconnects. Root cause: Abhyas app WebView does not fully implement Android WebChromeClient callbacks. Decision: build React Native app to solve these at once, then bug-fix MVP1, then resume revamp, then features.',
       planned:[[
         {s:'2026-06-22',e:'2026-07-15',label:'Planning + revamp Phase 1',color:'#C47B0A',st:'planning',owners:['suraj','ajay'],pivot:'MAJOR PIVOT — original planning phase never became a revamp. 7+ WebView-level issues (AI pen, screen share, fullscreen crash, camera/mic on OEM boards) surfaced as critical class-blocking bugs. React Native app work replaced this window.'},
         {s:'2026-07-15',e:'2026-08-15',label:'Classroom + Homework + Live Tuition (planned features)',color:'#639922',st:'dev',owners:['ajay','suman'],pivot:'PIVOTED OUT — feature sprint pushed by ~8 weeks. Sequence is now: native app → MVP1 bug fixes → revamp → features.'},
+        {s:'2026-09-23',e:'2026-10-15',label:'Smartboard stability fix — TOP PRIORITY (placeholder end)',color:C.red,st:'blocked',owners:['ajay'],pivot:'DEADLINE SET — still not fixed as of Oct 8. Must be fixed before the Dashain/Tihar holiday ends: hard deadline Oct 13 (placeholder was Oct 15).'},
       ]],
       tracks:[[
         {s:'2026-07-15',e:'2026-07-18',label:'Prototype (3 days): pen + whiteboard + BBB sync + mic + camera',color:C.red,st:'dev',owners:['ajay'],tip:'3-day validation spike Jul 15–17: AI pen on React Native canvas, whiteboard-BBB sync, mic/echo cancellation, camera on smartboard hardware (Android/Windows/Linux). Go/No-go on Jul 17.'},
         {s:'2026-07-18',e:'2026-08-01',label:'Native app build — minimal classroom functionality (2 weeks)',color:C.blue,st:'dev',owners:['ajay'],tip:'2-week build: minimal viable classroom app in React Native. Fixes 7 WebView issues at once (screen share, fullscreen, camera/mic permissions, whiteboard sizing, backgrounding). Backend and BBB engine unchanged. ⚠️ Ajay overlaps 977 S0/S1 in this window.'},
-        {s:'2026-09-23',e:'2026-10-15',label:'Smartboard stability fix — TOP PRIORITY',color:C.red,st:'blocked',owners:['ajay'],tip:'🔴 DEVIATION: production instability on some smartboards elevated to top priority (Sep 25 review). Abhyas — Features work put on hold to make room. End date is a placeholder estimate — no confirmed fix-complete date yet.'},
+        {s:'2026-09-23',e:'2026-10-13',label:'Smartboard stability fix — TOP PRIORITY (deadline Oct 13)',color:C.red,st:'blocked',owners:['ajay'],tip:'🔴 DEVIATION: production instability on some smartboards elevated to top priority (Sep 25 review). Abhyas — Features work put on hold to make room. Oct 8 review: still not fixed — must be fixed before the Dashain/Tihar holiday ends, hard deadline Oct 13.'},
       ]],
       ms:[
         {d:'2026-07-17',label:'Prototype go/no-go',color:C.red,tip:'🔴 Prototype validation decision: does the AI pen work natively on smartboard hardware? Gate for the 2-week build.'},
         {d:'2026-08-01',label:'Native app MVP delivered',color:C.blue,tip:'Minimal classroom app complete — teachers can conduct class smoothly with AI pen, screen share, fullscreen, camera and mic all working.'},
         {d:'2026-09-23',label:'DEVIATION: smartboard fix elevated to top priority',color:C.red,tip:'🔴 Smartboard app instability elevated to top priority this review — Features work paused to free up dev capacity. No confirmed fix-complete date.'},
+        {d:'2026-10-08',label:'Smartboard still not fixed — deadline Oct 13',color:C.red,tip:'🔴 Smartboard issue still not fixed as of the Oct 8 review. Need to fix before the Dashain/Tihar holiday ends — hard deadline Oct 13.'},
+        {d:'2026-10-13',label:'Smartboard fix deadline (before holidays end)',color:C.red,tip:'🔴 Hard deadline: smartboard stability fix must be done before the Dashain/Tihar holiday ends.'},
       ]
     },
     {
@@ -6815,12 +6832,13 @@ const GROUPS=[
       title:'Abhyas Sales & Growth',
       sub:'FY 83/84 targets · 4 quarters · Owner: Suraj Dhakal',
       tracks:[[
-        {s:'2026-08-01',e:'2026-10-31',label:'Q1 · Shrawan–Ashoj',color:C.teallt,st:'planning',owners:['dhakal','suraj'],tip:'Q1 (Aug–Oct 2026): 8 new municipalities signed · cumulative 8 · ERDCN MOU unblocked · pipeline: Budhanilkantha, Godawari, Mahalaxmi · hire 2 Growth Officers · ~96 schools onboarded · ~15,920 students (Class 8–10) · ~1,000 teacher accounts · 8 training events.'},
+        {s:'2026-08-01',e:'2026-10-31',label:'Q1 · Shrawan–Ashoj',color:C.teallt,st:'planning',owners:['dhakal','suraj'],tip:'Q1 (Aug–Oct 2026): 8 new municipalities signed · cumulative 8 · ERDCN MOU unblocked · pipeline: Budhanilkantha, Godawari, Mahalaxmi · hire 2 Growth Officers · ~96 schools onboarded · ~15,920 students (Class 8–10) · ~1,000 teacher accounts · 8 training events. Progress: Nagarjun municipality acquired (recorded Oct 8 review).'},
         {s:'2026-11-01',e:'2027-01-31',label:'Q2 · Kartik–Poush',color:C.teallt,st:'planning',owners:['dhakal'],tip:'Q2 (Nov 2026–Jan 2027): 12 new municipalities · cumulative 20 · ERDCN 1st referral active · pipeline: LMC, Bagmati, +5 new · hire 1 more Growth Officer if needed · ~240 schools · ~39,800 students · ~2,500 teachers · 12 events.'},
         {s:'2027-02-01',e:'2027-04-30',label:'Q3 · Magh–Chaitra',color:C.teallt,st:'planning',owners:['dhakal'],tip:'Q3 (Feb–Apr 2027): 15 new municipalities · cumulative 35 · ERDCN 3+ referrals · pipeline: Terai districts +8 new · hiring under review · ~420 schools · ~69,650 students · ~4,200 teachers · 15 events.'},
         {s:'2027-05-01',e:'2027-07-31',label:'Q4 · Baishakh–Ashad',color:C.teallt,st:'planning',owners:['dhakal'],tip:'Q4 (May–Jul 2027): 15 new municipalities · cumulative 50 · ERDCN 5+ referrals · pipeline consolidation +5 · hiring review · ~600 schools · ~99,500 students · ~6,000 teachers · 15 events. FY 83/84 close.'},
       ]],
       ms:[
+        {d:'2026-10-08',label:'Nagarjun municipality acquired',color:C.green,tip:'New municipality acquired: Nagarjun (recorded at the Oct 8 review). Q1 sales on plan.'},
         {d:'2026-10-31',label:'Q1 close: 8 munis · 96 schools · 15.9k students',color:C.teallt,tip:'Q1 targets: 8 new municipalities signed (cumulative 8) · ERDCN MOU unblocked · ~96 schools onboarded · ~15,920 students reached (Class 8–10) · ~1,000 teacher accounts · 8 centralized training events · 2 Growth Officers hired. Owner: Suraj Dhakal.'},
         {d:'2027-01-31',label:'Q2 close: 12 munis · 240 schools · 39.8k students',color:C.teallt,tip:'Q2 targets: 12 new municipalities (cumulative 20) · ERDCN 1st referral active · ~240 schools · ~39,800 students · ~2,500 teachers · 12 events. Pipeline: LMC, Bagmati, +5 new. Owner: Suraj Dhakal.'},
         {d:'2027-04-30',label:'Q3 close: 15 munis · 420 schools · 69.6k students',color:C.teallt,tip:'Q3 targets: 15 new municipalities (cumulative 35) · ERDCN 3+ referrals · ~420 schools · ~69,650 students · ~4,200 teachers · 15 events. Pipeline: Terai districts +8 new. Owner: Suraj Dhakal.'},
@@ -6832,22 +6850,24 @@ const GROUPS=[
   {id:'mukhi',label:'Mukhi — Identity & Verification',tag:'product',rows:[
     {
       title:'Mukhi V2',
-      sub:'Yao ID + Liveness + Face Matching → packaging ON HOLD, resumes Oct 1',
-      pivotReason:'PIVOTED: original plan was to train a custom AI model (data collection + annotation + training). Decided to procure the Yao ID model and combine with existing Liveness + Face Matching models — faster, more reliable, avoids months of data ops. PIVOTED AGAIN: product packaging (originally Sep 1–Oct 15) put ON HOLD — resumes Oct 1, now running Oct 1–Nov 14. Monthly release cadence (R1 onward) shifts to start after packaging completes.',
+      sub:'Yao ID + Liveness + Face Matching → packaging ON HOLD (Yao ID + licensing modules not procured), resumes after Nov 16',
+      pivotReason:'ON HOLD AGAIN (Oct 8 review): packaging did not resume Oct 1 as planned — the ID module and licensing module have not been procured from Yao. Packaging stays on hold and resumes after Nov 16; new window ~Nov 17 – Dec 31 (estimate, same ~6-week duration). Previously: PIVOTED: original plan was to train a custom AI model (data collection + annotation + training). Decided to procure the Yao ID model and combine with existing Liveness + Face Matching models — faster, more reliable, avoids months of data ops. PIVOTED AGAIN: product packaging (originally Sep 1–Oct 15) put ON HOLD — resumes Oct 1, now running Oct 1–Nov 14. Monthly release cadence (R1 onward) shifts to start after packaging completes.',
       planned:[[
         {s:'2026-06-19',e:'2026-06-30',label:'Data collection',color:'#1D9E75',st:'testing',owners:['ajay'],pivot:'DROPPED — data collection phase removed. Procuring Yao ID model instead of custom training.'},
         {s:'2026-07-01',e:'2026-07-15',label:'Annotation + training',color:'#0F6E56',st:'dev',owners:['ajay'],pivot:'DROPPED — annotation and training removed. Yao ID model is production-ready; no in-house training needed.'},
         {s:'2026-07-15',e:'2026-08-15',label:'Product packaging',color:'#185FA5',st:'dev',owners:['ajay'],pivot:'DEFERRED — packaging pushed to Sep 1–Oct 15 (was Jul 15–Aug 15), then put ON HOLD and resumed Oct 1–Nov 14. Now integrates procured Yao ID + existing Liveness + Face Matching.'},
+        {s:'2026-10-01',e:'2026-11-14',label:'Product packaging (resumed)',color:'#185FA5',st:'dev',owners:['ajay'],pivot:'ON HOLD AGAIN — did not resume Oct 1. ID module + licensing module not procured from Yao. Resumes after Nov 16 (~Nov 17 – Dec 31, estimate).'},
       ]],
       tracks:[[
         {s:'2026-06-19',e:'2026-08-31',label:'Yao ID procurement + Liveness & Face Matching planning',color:C.teallt,st:'planning',owners:['ajay'],tip:'Procure Yao ID model. Integrate existing Liveness and Face Matching model.'},
-        {s:'2026-09-01',e:'2026-09-30',label:'Product packaging — ON HOLD',color:C.red,st:'blocked',owners:['ajay'],tip:'🔴 ON HOLD. Originally scheduled Sep 1–Oct 15; paused, resumes Oct 1.'},
-        {s:'2026-10-01',e:'2026-11-14',label:'Product packaging (resumed)',color:C.blue,st:'dev',owners:['ajay'],tip:'Mukhi V2 packaging resumes Oct 1 (was Sep 1): Yao ID + Liveness + Face Matching → product-ready build. Runs Oct 1–Nov 14.'},
+        {s:'2026-09-01',e:'2026-11-16',label:'Product packaging — ON HOLD (Yao modules not procured)',color:C.red,st:'blocked',owners:['ajay'],tip:'🔴 ON HOLD. Originally scheduled Sep 1–Oct 15; was due to resume Oct 1. Oct 8 review: still on hold — ID module and licensing module not procured from Yao. Resumes after Nov 16.'},
+        {s:'2026-11-17',e:'2026-12-31',label:'Product packaging (resumes after Nov 16, est.)',color:C.blue,st:'dev',owners:['ajay'],tip:'Mukhi V2 packaging resumes after Nov 16 (was Oct 1), once the Yao ID + licensing modules are procured: Yao ID + Liveness + Face Matching → product-ready build. End Dec 31 is an estimate (same ~6-week duration).'},
       ]],
       ms:[
         {d:'2026-09-01',label:'Packaging start (ON HOLD)',color:C.red,tip:'🔴 Originally planned start Sep 1 — put on hold, resumes Oct 1.'},
-        {d:'2026-10-01',label:'Packaging resumes',color:C.blue,tip:'Mukhi V2 packaging resumes.'},
-        {d:'2026-11-14',label:'V2 packaged (target)',color:C.teal,tip:'Mukhi V2 fully packaged. Release 1 (monthly cadence) starts after this.'},
+        {d:'2026-10-01',label:'Resume missed — Yao modules not procured',color:C.red,tip:'🔴 Packaging did not resume Oct 1 — ID module and licensing module not procured from Yao. On hold; resumes after Nov 16.'},
+        {d:'2026-11-17',label:'Packaging resumes (planned)',color:C.blue,tip:'Mukhi V2 packaging resumes after Nov 16, pending Yao ID + licensing module procurement.'},
+        {d:'2026-12-31',label:'V2 packaged (target, est.)',color:C.teal,tip:'Mukhi V2 fully packaged (was Nov 14). Estimate. Release 1 (monthly cadence) starts after this.'},
       ]
     },
     {
@@ -6895,26 +6915,28 @@ const GROUPS=[
   {id:'apple',label:'Apple Entertainment',tag:'client',rows:[
     {
       title:'Apple — Branding',
-      sub:'Handled by Kris (freelancer) · Suraj R. & Rahul in loop · Sonic logo + photoshoot both slipped to Sep 30',
-      pivotReason:'DEVIATION (Sep 25 review): Sonic logo now extended to Sep 30 (was Sep 10) — revised animated sonic logo delivered to Apple for in-theatre testing, but Apple hasn\'t been able to try it yet due to their own movie release schedule (external blocker). Photoshoot & video shoot also extended to Sep 30 (was Aug 28) — final edit still needed, not yet delivered to Apple. Previously: PIVOTED: originally Rahul was to complete branding by Jul 3 in-house. Extended scope + Rahul needed for Apple website design and 977 design track. Hired Kris (freelancer) to own branding. Print collateral now delivered Aug 1. Remaining: Kris social/digital templates + marketing guidelines (Aug 21), sonic logo (extended from Aug 23 to Sep 10), photoshoot & video shoot (Aug 1–28).',
+      sub:'Handled by Kris (freelancer) · Suraj R. & Rahul in loop · Photoshoot/video DONE · Sonic logo ON HOLD (theatre demo) → ~Nov 15',
+      pivotReason:'ON HOLD (Oct 8 review): sonic logo needs final verification via a demo in the theatre, which is on hold — theatre schedule is packed due to the festival season and Apple\'s movie pipeline. Extended Sep 30 → ~Nov 15 (placeholder, after festival season; no confirmed date). Photoshoot & video completed. Previously: DEVIATION (Sep 25 review): Sonic logo now extended to Sep 30 (was Sep 10) — revised animated sonic logo delivered to Apple for in-theatre testing, but Apple hasn\'t been able to try it yet due to their own movie release schedule (external blocker). Photoshoot & video shoot also extended to Sep 30 (was Aug 28) — final edit still needed, not yet delivered to Apple. Previously: PIVOTED: originally Rahul was to complete branding by Jul 3 in-house. Extended scope + Rahul needed for Apple website design and 977 design track. Hired Kris (freelancer) to own branding. Print collateral now delivered Aug 1. Remaining: Kris social/digital templates + marketing guidelines (Aug 21), sonic logo (extended from Aug 23 to Sep 10), photoshoot & video shoot (Aug 1–28).',
       planned:[[
         {s:'2026-06-20',e:'2026-06-24',label:'Print handover (Rahul)',color:'#534AB7',st:'consulting',owners:['rahul','suraj'],pivot:'Same window — no change.'},
         {s:'2026-06-24',e:'2026-07-03',label:'Remaining branding (Rahul)',color:'#0F6E56',st:'dev',owners:['rahul'],pivot:'PIVOTED — scope grew, timeline extended. Kris (freelancer) hired to own branding. Print collateral delivered Aug 1; final deliverables (Kris templates + sonic logo + photoshoot/video) run through Sep 10.'},
         {s:'2026-08-01',e:'2026-09-10',label:'Sonic logo delivery — extended to Sep 10',color:C.amber,st:'dev',owners:['kris','rahul','suraj'],pivot:'SLIPPED AGAIN — extended to Sep 30. Revised animated sonic logo sent to Apple for in-theatre testing; Apple hasn\'t been able to try it yet due to their own movie release schedule.'},
         {s:'2026-08-01',e:'2026-08-28',label:'Photoshoot & video shoot',color:C.pink,st:'consulting',owners:['rahul','suraj'],pivot:'SLIPPED — extended to Sep 30. Final edit still needed; not yet delivered to Apple.'},
+        {s:'2026-08-01',e:'2026-09-30',label:'Sonic logo delivery — extended to Sep 30',color:C.red,st:'blocked',owners:['kris','rahul','suraj'],pivot:'ON HOLD — final verification needs an in-theatre demo; theatre schedule packed due to the festival season and Apple\'s movie pipeline. Extended to ~Nov 15 (placeholder).'},
       ]],
       tracks:[
         [{s:'2026-06-20',e:'2026-08-01',label:'Print collateral DELIVERED (Kris)',color:C.teal,st:'consulting',owners:['kris','rahul','suraj'],tip:'✓ DELIVERED: Kris freelance completed all print brand collateral by Aug 1.'}],
         [{s:'2026-08-01',e:'2026-08-21',label:'Kris remaining: social/digital templates + marketing guidelines',color:C.amber,st:'consulting',owners:['kris','suraj'],tip:'Kris remaining deliverables due Aug 21: (4.3) Branded templates for consistent digital presence — social media & digital templates. (4.6) Digital campaign and brand-consistency guidelines.'}],
-        [{s:'2026-08-01',e:'2026-09-30',label:'Sonic logo delivery — extended to Sep 30 (Apple testing pending)',color:C.red,st:'blocked',owners:['kris','rahul','suraj'],tip:'🔴 DEVIATION: revised animated sonic logo sent to Apple for in-theatre testing; Apple hasn\'t been able to try it yet due to their own movie release schedule. Deadline extended Sep 10 → Sep 30, pending their availability.'}],
-        [{s:'2026-08-01',e:'2026-09-30',label:'Photoshoot & video shoot — final edit pending, extended to Sep 30',color:C.red,st:'blocked',owners:['rahul','suraj'],tip:'🔴 DEVIATION: final edit still needed — not yet delivered to Apple. Deadline extended Aug 28 → Sep 30.'}],
+        [{s:'2026-08-01',e:'2026-11-15',label:'Sonic logo — ON HOLD, final in-theatre demo verification pending',color:C.red,st:'blocked',owners:['kris','rahul','suraj'],tip:'🔴 ON HOLD (Oct 8 review): sonic logo needs final verification with a demo in the theatre — on hold because the theatre schedule is packed due to the festival season and the movies pipeline. Extended Sep 30 → ~Nov 15 (placeholder, no confirmed date).'}],
+        [{s:'2026-08-01',e:'2026-09-30',label:'Photoshoot & video shoot — COMPLETED',color:C.teal,st:'consulting',owners:['rahul','suraj'],tip:'✓ Photoshoot & video shoot completed (confirmed Oct 8 review). Was Aug 28, extended to Sep 30.'}],
       ],
       ms:[
         {d:'2026-08-01',label:'Print collateral delivered',color:C.teal,tip:'✓ Kris print collateral fully delivered.'},
         {d:'2026-08-21',label:'Kris digital templates + guidelines',color:C.amber,tip:'Kris (4.3) social + digital templates and (4.6) digital marketing guidelines due.'},
         {d:'2026-09-10',label:'DEVIATION: sonic logo slipped — Apple testing pending',color:C.red,tip:'🔴 Sonic logo was due Sep 10 (extended from Aug 23) — now extended again to Sep 30. Waiting on Apple to try it in-theatre; blocked by their movie release schedule.'},
         {d:'2026-08-28',label:'DEVIATION: photoshoot slipped — final edit pending',color:C.red,tip:'🔴 Photoshoot + video was due Aug 28 — now extended to Sep 30. Final edit still needed, not yet delivered to Apple.'},
-        {d:'2026-09-30',label:'Sonic logo + photoshoot/video — new target',color:C.amber,tip:'New target for both the sonic logo (pending Apple in-theatre testing) and the photoshoot/video final edit.'},
+        {d:'2026-09-30',label:'Photoshoot/video completed · sonic logo ON HOLD',color:C.red,tip:'🔴 Photoshoot & video completed. Sonic logo missed Sep 30: final verification needs an in-theatre demo, on hold as the theatre schedule is packed due to the festival season and movies pipeline. New placeholder ~Nov 15.'},
+        {d:'2026-11-15',label:'Sonic logo verification (placeholder)',color:C.amber,tip:'Placeholder target for the in-theatre sonic logo demo + final verification, after the festival season. Not confirmed.'},
       ]
     },
     {
@@ -6930,7 +6952,7 @@ const GROUPS=[
         [{s:'2026-06-19',e:'2026-07-24',label:'Design — all pages (Rahul)',color:C.purple,st:'design',owners:['rahul'],tip:'All pages designed by Jul 24. Suraj R. coordinates and removes blockers.'}],
         [{s:'2026-07-20',e:'2026-08-31',label:'Website development (Umang) + testing (Pranuz)',color:C.blue,st:'dev',owners:['umang','suraj','pranuz'],tip:'Development Jul 20–Aug 31. Umang: dev and management. Pranuz: testing. Suraj R.: monitors and unblocks.'}],
         [{s:'2026-09-01',e:'2026-09-18',label:'Migration + testing + data population + server setup — RELEASED',color:C.green,st:'live',owners:['umang','pranuz','suraj'],tip:'Production migration, QA/regression testing, data population, and server setup. RELEASED ~Sep 18 (was hard deadline Sep 10, 8 days late).'}],
-        [{s:'2026-09-18',e:'2026-12-17',label:'Data population + bug fixes + improvements + support (ongoing)',color:C.gray,st:'support',owners:['umang','pranuz','suraj'],tip:'Post-launch: data population, minor bug fixes, and improvements continue. Official support contract still pending — not yet signed.'}],
+        [{s:'2026-09-18',e:'2026-12-17',label:'Data population + bug fixes done · minor support (ongoing)',color:C.gray,st:'support',owners:['umang','pranuz','suraj'],tip:'Post-launch: data population and bug fixes DONE (confirmed Oct 8 review). Only minor support needed going forward. Official support contract still pending — not yet signed.'}],
       ],
       ms:[
         {d:'2026-07-24',label:'Design finalised',color:C.purple,tip:'All Apple website designs signed off.'},
@@ -6999,6 +7021,7 @@ const GROUPS=[
         {d:'2026-09-17',label:'DEVIATION: App Store RC deferred to Release 2',color:C.red,tip:'🔴 App Store RC was targeted Sep 17 but NOT submitted — Apple Developer account (DUNS) still pending. Deferred to Release 2. This release (MVP1) now targets Play Store only.'},
         {d:'2026-09-18',label:'S5 start',color:C.br2,tip:'Sprint 5: Hardening.'},
         {d:'2026-10-08',label:'MVP1 target live (Play Store only)',color:C.red,tip:'🔴 MVP1 go-live target now Oct 8 (was Oct 17) — Play Store only, since App Store submission is deferred to Release 2 pending the Apple Developer account (DUNS).'},
+        {d:'2026-10-08',label:'MVP1 LIVE on Play Store ✓',color:C.green,tip:'✓ MVP1 app live on the Play Store Oct 8 — on the revised target.'},
         {d:'2026-10-02',label:'R2 start',color:C.br,tip:'R2: DCB + coin wallet.'},
         {d:'2026-11-13',label:'R3/R4 start',color:C.br2,tip:'R3/R4: Personalisation, subscription.'},
         {d:'2026-12-17',label:'R3/R4 target done',color:C.teal,tip:'Contractual Month 5 target. R3/R4 complete.'},
@@ -7006,21 +7029,27 @@ const GROUPS=[
     },
     {
       title:'977 Design (Rahul)',
-      sub:'One sprint ahead of dev · MVP1 design done Sep 17 · Release 2 design Sep 22 – Oct 2',
-      pivotReason:'NEW SCOPE (Sep 25 review): Rahul begins a new sprint-wise design plan for Release 2 (post-MVP1), Sep 22 – Oct 2 — added now that MVP1 design has wrapped. Previously: NEW PROJECT: Rahul assigned as 977 designer, running one sprint ahead of dev through MVP1.',
-      planned:[],
+      sub:'One sprint ahead of dev · MVP1 design done Sep 17 · Release 2 design Sep 22 – Oct 16 (review + finalisation) · CR: publisher dashboard + CMS design Oct 5–9',
+      pivotReason:'EXTENDED + NEW CR (Oct 8 review): Release 2 design is completed but not yet verified — needs review and finalisation, extended Oct 2 → Oct 16. New change request: publisher dashboard + CMS design changes, started Oct 5, completing Oct 9. Previously: NEW SCOPE (Sep 25 review): Rahul begins a new sprint-wise design plan for Release 2 (post-MVP1), Sep 22 – Oct 2 — added now that MVP1 design has wrapped. Previously: NEW PROJECT: Rahul assigned as 977 designer, running one sprint ahead of dev through MVP1.',
+      planned:[[
+        {s:'2026-09-22',e:'2026-10-02',label:'Release 2 design — Rahul',color:C.indlt,st:'design',owners:['rahul'],pivot:'EXTENDED — design completed but not verified; review + finalisation for Release 2 extended to Oct 16.'},
+      ]],
       tracks:[[
         {s:'2026-07-17',e:'2026-07-23',label:'Design S1 — mobile app',color:C.ind,st:'design',owners:['rahul'],tip:'Rahul designs S1 screens during S0. Must be approved before S1 dev starts.'},
         {s:'2026-07-24',e:'2026-08-06',label:'Design S2',color:C.indlt,st:'design',owners:['rahul'],tip:'Designs S2 screens during S1.'},
         {s:'2026-08-07',e:'2026-08-20',label:'Design S3',color:C.ind,st:'design',owners:['rahul'],tip:'Designs S3 screens during S2.'},
         {s:'2026-08-21',e:'2026-09-03',label:'Design S4',color:C.indlt,st:'design',owners:['rahul'],tip:'Designs S4 screens during S3.'},
         {s:'2026-09-04',e:'2026-09-17',label:'Design S5 — final deliverable',color:C.ind,st:'design',owners:['rahul'],tip:'Last design deliverable for MVP1 (tight-window, Section 04).'},
-        {s:'2026-09-22',e:'2026-10-02',label:'Release 2 design — Rahul',color:C.indlt,st:'design',owners:['rahul'],tip:'NEW: Rahul begins sprint-wise design for 977 Release 2 (post-MVP1), running ahead of R2 dev.'},
+        {s:'2026-09-22',e:'2026-10-16',label:'Release 2 design — Rahul (done, review + finalisation to Oct 16)',color:C.indlt,st:'design',owners:['rahul'],tip:'Rahul sprint-wise design for 977 Release 2. Oct 8 review: design completed but not verified — needs review and finalisation for Release 2. Extended Oct 2 → Oct 16.'},
+      ],[
+        {s:'2026-10-05',e:'2026-10-09',label:'CR: publisher dashboard + CMS design changes',color:C.red,st:'design',owners:['rahul'],tip:'🔴 NEW CHANGE REQUEST: publisher dashboard and CMS design changes. Started Oct 5, completing Oct 9.'},
       ]],
       ms:[
         {d:'2026-09-17',label:'Rahul design done (MVP1)',color:C.ind,tip:'Final design deliverable for 977 MVP1 approved.'},
         {d:'2026-09-22',label:'Release 2 design starts',color:C.indlt,tip:'Rahul begins Release 2 design, sprint-wise, running ahead of R2 dev.'},
-        {d:'2026-10-02',label:'Release 2 design complete (Rahul)',color:C.indlt,tip:'Target completion for Release 2 design deliverables.'},
+        {d:'2026-10-02',label:'R2 design done but not verified — extended to Oct 16',color:C.red,tip:'🔴 Release 2 design completed but not verified — needs review and finalisation for Release 2. Extended Oct 2 → Oct 16.'},
+        {d:'2026-10-05',label:'New CR: publisher dashboard + CMS design',color:C.red,tip:'🔴 New change request: publisher dashboard and CMS design changes, started Oct 5, completing Oct 9.'},
+        {d:'2026-10-16',label:'Release 2 design finalised (target)',color:C.indlt,tip:'Release 2 design reviewed, verified and finalised.'},
       ]
     },
     {
@@ -7031,12 +7060,12 @@ const GROUPS=[
         {s:'2026-08-07',e:'2026-09-15',label:'977 branding — brand identity development',color:C.pink,st:'design',owners:['rahul','suraj'],pivot:'EXTENDED — deadline pushed from Sep 15 to Sep 30.'},
       ]],
       tracks:[[
-        {s:'2026-08-07',e:'2026-09-30',label:'977 branding — brand identity development (extended)',color:C.pink,st:'design',owners:['rahul','suraj'],tip:'977 / Olive & Lime branding: brand identity development. Extended Aug 7 – Sep 30 (was Sep 15).'},
+        {s:'2026-08-07',e:'2026-09-30',label:'977 branding — COMPLETED',color:C.pink,st:'design',owners:['rahul','suraj'],tip:'✓ 977 / Olive & Lime branding: brand identity completed (confirmed Oct 8 review). Ran Aug 7 – Sep 30 (was Sep 15).'},
       ]],
       ms:[
         {d:'2026-08-07',label:'Branding starts',color:C.pink,tip:'977 branding workstream kicks off.'},
         {d:'2026-09-15',label:'DEVIATION: branding deadline missed — extended to Sep 30',color:C.red,tip:'🔴 Original branding deadline Sep 15 missed — extended to Sep 30.'},
-        {d:'2026-09-30',label:'Branding deadline (extended)',color:C.pink,tip:'New branding deliverables deadline.'},
+        {d:'2026-09-30',label:'Branding completed',color:C.green,tip:'✓ 977 branding completed by the extended Sep 30 deadline.'},
       ]
     }
   ]},
@@ -7044,14 +7073,18 @@ const GROUPS=[
   {id:'clients',label:'Other Client Work',tag:'client',rows:[
     {
       title:'NMCTH Website',
-      sub:'Contract pending — dev contingent on signature',
+      sub:'ARCHIVED (Oct 8 review) — contract never signed, dev never started',
+      pivotReason:'ARCHIVED (Oct 8 review): contract was never signed, so the planned Jul 1 – Sep 30 development did not happen. Project archived.',
+      planned:[[
+        {s:'2026-07-01',e:'2026-09-30',label:'Website development (if signed)',color:C.blue,st:'dev',owners:['suman'],pivot:'NEVER STARTED — contract not signed. Project archived Oct 8.'},
+      ]],
       tracks:[[
         {s:'2026-06-19',e:'2026-07-01',label:'Awaiting contract signature',color:C.gray,st:'blocked',owners:['suraj'],tip:'Contract sent. Awaiting NMCTH signature.',dashed:true},
-        {s:'2026-07-01',e:'2026-09-30',label:'Website development (if signed)',color:C.blue,st:'dev',owners:['suman'],tip:'Dev starts July if signed. NPR 18,00,000 Phase 1.',dashed:true},
+        {s:'2026-07-01',e:'2026-10-08',label:'Contract never signed — ARCHIVED',color:C.gray,st:'blocked',owners:['suraj'],tip:'Contract never signed; development (NPR 18,00,000 Phase 1) never started. Archived at the Oct 8 review.',dashed:true},
       ]],
       ms:[
         {d:'2026-07-01',label:'Contract gate',color:C.red,tip:'🔴 Contract must be signed to start dev.'},
-        {d:'2026-08-15',label:'Mid review',color:C.gray,tip:'Mid-project review (tentative).'},
+        {d:'2026-10-08',label:'ARCHIVED',color:C.red,tip:'🔴 NMCTH archived at the Oct 8 review — contract never signed.'},
       ]
     }
   ]},
@@ -7077,16 +7110,22 @@ const GROUPS=[
 
   {id:'attendance',label:'Attendance System',tag:'product',rows:[{
     title:'Attendance System',
-    sub:'Amit lead · Umang backend · Reusing payment hardware + firmware · MVP by Sep 11',
-    pivotReason:'NEW PRODUCT: Attendance system kick-off Aug 10. Reuses existing payment system hardware + firmware (repurposed for card provisioning) to accelerate build. 4-week window to full attendance MVP (Sep 11). Amit leads hardware + coordination; Umang on backend/API.',
+    sub:'Amit lead · Umang backend · Reusing payment hardware + firmware · MVP by Sep 11 · ON HOLD from Oct 8 (awaiting other party)',
+    pivotReason:'ON HOLD (Oct 8 review): work completed from our side — no response from the other party, so support + pilots are on hold. Placeholder Oct 31 to revisit next review; pilots resume only once the other party responds. Previously: NEW PRODUCT: Attendance system kick-off Aug 10. Reuses existing payment system hardware + firmware (repurposed for card provisioning) to accelerate build. 4-week window to full attendance MVP (Sep 11). Amit leads hardware + coordination; Umang on backend/API.',
+    planned:[[
+      {s:'2026-09-11',e:'2027-07-31',label:'Attendance ongoing support + pilots',color:C.gray,st:'support',owners:['amit','umang'],pivot:'ON HOLD — completed from our side, no response from the other party. Support + pilots paused from Oct 8; resume pending their response.'},
+    ]],
     tracks:[[
       {s:'2026-08-10',e:'2026-08-14',label:'Setup week: hardware functional + firmware + API endpoints',color:C.blue,st:'planning',owners:['amit','umang'],tip:'Aug 10-14 setup week: (1) make hardware functional (2) test hardware (3) load previous payment system firmware for card provisioning (4) plan attendance system using existing components (5) create API endpoints spec for attendance flow with DB.'},
       {s:'2026-08-14',e:'2026-09-11',label:'Full attendance system build (4 weeks)',color:C.blue,st:'dev',owners:['amit','umang'],tip:'4-week build ending Sep 11: full attendance system on top of the reused payment hardware + firmware. Backend API + database (Umang), hardware assembly + firmware + testing (Amit).'},
-      {s:'2026-09-11',e:'2027-07-31',label:'Attendance ongoing support + pilots',color:C.gray,st:'support',owners:['amit','umang'],tip:'Post-MVP support and pilot deployments through Ashad. Target: 3 pilots (schools/offices) by end of FY.'},
+      {s:'2026-09-11',e:'2026-10-08',label:'Support + pilot prep — completed from our side',color:C.gray,st:'support',owners:['amit','umang'],tip:'Post-MVP support and pilot prep. Completed from our side as of the Oct 8 review.'},
+      {s:'2026-10-08',e:'2026-10-31',label:'ON HOLD — no response from other party',color:C.red,st:'blocked',owners:['amit','umang'],tip:'🔴 ON HOLD: completed from our side, no response from the other party. Oct 31 is a placeholder to revisit next review.'},
+      {s:'2026-11-01',e:'2027-07-31',label:'Pilots (pending other party response)',color:C.gray,st:'support',owners:['amit','umang'],tip:'Pilot deployments through Ashad, resuming only once the other party responds. Target: 3 pilots (schools/offices) by end of FY.',dashed:true},
     ]],
     ms:[
       {d:'2026-08-14',label:'Hardware + firmware ready',color:C.blue,tip:'Setup week complete: hardware functional, firmware loaded for card provisioning, API endpoints defined.'},
       {d:'2026-09-11',label:'Attendance MVP delivered',color:C.green,tip:'Full attendance system MVP complete after 4-week build. Ready for pilot deployment.'},
+      {d:'2026-10-08',label:'ON HOLD — awaiting other party',color:C.red,tip:'🔴 Attendance on hold: completed from our side, no response from the other party.'},
     ]
   }]}];
 
