@@ -453,16 +453,16 @@ const PRODUCTS = [
     fyGoal:'20 municipalities, ~120 schools, ~24k Class 8–10 students by Ashad',
     currentGoal:'Fix Native Smartboard App stability (top priority), keep V2 revamp sign-off moving — Features on hold pending further decision.',
     health:'a', // g/a/r/paused/closed
-    healthNote:'DEADLINE SET (Oct 8 review): smartboard issue still not fixed — must be fixed before the Dashain/Tihar holiday ends, hard deadline Oct 13. Features still on hold. Sales: Nagarjun municipality acquired; Q1 on plan. DEVIATION (Sep 25 review): V2 revamp RELEASED Sep 23 (was targeting Sep 16, 7 days late — reason not specified). Abhyas — Features (Classroom/Homework/Live Tuition) put ON HOLD pending further decision — the Native Smartboard App stability issue has been elevated to TOP PRIORITY, redirecting dev focus there instead of features. No confirmed dates for either the fix or a Features restart. Latest Redmine sync: 99% scope — all 18 named epics fully Done, unsorted feedback bucket now 97% Done (32/33).',
+    healthNote:'DEADLINE SET (Oct 8 review): smartboard issue still not fixed — must be fixed before the Dashain/Tihar holiday ends, hard deadline Nov 6. Features still on hold. Sales: Nagarjun municipality acquired; Q1 on plan. DEVIATION (Sep 25 review): V2 revamp RELEASED Sep 23 (was targeting Sep 16, 7 days late — reason not specified). Abhyas — Features (Classroom/Homework/Live Tuition) put ON HOLD pending further decision — the Native Smartboard App stability issue has been elevated to TOP PRIORITY, redirecting dev focus there instead of features. No confirmed dates for either the fix or a Features restart. Latest Redmine sync: 99% scope — all 18 named epics fully Done, unsorted feedback bucket now 97% Done (32/33).',
     execStatus:'dev',
     progress:99, // fallback only — live value pulled from abhyas-R1 via productLiveProgress()
     currentPhase:'Smartboard stability fix (TOP PRIORITY) — Features on hold pending further decision',
     nextMilestone:'Smartboard stability fix complete (before Dashain/Tihar holiday ends)',
-    nextMilestoneDate:'2026-10-13',
+    nextMilestoneDate:'2026-11-06',
     owner:'Suman',
     resources:['ajay','suman','rahul','pranuz','shreya','dhakal','suraj'],
     risks:[
-      {label:'Native Smartboard App instability still not fixed (Oct 8) — hard deadline Oct 13, before the Dashain/Tihar holiday ends; Features paused to free up capacity', sev:'r'},
+      {label:'Native Smartboard App instability still not fixed (Oct 8) — hard deadline Nov 6, before the Dashain/Tihar holiday ends; Features paused to free up capacity', sev:'r'},
       {label:'Abhyas — Features (Classroom/Homework/Live Tuition) ON HOLD pending further decision — no confirmed restart date', sev:'a'},
       {label:'Further releases and support depend on the dedicated Abhyas dev hire (post-revamp)', sev:'r'},
       {label:'Municipality onboarding depends on new hires', sev:'a'},
@@ -6740,23 +6740,23 @@ const GROUPS=[
     {
       title:'Abhyas — Native Smartboard App',
       sub:'DELIVERED Aug 1 (Ajay) · Unstable in production — TOP PRIORITY fix (Sep 25 review), Features work put on hold to make room for it',
-      pivotReason:'DEADLINE SET, STILL NOT FIXED (Oct 8 review): smartboard issue still not fixed. Must be fixed before the Dashain/Tihar holiday ends — hard deadline Oct 13 (was a placeholder Oct 15). Previously: TOP PRIORITY (Sep 25 review): smartboard stability issue elevated to top priority — Abhyas — Features (Classroom/Homework/Live Tuition) put on hold to free up dev focus for this fix. No confirmed fix-complete date yet. Previously: MAJOR PIVOT: original plan was a straight revamp + feature sprint (Classroom, Homework, Live Tuition). Blocked by 7+ WebView-level issues affecting live classes on smartboards — screen share failure, fullscreen crash, camera/mic permission failures, whiteboard sizing, backgrounding disconnects. Root cause: Abhyas app WebView does not fully implement Android WebChromeClient callbacks. Decision: build React Native app to solve these at once, then bug-fix MVP1, then resume revamp, then features.',
+      pivotReason:'DEADLINE SET, STILL NOT FIXED (Oct 8 review): smartboard issue still not fixed. Must be fixed before the Dashain/Tihar holiday ends — hard deadline Nov 6 (was a placeholder Oct 15). Previously: TOP PRIORITY (Sep 25 review): smartboard stability issue elevated to top priority — Abhyas — Features (Classroom/Homework/Live Tuition) put on hold to free up dev focus for this fix. No confirmed fix-complete date yet. Previously: MAJOR PIVOT: original plan was a straight revamp + feature sprint (Classroom, Homework, Live Tuition). Blocked by 7+ WebView-level issues affecting live classes on smartboards — screen share failure, fullscreen crash, camera/mic permission failures, whiteboard sizing, backgrounding disconnects. Root cause: Abhyas app WebView does not fully implement Android WebChromeClient callbacks. Decision: build React Native app to solve these at once, then bug-fix MVP1, then resume revamp, then features.',
       planned:[[
         {s:'2026-06-22',e:'2026-07-15',label:'Planning + revamp Phase 1',color:'#C47B0A',st:'planning',owners:['suraj','ajay'],pivot:'MAJOR PIVOT — original planning phase never became a revamp. 7+ WebView-level issues (AI pen, screen share, fullscreen crash, camera/mic on OEM boards) surfaced as critical class-blocking bugs. React Native app work replaced this window.'},
         {s:'2026-07-15',e:'2026-08-15',label:'Classroom + Homework + Live Tuition (planned features)',color:'#639922',st:'dev',owners:['ajay','suman'],pivot:'PIVOTED OUT — feature sprint pushed by ~8 weeks. Sequence is now: native app → MVP1 bug fixes → revamp → features.'},
-        {s:'2026-09-23',e:'2026-10-15',label:'Smartboard stability fix — TOP PRIORITY (placeholder end)',color:C.red,st:'blocked',owners:['ajay'],pivot:'DEADLINE SET — still not fixed as of Oct 8. Must be fixed before the Dashain/Tihar holiday ends: hard deadline Oct 13 (placeholder was Oct 15).'},
+        {s:'2026-09-23',e:'2026-10-15',label:'Smartboard stability fix — TOP PRIORITY (placeholder end)',color:C.red,st:'blocked',owners:['ajay'],pivot:'DEADLINE SET — still not fixed as of Oct 8. Must be fixed before the Dashain/Tihar holiday ends: hard deadline Nov 6 (placeholder was Oct 15).'},
       ]],
       tracks:[[
         {s:'2026-07-15',e:'2026-07-18',label:'Prototype (3 days): pen + whiteboard + BBB sync + mic + camera',color:C.red,st:'dev',owners:['ajay'],tip:'3-day validation spike Jul 15–17: AI pen on React Native canvas, whiteboard-BBB sync, mic/echo cancellation, camera on smartboard hardware (Android/Windows/Linux). Go/No-go on Jul 17.'},
         {s:'2026-07-18',e:'2026-08-01',label:'Native app build — minimal classroom functionality (2 weeks)',color:C.blue,st:'dev',owners:['ajay'],tip:'2-week build: minimal viable classroom app in React Native. Fixes 7 WebView issues at once (screen share, fullscreen, camera/mic permissions, whiteboard sizing, backgrounding). Backend and BBB engine unchanged. ⚠️ Ajay overlaps 977 S0/S1 in this window.'},
-        {s:'2026-09-23',e:'2026-10-13',label:'Smartboard stability fix — TOP PRIORITY (deadline Oct 13)',color:C.red,st:'blocked',owners:['ajay'],tip:'🔴 DEVIATION: production instability on some smartboards elevated to top priority (Sep 25 review). Abhyas — Features work put on hold to make room. Oct 8 review: still not fixed — must be fixed before the Dashain/Tihar holiday ends, hard deadline Oct 13.'},
+        {s:'2026-09-23',e:'2026-11-06',label:'Smartboard stability fix — TOP PRIORITY (deadline Nov 6)',color:C.red,st:'blocked',owners:['ajay'],tip:'🔴 DEVIATION: production instability on some smartboards elevated to top priority (Sep 25 review). Abhyas — Features work put on hold to make room. Oct 8 review: still not fixed — must be fixed before the Dashain/Tihar holiday ends, hard deadline Nov 6.'},
       ]],
       ms:[
         {d:'2026-07-17',label:'Prototype go/no-go',color:C.red,tip:'🔴 Prototype validation decision: does the AI pen work natively on smartboard hardware? Gate for the 2-week build.'},
         {d:'2026-08-01',label:'Native app MVP delivered',color:C.blue,tip:'Minimal classroom app complete — teachers can conduct class smoothly with AI pen, screen share, fullscreen, camera and mic all working.'},
         {d:'2026-09-23',label:'DEVIATION: smartboard fix elevated to top priority',color:C.red,tip:'🔴 Smartboard app instability elevated to top priority this review — Features work paused to free up dev capacity. No confirmed fix-complete date.'},
-        {d:'2026-10-08',label:'Smartboard still not fixed — deadline Oct 13',color:C.red,tip:'🔴 Smartboard issue still not fixed as of the Oct 8 review. Need to fix before the Dashain/Tihar holiday ends — hard deadline Oct 13.'},
-        {d:'2026-10-13',label:'Smartboard fix deadline (before holidays end)',color:C.red,tip:'🔴 Hard deadline: smartboard stability fix must be done before the Dashain/Tihar holiday ends.'},
+        {d:'2026-10-08',label:'Smartboard still not fixed — deadline Nov 6',color:C.red,tip:'🔴 Smartboard issue still not fixed as of the Oct 8 review. Need to fix before the Dashain/Tihar holiday ends — hard deadline Nov 6.'},
+        {d:'2026-11-06',label:'Smartboard fix deadline (before holidays end)',color:C.red,tip:'🔴 Hard deadline: smartboard stability fix must be done before the Dashain/Tihar holiday ends.'},
       ]
     },
     {
@@ -6978,17 +6978,22 @@ const GROUPS=[
   {id:'olive',label:'Olive & Lime — incl. 977 OTT',tag:'977',rows:[
     {
       title:'O&L Consulting',
-      sub:'Expired July — OTT report sent, no further engagement',
-      pivotReason:'CLOSED EARLY + NEW SCOPE: original consulting was to run discovery → infra report → ongoing advisory through Sep 15. Closed early July after report delivery. HOWEVER, Olive & Lime signed 977 as a full product build (new project below) — much bigger engagement than the consulting retainer.',
+      sub:'Expired July — OTT report sent · NEW 3-month consulting contract Sep 1 – Nov 30 (Local Ads Platform, DCB consulting + others · monthly report before billing)',
+      pivotReason:'SLIPPED (Oct 8 review): Month 1 (Sep) report not sent by Sep 30 — still in review, so Month 1 billing is held. Send date not yet confirmed. NEW CONTRACT (Oct 8 review): completely new 3-month consulting contract with Olive & Lime, Sep 1 – Nov 30 — separate from the earlier engagement that closed in July. Scope: Local Ads Platform, DCB consulting, and other advisory. Monthly reporting milestone at each month-end, delivered before billing. Previously: CLOSED EARLY + NEW SCOPE: original consulting was to run discovery → infra report → ongoing advisory through Sep 15. Closed early July after report delivery. HOWEVER, Olive & Lime signed 977 as a full product build (new project below) — much bigger engagement than the consulting retainer.',
       planned:[[
         {s:'2026-06-19',e:'2026-07-31',label:'Discovery + requirements + infra + budget',color:'#534AB7',st:'consulting',owners:['suraj'],pivot:'DELIVERED EARLY — discovery report delivered and consulting concluded early July (planned till Jul 31).'},
         {s:'2026-08-01',e:'2026-09-15',label:'Infra & budget report delivery (planned)',color:'#7F77DD',st:'consulting',owners:['suraj'],pivot:'PIVOTED OUT — this phase never happened as ongoing consulting. Instead, Olive & Lime signed 977 as a full product build (new project below). Consulting retainer closed.'},
       ]],
       tracks:[[
         {s:'2026-06-19',e:'2026-07-01',label:'Consulting (expired July)',color:C.purple,st:'consulting',owners:['suraj'],tip:'Olive & Lime consulting engagement expired from July. OTT report sent. No further engagement on consulting.'},
+        {s:'2026-09-01',e:'2026-11-30',label:'New consulting contract (3 months): Local Ads Platform, DCB + others — monthly report → billing',color:C.purple,st:'consulting',owners:['suraj'],tip:'Completely new 3-month Olive & Lime consulting contract, Sep 1 – Nov 30 (separate from the engagement that closed in July). Scope: Local Ads Platform, DCB consulting, and others. Each month ends with a reporting milestone, delivered before that month is billed.'},
       ]],
       ms:[
         {d:'2026-07-01',label:'OTT report sent · engagement closed',color:C.purple,tip:'OTT infrastructure & budget report delivered. Consulting engagement concluded.'},
+        {d:'2026-09-01',label:'New 3-month consulting contract starts',color:C.purple,tip:'Completely new Olive & Lime consulting contract begins Sep 1, running 3 months to Nov 30.'},
+        {d:'2026-09-30',label:'Month 1 report NOT SENT — in review (billing held)',color:C.red,tip:'🔴 Month 1 (Sep) consulting report was due Sep 30 but has not been sent — still in review as of the Oct 8 review. Month 1 billing is held until the report goes out. Send date not yet confirmed.'},
+        {d:'2026-10-31',label:'Month 2 report → billing',color:C.purple,tip:'Month 2 (Oct) consulting report delivered to Olive & Lime — gate before Month 2 billing.'},
+        {d:'2026-11-30',label:'Month 3 report → billing · engagement ends',color:C.purple,tip:'Month 3 (Nov) consulting report delivered to Olive & Lime — gate before final billing. 3-month contract ends.'},
       ]
     },
     {
