@@ -709,12 +709,12 @@ const PRODUCTS = [
     fyGoal:'Working attendance MVP + 3 pilot deployments by Ashad',
     currentGoal:'Aug 10–14: hardware functional + previous payment firmware repurposed for card provisioning + API endpoints spec. 4-week full attendance system build ends Sep 11.',
     health:'paused',
-    healthNote:'ON HOLD (Oct 8 review): completed from our side — no response from the other party. Support + pilots paused; placeholder Oct 31 to revisit. Previously: new initiative kicking off Aug 10, reusing existing payment system hardware + firmware.',
+    healthNote:'STILL BLOCKED (Nov 6 review): no response from the other party — on hold extended to Nov 30 (placeholder). ON HOLD (Oct 8 review): completed from our side — no response from the other party. Support + pilots paused; placeholder Oct 31 to revisit. Previously: new initiative kicking off Aug 10, reusing existing payment system hardware + firmware.',
     execStatus:'blocked',
     progress:5,
     currentPhase:'ON HOLD — completed from our side, awaiting other party response',
     nextMilestone:'Revisit on-hold status (other party response)',
-    nextMilestoneDate:'2026-10-31',
+    nextMilestoneDate:'2026-11-30',
     owner:'Amit',
     resources:['amit','umang','abishek','suraj'],
     risks:[
@@ -7027,7 +7027,7 @@ const GROUPS=[
         {s:'2026-09-04',e:'2026-09-17',label:'S4 — Monetisation (COMPLETE) — App Store RC deferred',color:C.teal,st:'sprint',owners:['ajay','suraj','pranuz'],tip:'✓ S4 COMPLETE: Features 17–18 (Player), 20 (Coin), 21–24 (Ads), 25 (Notifs), 32 (CMS), 37–38 (Support) delivered. App Store RC (feature 45, iOS) NOT submitted — Apple Developer account (DUNS) still pending. Deferred to Release 2. QA: Pranuz.'},
         {s:'2026-09-18',e:'2026-10-01',label:'S5 — Hardening + launch prep (IN PROGRESS)',color:C.br2,st:'sprint',owners:['ajay','pranuz'],tip:'S5 (current): Features 34–36 (CRM), 39–40 (Analytics), 41 (Platform). iOS (feature 45) deferred with App Store submission. Targeting Play Store-only launch Oct 8. QA: Pranuz.'},
         {s:'2026-10-02',e:'2026-11-01',label:'R2 — DCB + coin wallet — ON HOLD (replaced by CR)',color:C.red,st:'blocked',owners:['ajay','pranuz'],tip:'🔴 Nov 6 review: R2 (Features 46–63: DCB, coin ledger, Google+Apple Sign-In, manual quality, notifications, executive analytics; was due Nov 12) put ON HOLD from Nov 1 and replaced with the 977 Intelligence change request (deadline Nov 20).'},
-        {s:'2026-11-13',e:'2026-12-17',label:'R3/R4 — Personalisation + subscription + offline',color:C.br2,st:'sprint',owners:['ajay','pranuz'],tip:'R3 (64–94) + R4 (95–112): Personalisation, subscription, offline, retention. QA: Pranuz. Contractual target Dec 17.'},
+        {s:'2026-11-13',e:'2026-12-17',label:'R3/R4 — Personalisation + subscription + offline',color:C.br2,st:'sprint',owners:['ajay','pranuz'],tip:'R3 (64–94) + R4 (95–112): Personalisation, subscription, offline, retention. QA: Pranuz. Contractual target Dec 17. Nov 6 review: no change — R3/R4 dates hold and will cover the planned features despite R2 being on hold for the 977 Intelligence CR.'},
       ],[
         {s:'2026-11-01',e:'2026-11-20',label:'CR: 977 Intelligence (replaces R2) — Nov 1 → Nov 20',color:C.red,st:'sprint',owners:['ajay','pranuz'],tip:'🔴 Change request for 977 Intelligence, started Nov 1, deadline Nov 20. Replaces R2 (DCB + coin wallet), which is on hold.'},
       ]],
@@ -7055,9 +7055,10 @@ const GROUPS=[
     {
       title:'977 Design (Rahul)',
       sub:'One sprint ahead of dev · MVP1 design done Sep 17 · Release 2 design Sep 22 – Oct 16 (review + finalisation) · CR: publisher dashboard + CMS design Oct 5–9',
-      pivotReason:'EXTENDED + NEW CR (Oct 8 review): Release 2 design is completed but not yet verified — needs review and finalisation, extended Oct 2 → Oct 16. New change request: publisher dashboard + CMS design changes, started Oct 5, completing Oct 9. Previously: NEW SCOPE (Sep 25 review): Rahul begins a new sprint-wise design plan for Release 2 (post-MVP1), Sep 22 – Oct 2 — added now that MVP1 design has wrapped. Previously: NEW PROJECT: Rahul assigned as 977 designer, running one sprint ahead of dev through MVP1.',
+      pivotReason:'STILL IN REVIEW (Nov 6 review): Release 2 design not finalised by Oct 16 — still in review. No new date given; Nov 30 used as a placeholder to revisit next review. EXTENDED + NEW CR (Oct 8 review): Release 2 design is completed but not yet verified — needs review and finalisation, extended Oct 2 → Oct 16. New change request: publisher dashboard + CMS design changes, started Oct 5, completing Oct 9. Previously: NEW SCOPE (Sep 25 review): Rahul begins a new sprint-wise design plan for Release 2 (post-MVP1), Sep 22 – Oct 2 — added now that MVP1 design has wrapped. Previously: NEW PROJECT: Rahul assigned as 977 designer, running one sprint ahead of dev through MVP1.',
       planned:[[
         {s:'2026-09-22',e:'2026-10-02',label:'Release 2 design — Rahul',color:C.indlt,st:'design',owners:['rahul'],pivot:'EXTENDED — design completed but not verified; review + finalisation for Release 2 extended to Oct 16.'},
+        {s:'2026-09-22',e:'2026-10-16',label:'Release 2 design — Rahul (done, review + finalisation to Oct 16)',color:C.indlt,st:'design',owners:['rahul'],pivot:'SLIPPED — not finalised by Oct 16; still in review at the Nov 6 review. Placeholder end Nov 30.'},
       ]],
       tracks:[[
         {s:'2026-07-17',e:'2026-07-23',label:'Design S1 — mobile app',color:C.ind,st:'design',owners:['rahul'],tip:'Rahul designs S1 screens during S0. Must be approved before S1 dev starts.'},
@@ -7065,7 +7066,7 @@ const GROUPS=[
         {s:'2026-08-07',e:'2026-08-20',label:'Design S3',color:C.ind,st:'design',owners:['rahul'],tip:'Designs S3 screens during S2.'},
         {s:'2026-08-21',e:'2026-09-03',label:'Design S4',color:C.indlt,st:'design',owners:['rahul'],tip:'Designs S4 screens during S3.'},
         {s:'2026-09-04',e:'2026-09-17',label:'Design S5 — final deliverable',color:C.ind,st:'design',owners:['rahul'],tip:'Last design deliverable for MVP1 (tight-window, Section 04).'},
-        {s:'2026-09-22',e:'2026-10-16',label:'Release 2 design — Rahul (done, review + finalisation to Oct 16)',color:C.indlt,st:'design',owners:['rahul'],tip:'Rahul sprint-wise design for 977 Release 2. Oct 8 review: design completed but not verified — needs review and finalisation for Release 2. Extended Oct 2 → Oct 16.'},
+        {s:'2026-09-22',e:'2026-11-30',label:'Release 2 design — Rahul (done, STILL IN REVIEW)',color:C.indlt,st:'design',owners:['rahul'],tip:'Nov 6 review: not finalised by Oct 16 — still in review; Nov 30 is a placeholder. Rahul sprint-wise design for 977 Release 2. Oct 8 review: design completed but not verified — needs review and finalisation for Release 2. Extended Oct 2 → Oct 16.'},
       ],[
         {s:'2026-10-05',e:'2026-10-09',label:'CR: publisher dashboard + CMS design changes',color:C.red,st:'design',owners:['rahul'],tip:'🔴 NEW CHANGE REQUEST: publisher dashboard and CMS design changes. Started Oct 5, completing Oct 9.'},
       ]],
@@ -7074,7 +7075,7 @@ const GROUPS=[
         {d:'2026-09-22',label:'Release 2 design starts',color:C.indlt,tip:'Rahul begins Release 2 design, sprint-wise, running ahead of R2 dev.'},
         {d:'2026-10-02',label:'R2 design done but not verified — extended to Oct 16',color:C.red,tip:'🔴 Release 2 design completed but not verified — needs review and finalisation for Release 2. Extended Oct 2 → Oct 16.'},
         {d:'2026-10-05',label:'New CR: publisher dashboard + CMS design',color:C.red,tip:'🔴 New change request: publisher dashboard and CMS design changes, started Oct 5, completing Oct 9.'},
-        {d:'2026-10-16',label:'Release 2 design finalised (target)',color:C.indlt,tip:'Release 2 design reviewed, verified and finalised.'},
+        {d:'2026-10-16',label:'R2 design finalisation missed — still in review',color:C.red,tip:'🔴 Nov 6 review: Release 2 design was not finalised by the Oct 16 target — still in review. No new date given (Nov 30 placeholder).'},
       ]
     },
     {
@@ -7135,22 +7136,24 @@ const GROUPS=[
 
   {id:'attendance',label:'Attendance System',tag:'product',rows:[{
     title:'Attendance System',
-    sub:'Amit lead · Umang backend · Reusing payment hardware + firmware · MVP by Sep 11 · ON HOLD from Oct 8 (awaiting other party)',
-    pivotReason:'ON HOLD (Oct 8 review): work completed from our side — no response from the other party, so support + pilots are on hold. Placeholder Oct 31 to revisit next review; pilots resume only once the other party responds. Previously: NEW PRODUCT: Attendance system kick-off Aug 10. Reuses existing payment system hardware + firmware (repurposed for card provisioning) to accelerate build. 4-week window to full attendance MVP (Sep 11). Amit leads hardware + coordination; Umang on backend/API.',
+    sub:'Amit lead · Umang backend · Reusing payment hardware + firmware · MVP by Sep 11 · ON HOLD from Oct 8, extended to Nov 30 (awaiting other party)',
+    pivotReason:'STILL BLOCKED (Nov 6 review): still no response from the other party — on hold extended Oct 31 → Nov 30 (placeholder, revisit next review); pilot start pushed accordingly. ON HOLD (Oct 8 review): work completed from our side — no response from the other party, so support + pilots are on hold. Placeholder Oct 31 to revisit next review; pilots resume only once the other party responds. Previously: NEW PRODUCT: Attendance system kick-off Aug 10. Reuses existing payment system hardware + firmware (repurposed for card provisioning) to accelerate build. 4-week window to full attendance MVP (Sep 11). Amit leads hardware + coordination; Umang on backend/API.',
     planned:[[
       {s:'2026-09-11',e:'2027-07-31',label:'Attendance ongoing support + pilots',color:C.gray,st:'support',owners:['amit','umang'],pivot:'ON HOLD — completed from our side, no response from the other party. Support + pilots paused from Oct 8; resume pending their response.'},
+      {s:'2026-10-08',e:'2026-10-31',label:'ON HOLD — no response from other party',color:C.red,st:'blocked',owners:['amit','umang'],pivot:'EXTENDED — still blocked at the Nov 6 review (no response from the other party); on hold extended to Nov 30.'},
     ]],
     tracks:[[
       {s:'2026-08-10',e:'2026-08-14',label:'Setup week: hardware functional + firmware + API endpoints',color:C.blue,st:'planning',owners:['amit','umang'],tip:'Aug 10-14 setup week: (1) make hardware functional (2) test hardware (3) load previous payment system firmware for card provisioning (4) plan attendance system using existing components (5) create API endpoints spec for attendance flow with DB.'},
       {s:'2026-08-14',e:'2026-09-11',label:'Full attendance system build (4 weeks)',color:C.blue,st:'dev',owners:['amit','umang'],tip:'4-week build ending Sep 11: full attendance system on top of the reused payment hardware + firmware. Backend API + database (Umang), hardware assembly + firmware + testing (Amit).'},
       {s:'2026-09-11',e:'2026-10-08',label:'Support + pilot prep — completed from our side',color:C.gray,st:'support',owners:['amit','umang'],tip:'Post-MVP support and pilot prep. Completed from our side as of the Oct 8 review.'},
-      {s:'2026-10-08',e:'2026-10-31',label:'ON HOLD — no response from other party',color:C.red,st:'blocked',owners:['amit','umang'],tip:'🔴 ON HOLD: completed from our side, no response from the other party. Oct 31 is a placeholder to revisit next review.'},
-      {s:'2026-11-01',e:'2027-07-31',label:'Pilots (pending other party response)',color:C.gray,st:'support',owners:['amit','umang'],tip:'Pilot deployments through Ashad, resuming only once the other party responds. Target: 3 pilots (schools/offices) by end of FY.',dashed:true},
+      {s:'2026-10-08',e:'2026-11-30',label:'ON HOLD — no response from other party',color:C.red,st:'blocked',owners:['amit','umang'],tip:'🔴 ON HOLD: completed from our side, no response from the other party. Nov 6 review: still blocked — extended Oct 31 → Nov 30 (placeholder, revisit next review).'},
+      {s:'2026-12-01',e:'2027-07-31',label:'Pilots (pending other party response)',color:C.gray,st:'support',owners:['amit','umang'],tip:'Pilot deployments through Ashad, resuming only once the other party responds. Target: 3 pilots (schools/offices) by end of FY.',dashed:true},
     ]],
     ms:[
       {d:'2026-08-14',label:'Hardware + firmware ready',color:C.blue,tip:'Setup week complete: hardware functional, firmware loaded for card provisioning, API endpoints defined.'},
       {d:'2026-09-11',label:'Attendance MVP delivered',color:C.green,tip:'Full attendance system MVP complete after 4-week build. Ready for pilot deployment.'},
       {d:'2026-10-08',label:'ON HOLD — awaiting other party',color:C.red,tip:'🔴 Attendance on hold: completed from our side, no response from the other party.'},
+      {d:'2026-11-06',label:'Still blocked — hold extended to Nov 30',color:C.red,tip:'🔴 Nov 6 review: still no response from the other party. On hold extended Oct 31 → Nov 30; pilots now start no earlier than Dec 1.'},
     ]
   }]}];
 
